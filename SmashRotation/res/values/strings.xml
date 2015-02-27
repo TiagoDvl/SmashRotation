@@ -15,5 +15,11 @@
     <string name="error_insert_player_name">Insira um nome</string>
     <string name="success_insert_player_name">Jogador inserido com sucesso</string>
     <string name="start_rotation">Rotation!</string>
+    
+    <!-- Actions Dialog Fragment -->
+    
+    <string name="action_dialog_win">Ganhou</string>
+    <string name="action_dialog_lose">Perdeu</string>
+    <string name="action_dialog_pass">Passou</string>
 
 </resources>

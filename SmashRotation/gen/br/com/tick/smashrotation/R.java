@@ -92,6 +92,11 @@ public final class R {
         public static final int smash_rotation=0x7f080000;
     }
     public static final class string {
+        public static final int action_dialog_lose=0x7f06000c;
+        public static final int action_dialog_pass=0x7f06000d;
+        /**  Actions Dialog Fragment 
+         */
+        public static final int action_dialog_win=0x7f06000b;
         public static final int action_settings=0x7f060002;
         public static final int adapter_player_losses=0x7f060007;
         public static final int adapter_player_name=0x7f060005;

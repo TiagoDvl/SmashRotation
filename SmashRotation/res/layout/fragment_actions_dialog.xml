@@ -26,7 +26,10 @@
             android:layout_width="@dimen/actions_width"
             android:layout_height="@dimen/actions_height"
             android:background="@color/light_gray"
-            android:clickable="true" />
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/action_dialog_win"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/action_loser"
@@ -35,14 +38,20 @@
             android:layout_marginLeft="@dimen/actions_center_margin_left"
             android:layout_marginRight="@dimen/actions_center_margin_right"
             android:background="@color/light_gray"
-            android:clickable="true" />
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/action_dialog_lose"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/action_pass"
             android:layout_width="@dimen/actions_width"
             android:layout_height="@dimen/actions_height"
             android:background="@color/light_gray"
-            android:clickable="true" />
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/action_dialog_pass"
+            android:textColor="@color/white" />
     </LinearLayout>
 
 </RelativeLayout>
