@@ -49,19 +49,18 @@ public class RotationAdapter extends BaseAdapter {
 			holder = new ViewHolder();
 			convertView = inflater.inflate(R.layout.adapter_rotation_players, ((ViewGroup) null));
 
-			holder.playerName = (TextView) convertView.findViewById(R.id.list_of_players_names);
-			holder.playerWins = (TextView) convertView.findViewById(R.id.list_of_players_wins);
-			holder.playerLosses = (TextView) convertView.findViewById(R.id.list_of_players_losses);
-
-			holder.playerName.setText(player.getName());
-			holder.playerWins.setText(activity.getResources().getString(R.string.adapter_player_wins) + player.getWins());
-			holder.playerLosses.setText(activity.getResources().getString(R.string.adapter_player_wins) + player.getLosses());
-			
-
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
+		
+		holder.playerName = (TextView) convertView.findViewById(R.id.list_of_players_names);
+		holder.playerWins = (TextView) convertView.findViewById(R.id.list_of_players_wins);
+		holder.playerLosses = (TextView) convertView.findViewById(R.id.list_of_players_losses);
+
+		holder.playerName.setText(player.getName());
+		holder.playerWins.setText(activity.getResources().getString(R.string.adapter_player_wins) + player.getWins());
+		holder.playerLosses.setText(activity.getResources().getString(R.string.adapter_player_wins) + player.getLosses());
 
 		return convertView;
 	}

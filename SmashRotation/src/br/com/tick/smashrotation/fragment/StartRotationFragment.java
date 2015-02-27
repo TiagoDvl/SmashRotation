@@ -14,16 +14,31 @@ import android.widget.TextView;
 import br.com.tick.smashrotation.R;
 import br.com.tick.smashrotation.domain.Player;
 import br.com.tick.smashrotation.fragment.adapter.RotationAdapter;
+import br.com.tick.smashrotation.listener.ISmashRotation;
 
 public class StartRotationFragment extends Fragment implements OnClickListener {
 	
 	private transient TextView contestantA;
 	private transient TextView contestantB;
+	private transient int contestantPositionA;
+	private transient int contestantPositionB;
+	
 	private transient List<Player> listOfPlayers;
 	private transient ListView rotation;
 	private transient RotationAdapter adapter;
+	private transient ISmashRotation listener;
+	
+	private transient static int FIRST_CONTESTANT = 0;
+	private transient static int SECOND_CONTESTANT = 1;
 
 	public StartRotationFragment() {
+	}
+	
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		
+		this.listener = (ISmashRotation) getActivity();
 	}
 
 	@Override
@@ -46,12 +61,32 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 
 	private void setContestantsNames(String nameA, String nameB) {
 		contestantA.setText(nameA);
+		contestantPositionA = FIRST_CONTESTANT;
+		
 		contestantB.setText(nameB);
+		contestantPositionB = SECOND_CONTESTANT;
 	}
 
 	@Override
 	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.contestant_a:
+			showActionsDialog(contestantPositionA);
+			break;
+			
+		case R.id.contestant_b:
+			showActionsDialog(contestantPositionB);
+			break;
 
+		default:
+			break;
+		}
+		
+	}
+
+	private void showActionsDialog(int position) {
+		listener.showActionsDialog(position);
+		
 	}
 
 	public void setData(List<Player> listOfPlayers) {

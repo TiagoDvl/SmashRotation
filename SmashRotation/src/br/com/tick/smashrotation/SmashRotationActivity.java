@@ -22,12 +22,13 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 			fragment.setData();
 			getFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
 		}
-		
+
 		SmashRotationBO.getInstance(getApplicationContext());
-		// Proving that the singleton design patters works and its gonna be used through the application.
-		for (Player player: SmashRotationBO.getInstance(getApplicationContext()).generateStaticPlayers()){
-			System.out.println("Nome -> "+ player.getName());
-			System.out.println("Wins -> "+ player.getWins() + "\n");
+		// Proving that the singleton design patters works and its gonna be used
+		// through the application.
+		for (Player player : SmashRotationBO.getInstance(getApplicationContext()).generateStaticPlayers()) {
+			System.out.println("Nome -> " + player.getName());
+			System.out.println("Wins -> " + player.getWins() + "\n");
 		}
 	}
 
@@ -37,6 +38,15 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 		StartRotationFragment fragment = new StartRotationFragment();
 		fragment.setData(listOfPlayers);
 		getFragmentManager().beginTransaction().replace(R.id.container, fragment).addToBackStack("name").commit();
+	}
+
+	@Override
+	public void showActionsDialog(int position) {
+		// Inflate rotation fragment.
+//		StartRotationFragment fragment = new StartRotationFragment();
+//		fragment.setData(position);
+//		getFragmentManager().beginTransaction().replace(R.id.container, fragment).addToBackStack("name").commit();
+
 	}
 
 }

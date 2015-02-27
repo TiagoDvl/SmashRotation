@@ -68,8 +68,9 @@ public final class R {
         public static final int activity_smash_rotation=0x7f030000;
         public static final int adapter_players=0x7f030001;
         public static final int adapter_rotation_players=0x7f030002;
-        public static final int fragment_smash_rotation=0x7f030003;
-        public static final int fragment_start_rotation=0x7f030004;
+        public static final int fragment_actions_dialog=0x7f030003;
+        public static final int fragment_smash_rotation=0x7f030004;
+        public static final int fragment_start_rotation=0x7f030005;
     }
     public static final class menu {
         public static final int smash_rotation=0x7f080000;
