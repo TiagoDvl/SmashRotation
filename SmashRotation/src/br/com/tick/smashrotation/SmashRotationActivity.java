@@ -1,10 +1,13 @@
 package br.com.tick.smashrotation;
 
+import java.util.List;
+
 import android.app.Activity;
 import android.os.Bundle;
 import br.com.tick.smashrotation.bo.SmashRotationBO;
 import br.com.tick.smashrotation.domain.Player;
 import br.com.tick.smashrotation.fragment.SmashRotationFragment;
+import br.com.tick.smashrotation.fragment.StartRotationFragment;
 import br.com.tick.smashrotation.listener.ISmashRotation;
 
 public class SmashRotationActivity extends Activity implements ISmashRotation {
@@ -15,7 +18,9 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 		setContentView(R.layout.activity_smash_rotation);
 
 		if (savedInstanceState == null) {
-			getFragmentManager().beginTransaction().add(R.id.container, new SmashRotationFragment()).commit();
+			SmashRotationFragment fragment = new SmashRotationFragment();
+			fragment.setData();
+			getFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
 		}
 		
 		SmashRotationBO.getInstance(getApplicationContext());
@@ -27,9 +32,11 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 	}
 
 	@Override
-	public void showRotationScreen() {
+	public void showRotationScreen(List<Player> listOfPlayers) {
 		// Inflate rotation fragment.
-		
+		StartRotationFragment fragment = new StartRotationFragment();
+		fragment.setData(listOfPlayers);
+		getFragmentManager().beginTransaction().replace(R.id.container, fragment).addToBackStack("name").commit();
 	}
 
 }

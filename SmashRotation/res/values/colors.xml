@@ -1,5 +1,9 @@
 <resources>
 
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    
     <color name="light_gray">#7f7f7f</color>
+    <color name="light_gray_pressed">#c3c3c3</color>
     
 </resources>

@@ -8,8 +8,8 @@ public class Player {
 
 	private int id;
 	private String name;
-	private int wins;
-	private int losses;
+	private int wins = 0;
+	private int losses = 0;
 
 	public String getName() {
 		return name;
