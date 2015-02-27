@@ -12,6 +12,7 @@ import br.com.tick.smashrotation.listener.ISmashRotation;
 public class ActionsDialogFragment extends Fragment implements OnClickListener {
 
 	private transient ISmashRotation listener;
+	private transient int playerPosition;
 
 	public ActionsDialogFragment() {
 	}
@@ -38,6 +39,10 @@ public class ActionsDialogFragment extends Fragment implements OnClickListener {
 			break;
 		}
 
+	}
+	
+	public void setData(int position) {
+		this.playerPosition = position;
 	}
 
 }

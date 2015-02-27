@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import br.com.tick.smashrotation.R;
 import br.com.tick.smashrotation.domain.Player;
@@ -22,6 +23,8 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 	private transient TextView contestantB;
 	private transient int contestantPositionA;
 	private transient int contestantPositionB;
+	private transient RelativeLayout contestantARelative;
+	private transient RelativeLayout contestantBRelative;
 	
 	private transient List<Player> listOfPlayers;
 	private transient ListView rotation;
@@ -47,9 +50,14 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 		
 		contestantA = (TextView) rootView.findViewById(R.id.contestant_a_name);
 		contestantB = (TextView) rootView.findViewById(R.id.contestant_b_name);
+		contestantARelative = (RelativeLayout) rootView.findViewById(R.id.contestant_a);
+		contestantBRelative = (RelativeLayout) rootView.findViewById(R.id.contestant_b);
 		rotation = (ListView) rootView.findViewById(R.id.rotation);
 		
 		setContestantsNames(listOfPlayers.get(0).getName(),listOfPlayers.get(1).getName());
+		contestantARelative.setOnClickListener(this);
+		contestantBRelative.setOnClickListener(this);
+		
 		
 		List<Player> rotationList = new ArrayList<Player>();
 		rotationList = listOfPlayers.subList(2, listOfPlayers.size());

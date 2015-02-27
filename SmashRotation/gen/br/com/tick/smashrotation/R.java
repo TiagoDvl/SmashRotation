@@ -14,9 +14,16 @@ public final class R {
         public static final int black=0x7f040000;
         public static final int light_gray=0x7f040002;
         public static final int light_gray_pressed=0x7f040003;
+        public static final int transparent_white=0x7f040004;
         public static final int white=0x7f040001;
     }
     public static final class dimen {
+        public static final int actions_center_margin_left=0x7f050010;
+        public static final int actions_center_margin_right=0x7f050011;
+        public static final int actions_height=0x7f05000d;
+        public static final int actions_margin_left=0x7f05000e;
+        public static final int actions_margin_right=0x7f05000f;
+        public static final int actions_width=0x7f05000c;
         /**  Default screen margins, per the Android Design guidelines. 
 
          Example customization of dimensions originally defined in res/values/dimens.xml
@@ -30,8 +37,12 @@ public final class R {
         /**  Smash Rotation Fragment 
          */
         public static final int adapter_player_name_margin_start=0x7f050002;
+        public static final int holder_height=0x7f05000b;
         public static final int holder_start_rotation_height=0x7f050003;
         public static final int holder_start_rotation_margin_top=0x7f050004;
+        /**  Actions Dialog	
+         */
+        public static final int holder_width=0x7f05000a;
         public static final int rotation_margin_top=0x7f050009;
         public static final int two_contestants_divider=0x7f050008;
         public static final int two_contestants_height=0x7f050007;
@@ -45,24 +56,29 @@ public final class R {
         public static final int start_rotation_btn_selector=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f090011;
+        public static final int action_loser=0x7f090007;
+        public static final int action_pass=0x7f090008;
+        public static final int action_settings=0x7f090016;
+        public static final int action_winner=0x7f090006;
+        public static final int actions_holder=0x7f090005;
         public static final int container=0x7f090000;
-        public static final int contestant_a=0x7f09000c;
-        public static final int contestant_a_name=0x7f09000d;
-        public static final int contestant_b=0x7f09000e;
-        public static final int contestant_b_name=0x7f09000f;
-        public static final int holder_start_rotation=0x7f090008;
-        public static final int insert_player_holder=0x7f090005;
-        public static final int insert_player_name=0x7f090006;
-        public static final int insert_player_name_button=0x7f090007;
-        public static final int list_of_players=0x7f09000a;
+        public static final int contestant_a=0x7f090010;
+        public static final int contestant_a_name=0x7f090011;
+        public static final int contestant_b=0x7f090012;
+        public static final int contestant_b_name=0x7f090013;
+        public static final int holder_dialog=0x7f090015;
+        public static final int holder_start_rotation=0x7f09000c;
+        public static final int insert_player_holder=0x7f090009;
+        public static final int insert_player_name=0x7f09000a;
+        public static final int insert_player_name_button=0x7f09000b;
+        public static final int list_of_players=0x7f09000e;
         public static final int list_of_players_losses=0x7f090004;
         public static final int list_of_players_names=0x7f090002;
         public static final int list_of_players_wins=0x7f090003;
-        public static final int rotation=0x7f090010;
+        public static final int rotation=0x7f090014;
         public static final int smash_logo=0x7f090001;
-        public static final int start_rotation_text=0x7f090009;
-        public static final int two_contestants_holder=0x7f09000b;
+        public static final int start_rotation_text=0x7f09000d;
+        public static final int two_contestants_holder=0x7f09000f;
     }
     public static final class layout {
         public static final int activity_smash_rotation=0x7f030000;

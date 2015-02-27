@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import br.com.tick.smashrotation.bo.SmashRotationBO;
 import br.com.tick.smashrotation.domain.Player;
+import br.com.tick.smashrotation.fragment.ActionsDialogFragment;
 import br.com.tick.smashrotation.fragment.SmashRotationFragment;
 import br.com.tick.smashrotation.fragment.StartRotationFragment;
 import br.com.tick.smashrotation.listener.ISmashRotation;
@@ -37,15 +38,15 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 		// Inflate rotation fragment.
 		StartRotationFragment fragment = new StartRotationFragment();
 		fragment.setData(listOfPlayers);
-		getFragmentManager().beginTransaction().replace(R.id.container, fragment).addToBackStack("name").commit();
+		getFragmentManager().beginTransaction().replace(R.id.container, fragment).addToBackStack(fragment.getClass().toString()).commit();
 	}
 
 	@Override
 	public void showActionsDialog(int position) {
 		// Inflate rotation fragment.
-//		StartRotationFragment fragment = new StartRotationFragment();
-//		fragment.setData(position);
-//		getFragmentManager().beginTransaction().replace(R.id.container, fragment).addToBackStack("name").commit();
+		ActionsDialogFragment fragment = new ActionsDialogFragment();
+		fragment.setData(position);
+		getFragmentManager().beginTransaction().add(R.id.holder_dialog, fragment).addToBackStack(fragment.getClass().toString()).commit();
 
 	}
 

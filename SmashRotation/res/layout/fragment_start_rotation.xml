@@ -59,4 +59,10 @@
         android:layout_marginTop="@dimen/rotation_margin_top" >
     </ListView>
 
+    <RelativeLayout
+        android:id="@+id/holder_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </RelativeLayout>
+
 </RelativeLayout>
