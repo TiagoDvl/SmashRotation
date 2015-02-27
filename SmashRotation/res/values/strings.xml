@@ -4,5 +4,13 @@
     <string name="app_name">SmashRotation</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    
+    <!-- Smash Rotation Fragment -->
+    
+    <string name="insert_player_name">Insira o nome do jogador</string>
+    <string name="insert_player_name_button">OK</string>
+    <string name="adapter_player_name">Jogador</string>
+    <string name="error_insert_player_name">Insira um nome</string>
+    <string name="success_insert_player_name">Jogador inserido com sucesso</string>
 
 </resources>

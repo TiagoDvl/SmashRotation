@@ -8,9 +8,35 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.com.tick.smashrotation.SmashRotationActivity$PlaceholderFragment" >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/insert_player_holder"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/insert_player_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:hint="@string/insert_player_name"
+            android:singleLine="true"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/insert_player_name_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/insert_player_name_button" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_of_players"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/insert_player_holder" >
+    </ListView>
 
 </RelativeLayout>

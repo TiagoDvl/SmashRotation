@@ -5,8 +5,9 @@ import android.os.Bundle;
 import br.com.tick.smashrotation.bo.SmashRotationBO;
 import br.com.tick.smashrotation.domain.Player;
 import br.com.tick.smashrotation.fragment.SmashRotationFragment;
+import br.com.tick.smashrotation.listener.ISmashRotation;
 
-public class SmashRotationActivity extends Activity {
+public class SmashRotationActivity extends Activity implements ISmashRotation {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,12 @@ public class SmashRotationActivity extends Activity {
 			System.out.println("Nome -> "+ player.getName());
 			System.out.println("Wins -> "+ player.getWins() + "\n");
 		}
+	}
+
+	@Override
+	public void showRotationScreen() {
+		// Inflate rotation fragment.
+		
 	}
 
 }

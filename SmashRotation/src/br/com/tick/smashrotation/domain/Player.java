@@ -6,6 +6,7 @@ public class Player {
 		// Construct something inside.
 	}
 
+	private int id;
 	private String name;
 	private int wins;
 	private int losses;
@@ -32,6 +33,14 @@ public class Player {
 
 	public void setLosses(int losses) {
 		this.losses = losses;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }
