@@ -1,7 +1,10 @@
 package br.com.tick.smashrotation.fragment;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -18,61 +21,71 @@ import br.com.tick.smashrotation.fragment.adapter.RotationAdapter;
 import br.com.tick.smashrotation.listener.ISmashRotation;
 
 public class StartRotationFragment extends Fragment implements OnClickListener {
-	
+
 	private transient TextView contestantA;
 	private transient TextView contestantB;
 	private transient int contestantPositionA;
 	private transient int contestantPositionB;
 	private transient RelativeLayout contestantARelative;
 	private transient RelativeLayout contestantBRelative;
-	
+
 	private transient List<Player> listOfPlayers;
 	private transient ListView rotation;
 	private transient RotationAdapter adapter;
 	private transient ISmashRotation listener;
-	
+
 	private transient static int FIRST_CONTESTANT = 0;
 	private transient static int SECOND_CONTESTANT = 1;
 
+	private transient Player playerA = null;
+	private transient Player playerB = null;
+
 	public StartRotationFragment() {
 	}
-	
+
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		
+
 		this.listener = (ISmashRotation) getActivity();
 	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_start_rotation, container, false);
-		
+
 		contestantA = (TextView) rootView.findViewById(R.id.contestant_a_name);
 		contestantB = (TextView) rootView.findViewById(R.id.contestant_b_name);
 		contestantARelative = (RelativeLayout) rootView.findViewById(R.id.contestant_a);
 		contestantBRelative = (RelativeLayout) rootView.findViewById(R.id.contestant_b);
 		rotation = (ListView) rootView.findViewById(R.id.rotation);
-		
-		setContestantsNames(listOfPlayers.get(0).getName(),listOfPlayers.get(1).getName());
+
+		startRotation();
+
 		contestantARelative.setOnClickListener(this);
 		contestantBRelative.setOnClickListener(this);
-		
-		
-		List<Player> rotationList = new ArrayList<Player>();
-		rotationList = listOfPlayers.subList(2, listOfPlayers.size());
-		adapter = new RotationAdapter(getActivity(), rotationList);
+
+		adapter = new RotationAdapter(getActivity(), listOfPlayers);
 		rotation.setAdapter(adapter);
-		
+
 		return rootView;
 	}
 
-	private void setContestantsNames(String nameA, String nameB) {
-		contestantA.setText(nameA);
-		contestantPositionA = FIRST_CONTESTANT;
+	private void startRotation() {
+		playerA = listOfPlayers.get(FIRST_CONTESTANT);
+		contestantA.setText(playerA.getName());
+		playerB = listOfPlayers.get(SECOND_CONTESTANT);
+		contestantB.setText(playerB.getName());
 		
-		contestantB.setText(nameB);
-		contestantPositionB = SECOND_CONTESTANT;
+		// Proper way to remove more than one element of lists.
+		Integer[] intArray = new Integer[] { FIRST_CONTESTANT, SECOND_CONTESTANT };
+		List<Integer> indices = new ArrayList<Integer>(Arrays.asList(intArray));
+		Collections.sort(indices, Collections.reverseOrder());
+		for (int i : indices){
+			listOfPlayers.remove(i);
+			
+		}
+
 	}
 
 	@Override
@@ -81,7 +94,7 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 		case R.id.contestant_a:
 			showActionsDialog(contestantPositionA);
 			break;
-			
+
 		case R.id.contestant_b:
 			showActionsDialog(contestantPositionB);
 			break;
@@ -89,18 +102,21 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 		default:
 			break;
 		}
-		
+
 	}
 
 	private void showActionsDialog(int position) {
 		listener.showActionsDialog(position);
-		
+
 	}
 
 	public void setData(List<Player> listOfPlayers) {
 		// Set any kind of data that i would like to handle.
-		this.listOfPlayers = listOfPlayers;
-		
+		this.listOfPlayers = new ArrayList<Player>();
+		this.listOfPlayers.addAll(listOfPlayers);
+		long seed = System.nanoTime();
+		Collections.shuffle(listOfPlayers, new Random(seed));
+
 	}
 
 }

@@ -60,7 +60,7 @@ public class RotationAdapter extends BaseAdapter {
 
 		holder.playerName.setText(player.getName());
 		holder.playerWins.setText(activity.getResources().getString(R.string.adapter_player_wins) + player.getWins());
-		holder.playerLosses.setText(activity.getResources().getString(R.string.adapter_player_wins) + player.getLosses());
+		holder.playerLosses.setText(activity.getResources().getString(R.string.adapter_player_losses) + player.getLosses());
 
 		return convertView;
 	}
