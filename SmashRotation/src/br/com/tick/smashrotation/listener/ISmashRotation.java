@@ -7,6 +7,6 @@ import br.com.tick.smashrotation.domain.Player;
 public interface ISmashRotation {
 	
 	void showRotationScreen(List<Player> listOfPlayers);
-	void showActionsDialog(int position);
+	void showActionsDialog();
 
 }

@@ -8,6 +8,7 @@ import java.util.Random;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -16,6 +17,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import br.com.tick.smashrotation.R;
+import br.com.tick.smashrotation.bo.SmashRotationBO;
 import br.com.tick.smashrotation.domain.Player;
 import br.com.tick.smashrotation.fragment.adapter.RotationAdapter;
 import br.com.tick.smashrotation.listener.ISmashRotation;
@@ -24,8 +26,6 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 
 	private transient TextView contestantA;
 	private transient TextView contestantB;
-	private transient int contestantPositionA;
-	private transient int contestantPositionB;
 	private transient RelativeLayout contestantARelative;
 	private transient RelativeLayout contestantBRelative;
 
@@ -76,14 +76,13 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 		contestantA.setText(playerA.getName());
 		playerB = listOfPlayers.get(SECOND_CONTESTANT);
 		contestantB.setText(playerB.getName());
-		
+
 		// Proper way to remove more than one element of lists.
 		Integer[] intArray = new Integer[] { FIRST_CONTESTANT, SECOND_CONTESTANT };
 		List<Integer> indices = new ArrayList<Integer>(Arrays.asList(intArray));
 		Collections.sort(indices, Collections.reverseOrder());
-		for (int i : indices){
+		for (int i : indices) {
 			listOfPlayers.remove(i);
-			
 		}
 
 	}
@@ -92,11 +91,11 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.contestant_a:
-			showActionsDialog(contestantPositionA);
+			showActionsDialog(1);
 			break;
 
 		case R.id.contestant_b:
-			showActionsDialog(contestantPositionB);
+			showActionsDialog(2);
 			break;
 
 		default:
@@ -105,8 +104,17 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 
 	}
 
-	private void showActionsDialog(int position) {
-		listener.showActionsDialog(position);
+	private void showActionsDialog(int player) {
+
+		if (player == 1) {
+			SmashRotationBO.getInstance(getActivity()).setChosenPlayer(playerA);
+		} else if (player == 2) {
+			SmashRotationBO.getInstance(getActivity()).setChosenPlayer(playerB);
+		} else {
+			Log.e("Erro na escolha", "Jogador escolhido inválido");
+		}
+		
+		listener.showActionsDialog();
 
 	}
 

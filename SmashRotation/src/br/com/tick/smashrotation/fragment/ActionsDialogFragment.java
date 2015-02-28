@@ -4,6 +4,7 @@ import java.util.List;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,7 +18,7 @@ import br.com.tick.smashrotation.listener.ISmashRotation;
 public class ActionsDialogFragment extends Fragment implements OnClickListener {
 
 	private transient ISmashRotation listener;
-	private transient int playerPosition;
+	private transient Player player;
 	private transient Button actionWinner;
 	private transient Button actionLoser;
 	private transient Button actionPassed;
@@ -36,7 +37,7 @@ public class ActionsDialogFragment extends Fragment implements OnClickListener {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_actions_dialog, container, false);
-
+		
 		listOfPlayers = SmashRotationBO.getInstance(getActivity()).getListOfPlayers();
 		
 		actionWinner = (Button) rootView.findViewById(R.id.action_winner);
@@ -65,8 +66,9 @@ public class ActionsDialogFragment extends Fragment implements OnClickListener {
 
 	}
 
-	public void setData(int position) {
-		this.playerPosition = position;
+	public void setData(Player player) {
+		this.player = player;
+		Log.e("Player in evidence -->", player.getName());
 	}
 
 }
