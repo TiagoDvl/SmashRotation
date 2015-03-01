@@ -42,10 +42,9 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 	}
 
 	@Override
-	public void showActionsDialog(int position) {
-		// Inflate rotation fragment.
+	public void showActionsDialog() {
 		ActionsDialogFragment fragment = new ActionsDialogFragment();
-		fragment.setData(position);
+		fragment.setData(SmashRotationBO.getInstance(getApplicationContext()).getChosenPlayer());
 		getFragmentManager().beginTransaction().add(R.id.holder_dialog, fragment).addToBackStack(fragment.getClass().toString()).commit();
 
 	}
