@@ -128,20 +128,65 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 
 	}
 
-	public void receiveAction(int action) {
+	public void receiveAction(int action, Player player) {
 		switch (action) {
 		case 0:
-			System.out.println("Action -> " + action +" -> Win");
+			System.out.println("Action -> " + action + " -> Win");
+			if (player.equals(playerA)) {
+				listOfPlayers.add(playerB);
+				playerB = null; // The player B have lost.
+				playerB = listOfPlayers.get(0);
+				listOfPlayers.remove(0);
+				contestantB.setText(playerB.getName());
+				adapter.notifyDataSetChanged();
+			} else {
+				listOfPlayers.add(playerA);
+				playerA = null; // The player A have lost.
+				playerA = listOfPlayers.get(0);
+				listOfPlayers.remove(0);
+				contestantA.setText(playerA.getName());
+				adapter.notifyDataSetChanged();
+			}
 			break;
 		case 1:
-			System.out.println("Action -> " + action +" -> Lose");
+			System.out.println("Action -> " + action + " -> Lose");
+			if (player.equals(playerA)) {
+				listOfPlayers.add(playerA);
+				playerA = null; // The player A have lost.
+				playerA = listOfPlayers.get(0);
+				listOfPlayers.remove(0);
+				contestantA.setText(playerA.getName());
+				adapter.notifyDataSetChanged();
+			} else {
+				listOfPlayers.add(playerB);
+				playerB = null; // The player B have lost.
+				playerB = listOfPlayers.get(0);
+				listOfPlayers.remove(0);
+				contestantB.setText(playerB.getName());
+				adapter.notifyDataSetChanged();
+			}
 			break;
 		case 2:
-			System.out.println("Action -> " + action +" -> Pass");
+			System.out.println("Action -> " + action + " -> Pass");
+			if (player.equals(playerA)) {
+				listOfPlayers.add(playerA);
+				playerA = null; // The player A have passed.
+				playerA = listOfPlayers.get(0);
+				listOfPlayers.remove(0);
+				contestantA.setText(playerA.getName());
+				adapter.notifyDataSetChanged();
+			} else {
+				listOfPlayers.add(playerB);
+				playerB = null; // The player B have passed.
+				playerB = listOfPlayers.get(0);
+				listOfPlayers.remove(0);
+				contestantB.setText(playerB.getName());
+				adapter.notifyDataSetChanged();
+			}
 			break;
 
 		default:
-			System.out.println("Action -> " + action +" -> Default");
+			System.out.println("Action -> " + action + " -> Default");
 			break;
 		}
 

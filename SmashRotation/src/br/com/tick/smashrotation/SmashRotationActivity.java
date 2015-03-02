@@ -55,8 +55,8 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 	}
 
 	@Override
-	public void receiveAction(int action) {
-		startRotationFragment.receiveAction(action);
+	public void receiveAction(int action, Player player) {
+		startRotationFragment.receiveAction(action, player);
 		
 	}
 

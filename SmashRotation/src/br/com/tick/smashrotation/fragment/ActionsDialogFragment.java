@@ -1,7 +1,5 @@
 package br.com.tick.smashrotation.fragment;
 
-import java.util.List;
-
 import android.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,7 +9,6 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import br.com.tick.smashrotation.R;
-import br.com.tick.smashrotation.bo.SmashRotationBO;
 import br.com.tick.smashrotation.domain.Player;
 import br.com.tick.smashrotation.listener.ISmashRotation;
 
@@ -22,11 +19,10 @@ public class ActionsDialogFragment extends Fragment implements OnClickListener {
 	private transient Button actionWinner;
 	private transient Button actionLoser;
 	private transient Button actionPassed;
-	private transient List<Player> listOfPlayers;
 
 	public ActionsDialogFragment() {
 	}
-	
+
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
@@ -37,9 +33,7 @@ public class ActionsDialogFragment extends Fragment implements OnClickListener {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_actions_dialog, container, false);
-		
-		listOfPlayers = SmashRotationBO.getInstance(getActivity()).getListOfPlayers();
-		
+
 		actionWinner = (Button) rootView.findViewById(R.id.action_winner);
 		actionLoser = (Button) rootView.findViewById(R.id.action_loser);
 		actionPassed = (Button) rootView.findViewById(R.id.action_pass);
@@ -55,15 +49,15 @@ public class ActionsDialogFragment extends Fragment implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.action_winner:
-			listener.receiveAction(0);
+			listener.receiveAction(0, player);
 			listener.popBackStack();
-			break;                                      
+			break;
 		case R.id.action_loser:
-			listener.receiveAction(1);
+			listener.receiveAction(1, player);
 			listener.popBackStack();
 			break;
 		case R.id.action_pass:
-			listener.receiveAction(2);
+			listener.receiveAction(2, player);
 			listener.popBackStack();
 			break;
 		default:

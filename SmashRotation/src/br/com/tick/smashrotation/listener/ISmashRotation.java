@@ -8,7 +8,7 @@ public interface ISmashRotation {
 	
 	void showRotationScreen(List<Player> listOfPlayers);
 	void showActionsDialog();
-	void receiveAction(int action);
+	void receiveAction(int action, Player player);
 	void popBackStack();
 
 }
