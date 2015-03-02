@@ -23,7 +23,8 @@
         android:layout_toRightOf="@id/smash_logo"
         android:text="@string/adapter_player_name"
         android:layout_centerVertical="true"
-        android:textColor="@color/light_gray"
+        android:textColor="@color/app_theme_red_light"
+        android:textSize="@dimen/adapter_text_size"
         android:layout_marginLeft="@dimen/adapter_player_name_margin_start" />
 
 </RelativeLayout>
