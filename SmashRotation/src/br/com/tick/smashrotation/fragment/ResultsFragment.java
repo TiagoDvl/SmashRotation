@@ -6,12 +6,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import br.com.tick.smashrotation.R;
+import br.com.tick.smashrotation.domain.Contest;
 import br.com.tick.smashrotation.listener.ISmashRotation;
 
 public class ResultsFragment extends Fragment implements OnClickListener {
 
 	private transient ISmashRotation listener;
+	private transient Contest contest;
+	
+	private transient TextView numberOfGames;
+	private transient TextView bestPlayer;
+	private transient TextView worstPlayer;
 
 	public ResultsFragment() {
 	}
@@ -25,8 +32,16 @@ public class ResultsFragment extends Fragment implements OnClickListener {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.fragment_start_rotation, container, false);
-
+		View rootView = inflater.inflate(R.layout.fragment_result, container, false);
+		
+		numberOfGames = (TextView) rootView.findViewById(R.id.number_of_games);
+		bestPlayer = (TextView) rootView.findViewById(R.id.best_player);
+		worstPlayer = (TextView) rootView.findViewById(R.id.worst_player);
+		
+		numberOfGames.setText(getActivity().getResources().getString(R.string.result_number_of_games)+contest.getNumberOfGames());
+//		bestPlayer.setText(getActivity().getResources().getString(R.string.result_best_player)+contest.getBestPlayer());
+//		worstPlayer.setText(getActivity().getResources().getString(R.string.result_worst_player)+contest.getWorstPlayer());
+		
 		return rootView;
 	}
 
@@ -38,6 +53,11 @@ public class ResultsFragment extends Fragment implements OnClickListener {
 			break;
 		}
 
+	}
+
+	public void setContest(Contest contest) {
+		this.contest = contest;
+		
 	}
 
 }

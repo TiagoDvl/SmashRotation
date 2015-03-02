@@ -10,10 +10,15 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.PopupMenu;
+import android.widget.PopupMenu.OnMenuItemClickListener;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,7 +29,7 @@ import br.com.tick.smashrotation.domain.Player;
 import br.com.tick.smashrotation.fragment.adapter.RotationAdapter;
 import br.com.tick.smashrotation.listener.ISmashRotation;
 
-public class StartRotationFragment extends Fragment implements OnClickListener {
+public class StartRotationFragment extends Fragment implements OnClickListener, OnMenuItemClickListener {
 
 	private transient TextView contestantA;
 	private transient TextView contestantB;
@@ -43,6 +48,8 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 	private transient Player playerB = null;
 
 	private transient Contest contest;
+	private transient ImageView menuPopUp;
+	private transient RelativeLayout menuPopUpHolder;
 
 	public StartRotationFragment() {
 	}
@@ -63,11 +70,18 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 		contestantARelative = (RelativeLayout) rootView.findViewById(R.id.contestant_a);
 		contestantBRelative = (RelativeLayout) rootView.findViewById(R.id.contestant_b);
 		rotation = (ListView) rootView.findViewById(R.id.rotation);
-
-		startRotation();
+		menuPopUp = (ImageView) rootView.findViewById(R.id.top_bar_menu);
+		menuPopUpHolder = (RelativeLayout) rootView.findViewById(R.id.menu_holder);
+		
+		if (playerA == null && playerB == null){
+			// This will be a problem.
+			startRotation();
+		}
 
 		contestantARelative.setOnClickListener(this);
 		contestantBRelative.setOnClickListener(this);
+		menuPopUp.setOnClickListener(this);
+		menuPopUpHolder.setOnClickListener(this);
 
 		adapter = new RotationAdapter(getActivity(), listOfPlayers);
 		rotation.setAdapter(adapter);
@@ -101,7 +115,10 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 		case R.id.contestant_b:
 			showActionsDialog(2);
 			break;
-
+		case R.id.menu_holder:
+		case R.id.top_bar_menu:
+			showMenuPopup(v);
+			break;
 		default:
 			break;
 		}
@@ -250,8 +267,6 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 			break;
 		}
 		
-		System.out.println("Melhor jogador -> "+ contest.getBestPlayer().getName());
-
 	}
 
 	public void setNewContest(Contest contest) {
@@ -269,4 +284,24 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 
 	}
 
+	private void showMenuPopup(final View view) {
+		PopupMenu menu = new PopupMenu(getActivity(), view);
+		menu.setOnMenuItemClickListener(this);
+		MenuInflater inflater = menu.getMenuInflater();
+		inflater.inflate(R.menu.menu_popup, menu.getMenu());
+
+		menu.show();
+	}
+
+	@Override
+	public boolean onMenuItemClick(MenuItem item) {
+		switch (item.getItemId()) {
+		
+		case R.id.finish_contest:
+			listener.showResultFragment(contest);
+			break;
+		
+		}
+		return false;
+	}
 }

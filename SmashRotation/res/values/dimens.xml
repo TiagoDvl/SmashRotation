@@ -24,6 +24,10 @@
     <dimen name="two_contestants_height">200dp</dimen>
     <dimen name="two_contestants_divider">15dp</dimen>
     <dimen name="rotation_margin_top">10dp</dimen>
+    <dimen name="two_contestants_margin_top">10dp</dimen>
+    <dimen name="rotation_menu_margin_right">10dp</dimen>
+    <dimen name="rotation_menu_width">8dp</dimen>
+    <dimen name="rotation_menu_height">30dp</dimen>
 
     <!-- Actions Dialog -->
 
