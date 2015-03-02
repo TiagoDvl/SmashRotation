@@ -22,6 +22,7 @@ public class SmashRotationBO {
 	public static SmashRotationBO getInstance(Context context) {
 		if (instance == null) {
 			instance = new SmashRotationBO(context);
+			instance.generateStaticPlayers();
 		}
 		return instance;
 	}

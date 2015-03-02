@@ -22,6 +22,7 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_smash_rotation);
+		SmashRotationBO.getInstance(getApplicationContext());
 
 		if (savedInstanceState == null) {
 			smashRotationFragment = new SmashRotationFragment();
@@ -29,13 +30,12 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 			getFragmentManager().beginTransaction().replace(R.id.container, smashRotationFragment).commit();
 		}
 
-		SmashRotationBO.getInstance(getApplicationContext());
 		// Proving that the singleton design patters works and its gonna be used
 		// through the application.
-		for (Player player : SmashRotationBO.getInstance(this).generateStaticPlayers()) {
-			System.out.println("Nome -> " + player.getName());
-			System.out.println("Wins -> " + player.getWins() + "\n");
-		}
+//		for (Player player : SmashRotationBO.getInstance(this).generateStaticPlayers()) {
+//			System.out.println("Nome -> " + player.getName());
+//			System.out.println("Wins -> " + player.getWins() + "\n");
+//		}
 	}
 
 	@Override
