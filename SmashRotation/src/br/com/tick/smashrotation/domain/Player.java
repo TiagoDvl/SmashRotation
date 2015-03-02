@@ -1,5 +1,6 @@
 package br.com.tick.smashrotation.domain;
 
+
 public class Player {
 
 	public Player() {

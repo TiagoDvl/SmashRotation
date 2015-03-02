@@ -3,42 +3,43 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    
+
     <!-- Smash Rotation Fragment -->
-    
+
     <dimen name="adapter_player_name_margin_start">5dp</dimen>
     <dimen name="holder_start_rotation_height">50dp</dimen>
     <dimen name="holder_start_rotation_margin_top">5dp</dimen>
     <dimen name="adapter_player_losses_margin_start">50dp</dimen>
-    
     <dimen name="top_bar_holder_height">50dp</dimen>
     <dimen name="top_bar_margin_left">10dp</dimen>
     <dimen name="top_bar_text_size">16sp</dimen>
     <dimen name="insert_player_holder_padding">5dp</dimen>
-    
     <dimen name="insert_player_name_height">45dp</dimen>
-    
     <dimen name="adapter_text_size">18sp</dimen>
     <dimen name="bottom_bar_text_size">16sp</dimen>
-    
+
     <!-- Start Rotation -->
-    
+
     <dimen name="two_contestants_width">120dp</dimen>
     <dimen name="two_contestants_height">200dp</dimen>
     <dimen name="two_contestants_divider">15dp</dimen>
     <dimen name="rotation_margin_top">10dp</dimen>
-    
-    <!-- Actions Dialog	-->
-    
+
+    <!-- Actions Dialog -->
+
     <dimen name="holder_width">280dp</dimen>
     <dimen name="holder_height">180dp</dimen>
-    
-	<dimen name="actions_width">80dp</dimen>
-	<dimen name="actions_height">140dp</dimen>
-	
-	<dimen name="actions_margin_left">10dp</dimen>
-	<dimen name="actions_margin_right">10dp</dimen>
-	
-	<dimen name="actions_center_margin_left">5dp</dimen>
-	<dimen name="actions_center_margin_right">5dp</dimen>
+    <dimen name="actions_width">80dp</dimen>
+    <dimen name="actions_height">140dp</dimen>
+    <dimen name="actions_margin_left">10dp</dimen>
+    <dimen name="actions_margin_right">10dp</dimen>
+    <dimen name="actions_center_margin_left">5dp</dimen>
+    <dimen name="actions_center_margin_right">5dp</dimen>
+
+    <!-- Result Fragment -->
+    <dimen name="result_texts">3dp</dimen>
+    <dimen name="result_texts_size">16sp</dimen>
+    <dimen name="result_texts_margin_top">20dp</dimen>
+    <dimen name="result_share_holder_height">50dp</dimen>
+
 </resources>
