@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
+import br.com.tick.smashrotation.domain.Contest;
 import br.com.tick.smashrotation.domain.Player;
 
 public class SmashRotationBO {
@@ -11,9 +12,11 @@ public class SmashRotationBO {
 	private static SmashRotationBO instance = null;
 	private List<Player> listOfPlayers;
 	private Player chosenPlayer;
+	private Contest contest;
 
 	protected SmashRotationBO(Context context) {
 		listOfPlayers = new ArrayList<Player>();
+		contest = new Contest();
 	}
 
 	public static SmashRotationBO getInstance(Context context) {
@@ -80,4 +83,12 @@ public class SmashRotationBO {
 		this.chosenPlayer = chosenPlayer;
 	}
 
+	public Contest getContest() {
+		return contest;
+	}
+
+	public void setContest(Contest contest) {
+		this.contest = contest;
+	}
+	
 }

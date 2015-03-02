@@ -32,7 +32,7 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 		SmashRotationBO.getInstance(getApplicationContext());
 		// Proving that the singleton design patters works and its gonna be used
 		// through the application.
-		for (Player player : SmashRotationBO.getInstance(getApplicationContext()).generateStaticPlayers()) {
+		for (Player player : SmashRotationBO.getInstance(this).generateStaticPlayers()) {
 			System.out.println("Nome -> " + player.getName());
 			System.out.println("Wins -> " + player.getWins() + "\n");
 		}
@@ -42,14 +42,15 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 	public void showRotationScreen(List<Player> listOfPlayers) {
 		// Inflate rotation fragment.
 		startRotationFragment = new StartRotationFragment();
-		startRotationFragment.setData(listOfPlayers);
+		startRotationFragment.setListOfPlayers(listOfPlayers);
+		startRotationFragment.setNewContest(SmashRotationBO.getInstance(this).getContest());
 		getFragmentManager().beginTransaction().replace(R.id.container, startRotationFragment).addToBackStack(startRotationFragment.getClass().toString()).commit();
 	}
 
 	@Override
 	public void showActionsDialog() {
 		actionsdialogFragment = new ActionsDialogFragment();
-		actionsdialogFragment.setData(SmashRotationBO.getInstance(getApplicationContext()).getChosenPlayer());
+		actionsdialogFragment.setData(SmashRotationBO.getInstance(this).getChosenPlayer());
 		getFragmentManager().beginTransaction().add(R.id.holder_dialog, actionsdialogFragment).addToBackStack(actionsdialogFragment.getClass().toString()).commit();
 
 	}

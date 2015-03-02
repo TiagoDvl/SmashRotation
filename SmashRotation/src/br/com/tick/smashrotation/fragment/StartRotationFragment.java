@@ -16,8 +16,10 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 import br.com.tick.smashrotation.R;
 import br.com.tick.smashrotation.bo.SmashRotationBO;
+import br.com.tick.smashrotation.domain.Contest;
 import br.com.tick.smashrotation.domain.Player;
 import br.com.tick.smashrotation.fragment.adapter.RotationAdapter;
 import br.com.tick.smashrotation.listener.ISmashRotation;
@@ -39,6 +41,8 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 
 	private transient Player playerA = null;
 	private transient Player playerB = null;
+
+	private transient Contest contest;
 
 	public StartRotationFragment() {
 	}
@@ -118,21 +122,34 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 
 	}
 
-	public void setData(List<Player> listOfPlayers) {
-		// Set any kind of data that i would like to handle.
-		this.listOfPlayers = new ArrayList<Player>();
-		this.listOfPlayers.addAll(listOfPlayers);
-		long seed = System.nanoTime();
-		Collections.shuffle(listOfPlayers, new Random(seed));
-		Collections.shuffle(listOfPlayers, new Random(seed));
-
-	}
-
 	public void receiveAction(int action, Player player) {
 		switch (action) {
 		case 0:
-			System.out.println("Action -> " + action + " -> Win");
+			Toast.makeText(getActivity(), "Jogador " + player.getName() + " Ganhou!", Toast.LENGTH_SHORT).show();
 			if (player.equals(playerA)) {
+				// Score change.
+				playerA.setWins(playerA.getWins() + 1);
+				playerB.setLosses(playerB.getLosses() + 1);
+				
+				// Contest changes.
+				contest.setNumberOfGames(contest.getNumberOfGames() + 1);
+				
+				/** This is commented because i did not put loads of efforts on it.
+				 * It is probably wrong or giving false-positives.
+				 * 
+				if (contest.getBestPlayer() == null) {
+					contest.setBestPlayer(playerA);
+				} else {
+					for (Player itPlayer : listOfPlayers) {
+						if (itPlayer.getWins() > contest.getBestPlayer().getWins()){
+							contest.setBestPlayer(itPlayer);
+							System.out.println("FOREACH -> "+ itPlayer.getName());
+						}
+					}
+				}
+				 **/
+				
+				// Rotation Logic.
 				listOfPlayers.add(playerB);
 				playerB = null; // The player B have lost.
 				playerB = listOfPlayers.get(0);
@@ -140,6 +157,17 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 				contestantB.setText(playerB.getName());
 				adapter.notifyDataSetChanged();
 			} else {
+				// Contest changes.
+				contest.setNumberOfGames(contest.getNumberOfGames() + 1);
+
+				// Score change.
+				playerB.setWins(playerA.getWins() + 1);
+				playerA.setLosses(playerA.getLosses() + 1);
+				
+				// Contest changes.
+				contest.setNumberOfGames(contest.getNumberOfGames() + 1);
+
+				// Rotation Logic.
 				listOfPlayers.add(playerA);
 				playerA = null; // The player A have lost.
 				playerA = listOfPlayers.get(0);
@@ -147,10 +175,19 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 				contestantA.setText(playerA.getName());
 				adapter.notifyDataSetChanged();
 			}
+
 			break;
 		case 1:
-			System.out.println("Action -> " + action + " -> Lose");
+			Toast.makeText(getActivity(), "Jogador " + player.getName() + " Perdeu!", Toast.LENGTH_SHORT).show();
 			if (player.equals(playerA)) {
+				// Contest changes.
+				contest.setNumberOfGames(contest.getNumberOfGames() + 1);
+
+				// Score change.
+				playerB.setWins(playerB.getWins() + 1);
+				playerA.setLosses(playerA.getLosses() + 1);
+
+				// Rotation Logic.
 				listOfPlayers.add(playerA);
 				playerA = null; // The player A have lost.
 				playerA = listOfPlayers.get(0);
@@ -158,6 +195,27 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 				contestantA.setText(playerA.getName());
 				adapter.notifyDataSetChanged();
 			} else {
+				// Contest changes.
+				contest.setNumberOfGames(contest.getNumberOfGames() + 1);
+
+				// Score change.
+				playerA.setWins(playerA.getWins() + 1);
+				playerB.setLosses(playerB.getLosses() + 1);
+				
+				// Contest changes.
+				contest.setNumberOfGames(contest.getNumberOfGames() + 1);
+
+				if (contest.getBestPlayer() == null) {
+					contest.setBestPlayer(playerA);
+				} else {
+					for (Player itPlayer : listOfPlayers) {
+						if (itPlayer.getWins() > contest.getBestPlayer().getWins()){
+							contest.setBestPlayer(itPlayer);
+						}
+					}
+				}
+
+				// Rotation Logic.
 				listOfPlayers.add(playerB);
 				playerB = null; // The player B have lost.
 				playerB = listOfPlayers.get(0);
@@ -167,8 +225,9 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 			}
 			break;
 		case 2:
-			System.out.println("Action -> " + action + " -> Pass");
+			Toast.makeText(getActivity(), "Jogador " + player.getName() + " Passou!", Toast.LENGTH_SHORT).show();
 			if (player.equals(playerA)) {
+				// Rotation Logic.
 				listOfPlayers.add(playerA);
 				playerA = null; // The player A have passed.
 				playerA = listOfPlayers.get(0);
@@ -176,6 +235,7 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 				contestantA.setText(playerA.getName());
 				adapter.notifyDataSetChanged();
 			} else {
+				// Rotation Logic.
 				listOfPlayers.add(playerB);
 				playerB = null; // The player B have passed.
 				playerB = listOfPlayers.get(0);
@@ -189,6 +249,23 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 			System.out.println("Action -> " + action + " -> Default");
 			break;
 		}
+		
+		System.out.println("Melhor jogador -> "+ contest.getBestPlayer().getName());
+
+	}
+
+	public void setNewContest(Contest contest) {
+		this.contest = contest;
+
+	}
+
+	public void setListOfPlayers(List<Player> listOfPlayers) {
+		// Set any kind of data that i would like to handle.
+		this.listOfPlayers = new ArrayList<Player>();
+		this.listOfPlayers.addAll(listOfPlayers);
+		long seed = System.nanoTime();
+		Collections.shuffle(listOfPlayers, new Random(seed));
+		Collections.shuffle(listOfPlayers, new Random(seed));
 
 	}
 
