@@ -12,6 +12,11 @@ import br.com.tick.smashrotation.fragment.StartRotationFragment;
 import br.com.tick.smashrotation.listener.ISmashRotation;
 
 public class SmashRotationActivity extends Activity implements ISmashRotation {
+	
+	// Put them in order to understand the app flow.
+	private SmashRotationFragment smashRotationFragment;
+	private StartRotationFragment startRotationFragment;
+	private ActionsDialogFragment actionsdialogFragment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +24,9 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 		setContentView(R.layout.activity_smash_rotation);
 
 		if (savedInstanceState == null) {
-			SmashRotationFragment fragment = new SmashRotationFragment();
-			fragment.setData();
-			getFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
+			smashRotationFragment = new SmashRotationFragment();
+			smashRotationFragment.setData();
+			getFragmentManager().beginTransaction().replace(R.id.container, smashRotationFragment).commit();
 		}
 
 		SmashRotationBO.getInstance(getApplicationContext());
@@ -36,17 +41,29 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 	@Override
 	public void showRotationScreen(List<Player> listOfPlayers) {
 		// Inflate rotation fragment.
-		StartRotationFragment fragment = new StartRotationFragment();
-		fragment.setData(listOfPlayers);
-		getFragmentManager().beginTransaction().replace(R.id.container, fragment).addToBackStack(fragment.getClass().toString()).commit();
+		startRotationFragment = new StartRotationFragment();
+		startRotationFragment.setData(listOfPlayers);
+		getFragmentManager().beginTransaction().replace(R.id.container, startRotationFragment).addToBackStack(startRotationFragment.getClass().toString()).commit();
 	}
 
 	@Override
 	public void showActionsDialog() {
-		ActionsDialogFragment fragment = new ActionsDialogFragment();
-		fragment.setData(SmashRotationBO.getInstance(getApplicationContext()).getChosenPlayer());
-		getFragmentManager().beginTransaction().add(R.id.holder_dialog, fragment).addToBackStack(fragment.getClass().toString()).commit();
+		actionsdialogFragment = new ActionsDialogFragment();
+		actionsdialogFragment.setData(SmashRotationBO.getInstance(getApplicationContext()).getChosenPlayer());
+		getFragmentManager().beginTransaction().add(R.id.holder_dialog, actionsdialogFragment).addToBackStack(actionsdialogFragment.getClass().toString()).commit();
 
+	}
+
+	@Override
+	public void receiveAction(int action) {
+		startRotationFragment.receiveAction(action);
+		
+	}
+
+	@Override
+	public void popBackStack() {
+		getFragmentManager().popBackStack();
+		
 	}
 
 }

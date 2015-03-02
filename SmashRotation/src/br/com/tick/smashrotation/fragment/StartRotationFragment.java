@@ -113,7 +113,7 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 		} else {
 			Log.e("Erro na escolha", "Jogador escolhido inválido");
 		}
-		
+
 		listener.showActionsDialog();
 
 	}
@@ -124,6 +124,26 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 		this.listOfPlayers.addAll(listOfPlayers);
 		long seed = System.nanoTime();
 		Collections.shuffle(listOfPlayers, new Random(seed));
+		Collections.shuffle(listOfPlayers, new Random(seed));
+
+	}
+
+	public void receiveAction(int action) {
+		switch (action) {
+		case 0:
+			System.out.println("Action -> " + action +" -> Win");
+			break;
+		case 1:
+			System.out.println("Action -> " + action +" -> Lose");
+			break;
+		case 2:
+			System.out.println("Action -> " + action +" -> Pass");
+			break;
+
+		default:
+			System.out.println("Action -> " + action +" -> Default");
+			break;
+		}
 
 	}
 

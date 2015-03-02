@@ -26,7 +26,7 @@ public class ActionsDialogFragment extends Fragment implements OnClickListener {
 
 	public ActionsDialogFragment() {
 	}
-
+	
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
@@ -55,10 +55,16 @@ public class ActionsDialogFragment extends Fragment implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.action_winner:
+			listener.receiveAction(0);
+			listener.popBackStack();
 			break;                                      
 		case R.id.action_loser:
+			listener.receiveAction(1);
+			listener.popBackStack();
 			break;
 		case R.id.action_pass:
+			listener.receiveAction(2);
+			listener.popBackStack();
 			break;
 		default:
 			break;
