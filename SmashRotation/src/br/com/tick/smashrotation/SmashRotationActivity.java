@@ -5,8 +5,10 @@ import java.util.List;
 import android.app.Activity;
 import android.os.Bundle;
 import br.com.tick.smashrotation.bo.SmashRotationBO;
+import br.com.tick.smashrotation.domain.Contest;
 import br.com.tick.smashrotation.domain.Player;
 import br.com.tick.smashrotation.fragment.ActionsDialogFragment;
+import br.com.tick.smashrotation.fragment.ResultsFragment;
 import br.com.tick.smashrotation.fragment.SmashRotationFragment;
 import br.com.tick.smashrotation.fragment.StartRotationFragment;
 import br.com.tick.smashrotation.listener.ISmashRotation;
@@ -17,6 +19,7 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 	private SmashRotationFragment smashRotationFragment;
 	private StartRotationFragment startRotationFragment;
 	private ActionsDialogFragment actionsdialogFragment;
+	private ResultsFragment resultsFragment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +67,14 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 	@Override
 	public void popBackStack() {
 		getFragmentManager().popBackStack();
+		
+	}
+
+	@Override
+	public void showResultFragment(Contest contest) {
+		resultsFragment = new ResultsFragment();
+		resultsFragment.setContest(contest);
+		getFragmentManager().beginTransaction().replace(R.id.container, resultsFragment).addToBackStack(resultsFragment.getClass().toString()).commit();
 		
 	}
 

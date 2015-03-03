@@ -2,6 +2,7 @@ package br.com.tick.smashrotation.listener;
 
 import java.util.List;
 
+import br.com.tick.smashrotation.domain.Contest;
 import br.com.tick.smashrotation.domain.Player;
 
 public interface ISmashRotation {
@@ -9,6 +10,7 @@ public interface ISmashRotation {
 	void showRotationScreen(List<Player> listOfPlayers);
 	void showActionsDialog();
 	void receiveAction(int action, Player player);
+	void showResultFragment(Contest contest);
 	void popBackStack();
 
 }
