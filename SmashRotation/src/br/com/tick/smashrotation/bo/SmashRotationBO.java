@@ -22,51 +22,10 @@ public class SmashRotationBO {
 	public static SmashRotationBO getInstance(Context context) {
 		if (instance == null) {
 			instance = new SmashRotationBO(context);
-			instance.generateStaticPlayers();
 		}
 		return instance;
 	}
 
-	public List<Player> generateStaticPlayers() {
-		Player currentPlayer = new Player();
-
-		currentPlayer.setName("Tikun");
-		currentPlayer.setWins(10);
-		currentPlayer.setLosses(5);
-		getListOfPlayers().add(currentPlayer);
-
-		currentPlayer = new Player();
-		currentPlayer.setName("nRick");
-		currentPlayer.setWins(1);
-		currentPlayer.setLosses(5000);
-		getListOfPlayers().add(currentPlayer);
-
-		currentPlayer = new Player();
-		currentPlayer.setName("Lucas");
-		currentPlayer.setWins(50);
-		currentPlayer.setLosses(10);
-		getListOfPlayers().add(currentPlayer);
-
-		currentPlayer = new Player();
-		currentPlayer.setName("Fabio");
-		currentPlayer.setWins(20);
-		currentPlayer.setLosses(10);
-		getListOfPlayers().add(currentPlayer);
-
-		currentPlayer = new Player();
-		currentPlayer.setName("Ramon");
-		currentPlayer.setWins(10);
-		currentPlayer.setLosses(2);
-		getListOfPlayers().add(currentPlayer);
-
-		currentPlayer = new Player();
-		currentPlayer.setName("Rendom");
-		currentPlayer.setWins(0);
-		currentPlayer.setLosses(2);
-		getListOfPlayers().add(currentPlayer);
-
-		return getListOfPlayers();
-	}
 
 	public List<Player> getListOfPlayers() {
 		return listOfPlayers;

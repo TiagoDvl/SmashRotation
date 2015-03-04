@@ -1,16 +1,23 @@
 package br.com.tick.smashrotation.domain;
 
+import java.io.Serializable;
 
-public class Player {
+
+public class Player implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3308386274455299289L;
 
 	public Player() {
 		// Construct something inside.
 	}
 
-	private int id;
+	private Integer id;
 	private String name;
-	private int wins = 0;
-	private int losses = 0;
+	private Integer wins = 0;
+	private Integer losses = 0;
 
 	public String getName() {
 		return name;
@@ -20,11 +27,11 @@ public class Player {
 		this.name = name;
 	}
 
-	public int getWins() {
+	public Integer getWins() {
 		return wins;
 	}
 
-	public void setWins(int wins) {
+	public void setWins(Integer wins) {
 		this.wins = wins;
 	}
 
@@ -32,15 +39,15 @@ public class Player {
 		return losses;
 	}
 
-	public void setLosses(int losses) {
+	public void setLosses(Integer losses) {
 		this.losses = losses;
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
