@@ -9,23 +9,25 @@ import java.io.ObjectOutputStream;
 
 public class Serialization {
 	
+	private static String FILE_NAME = "SMASH_ROTATION";
+	
 	public Serialization() {
 		// TODO Auto-generated constructor stub
 	}
 	
 	
 	// Serialize!
-	public static ObjectOutputStream createDataOutputStream(final String fileName, final String folderPath) throws IOException {
+	public static ObjectOutputStream createDataOutputStream(final String folderPath) throws IOException {
 
 		ObjectOutputStream saver = null;
 
 		try {
 
-			final File folder = new File(folderPath);
+			final File file = new File(folderPath);
 
-			if (folder.exists() || folder.mkdirs()) {
+			if (file.exists() || file.mkdirs()) {
 
-				saver = new ObjectOutputStream(new FileOutputStream(new File(folder, fileName)));
+				saver = new ObjectOutputStream(new FileOutputStream(new File(file, FILE_NAME)));
 			}
 
 		} catch (IOException e) {
@@ -36,7 +38,7 @@ public class Serialization {
 	}
 	
 	// Unserialize!
-	public static ObjectInputStream createDataInputStream(final String fileName, final String folderPath) throws IOException {
+	public static ObjectInputStream createDataInputStream(final String folderPath) throws IOException {
 
 		ObjectInputStream  loader = null;
 
@@ -46,7 +48,7 @@ public class Serialization {
 
 			if (folder.exists() || folder.mkdirs()) {
 
-				final File dataFile = new File(folder, fileName);
+				final File dataFile = new File(folder, FILE_NAME);
 
 				if(dataFile.exists()) {
 					loader = new ObjectInputStream(new FileInputStream(dataFile));
