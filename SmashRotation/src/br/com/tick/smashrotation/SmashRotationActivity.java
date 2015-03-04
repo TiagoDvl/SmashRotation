@@ -1,5 +1,6 @@
 package br.com.tick.smashrotation;
 
+import java.io.IOException;
 import java.util.List;
 
 import android.app.Activity;
@@ -12,6 +13,7 @@ import br.com.tick.smashrotation.fragment.ResultsFragment;
 import br.com.tick.smashrotation.fragment.SmashRotationFragment;
 import br.com.tick.smashrotation.fragment.StartRotationFragment;
 import br.com.tick.smashrotation.listener.ISmashRotation;
+import br.com.tick.smashrotation.persistence.Serialization;
 
 public class SmashRotationActivity extends Activity implements ISmashRotation {
 	
@@ -76,6 +78,19 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 		resultsFragment.setContest(contest);
 		getFragmentManager().beginTransaction().replace(R.id.container, resultsFragment).addToBackStack(resultsFragment.getClass().toString()).commit();
 		
+	}
+	
+	@Override
+	protected void onDestroy() {
+		try {
+			Serialization.createDataInputStream(getApplication().getFilesDir().getPath());
+			System.out.println("Salvou!");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		super.onDestroy();
 	}
 
 }
