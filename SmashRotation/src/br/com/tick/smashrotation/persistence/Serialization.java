@@ -36,7 +36,7 @@ public class Serialization {
 		return saver;
 	}
 	
-	// Unserialize!
+	// Deserialize!
 	public static ObjectInputStream createDataInputStream(final String folderPath) throws IOException {
 
 		ObjectInputStream  loader = null;
@@ -61,39 +61,4 @@ public class Serialization {
 		return loader;
 	}
 	
-	/*
-	public static boolean persistData(final List<Category> data) throws IOException {
-
-		boolean saved = false;
-
-		synchronized (SYNC_OBJECT) {
-
-			ObjectOutputStream objectOutputStream = Serialization.createDataOutputStream(Serialization.getFileName(data.get(0)), Serialization.getFolderPath());
-			if (objectOutputStream != null) {
-				final ObjectOutputStream saver = Serialization.createDataOutputStream(Serialization.getFileName(data.get(0)), Serialization.getFolderPath());
-
-				try {
-					if (saver != null) {
-						saver.writeObject(data);
-						saved = true;
-					} else {
-						WrapperLog.error("Could not save on persistData. Saved = false", RssReaderDAO.class, "http://pastie.org/10000155persistData");
-						saved = false;
-					}
-				} catch (IOException e) {
-					saved = false;
-				} finally {
-					if (saver != null) {
-						saver.close();
-					}
-				}
-				objectOutputStream.close();
-				return saved;
-			} else {
-				return saved;
-			}
-		}
-	}
-	*/
-
 }
