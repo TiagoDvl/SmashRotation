@@ -1,6 +1,7 @@
 package br.com.tick.smashrotation;
 
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.List;
 
 import android.app.Activity;
@@ -83,7 +84,8 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 	@Override
 	protected void onDestroy() {
 		try {
-			Serialization.createDataInputStream(getApplication().getFilesDir().getPath());
+			ObjectOutputStream objectOutputStream = Serialization.createDataOutputStream(getApplication().getFilesDir().getPath());
+			objectOutputStream.writeObject(SmashRotationBO.getInstance(getApplicationContext()).getListOfPlayers());
 			System.out.println("Salvou!");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

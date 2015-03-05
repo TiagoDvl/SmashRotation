@@ -1,5 +1,6 @@
 package br.com.tick.smashrotation.fragment;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Fragment;
@@ -19,9 +20,10 @@ import br.com.tick.smashrotation.R;
 import br.com.tick.smashrotation.bo.SmashRotationBO;
 import br.com.tick.smashrotation.domain.Player;
 import br.com.tick.smashrotation.fragment.adapter.PlayersAdapter;
+import br.com.tick.smashrotation.listener.IChoseYou;
 import br.com.tick.smashrotation.listener.ISmashRotation;
 
-public class SmashRotationFragment extends Fragment implements OnClickListener {
+public class SmashRotationFragment extends Fragment implements OnClickListener, IChoseYou {
 
 	private transient ListView listOfPlayers;
 	private transient EditText insertPlayerName;
@@ -31,6 +33,7 @@ public class SmashRotationFragment extends Fragment implements OnClickListener {
 	private transient PlayersAdapter playersAdapter;
 	private transient RelativeLayout startRotation;
 	private transient ISmashRotation listener;
+	private transient List<Player> chosenPlayers;
 	
 	private static String EMPTY_STRING = "";
 
@@ -41,6 +44,7 @@ public class SmashRotationFragment extends Fragment implements OnClickListener {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_smash_rotation, container, false);
 		instance = SmashRotationBO.getInstance(getActivity());
+		chosenPlayers = new ArrayList<Player>();
 
 		mgr = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
 		listOfPlayers = (ListView) rootView.findViewById(R.id.list_of_players);
@@ -48,7 +52,7 @@ public class SmashRotationFragment extends Fragment implements OnClickListener {
 		insertPlayerNameButton = (Button) rootView.findViewById(R.id.insert_player_name_button);
 		startRotation = (RelativeLayout) rootView.findViewById(R.id.holder_start_rotation);
 
-		playersAdapter = new PlayersAdapter(getActivity(), instance.getListOfPlayers());
+		playersAdapter = new PlayersAdapter(getActivity(), instance.getListOfPlayers(), this);
 		listOfPlayers.setAdapter(playersAdapter);
 		insertPlayerNameButton.setOnClickListener(this);
 		startRotation.setOnClickListener(this);
@@ -79,7 +83,11 @@ public class SmashRotationFragment extends Fragment implements OnClickListener {
 			break;
 			
 		case R.id.holder_start_rotation:
-			showStartRotationScreen(instance.getListOfPlayers());
+			if (chosenPlayers.size() > 2) {
+				showStartRotationScreen(chosenPlayers);
+			} else {
+				Toast.makeText(getActivity(), R.string.not_enough, Toast.LENGTH_SHORT).show();
+			}
 			break;
 
 		default:
@@ -110,6 +118,18 @@ public class SmashRotationFragment extends Fragment implements OnClickListener {
 
 	public void setData() {
 		// Set any kind of data that i would like to handle.
+		
+	}
+
+	@Override
+	public void updateChosenPlayers(Player player, boolean isChecked) {
+		
+		if (isChecked){
+			chosenPlayers.add(player);
+		} else {
+			// Is this going to work?
+			chosenPlayers.remove(player);
+		}
 		
 	}
 }

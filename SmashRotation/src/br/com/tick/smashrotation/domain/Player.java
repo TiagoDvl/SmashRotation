@@ -14,7 +14,7 @@ public class Player implements Serializable {
 		// Construct something inside.
 	}
 
-	private Integer id;
+	private Integer id = 0;
 	private String name;
 	private Integer wins = 0;
 	private Integer losses = 0;

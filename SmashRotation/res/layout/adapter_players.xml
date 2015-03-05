@@ -9,22 +9,21 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.com.tick.smashrotation.SmashRotationActivity$PlaceholderFragment" >
 
-    <ImageView
-        android:id="@+id/smash_logo"
-        android:layout_width="70dp"
-        android:layout_height="49dp"
-        android:contentDescription="@null"
-        android:background="@drawable/smash_vector" />
-
     <TextView
         android:id="@+id/list_of_players_names"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/smash_logo"
         android:text="@string/adapter_player_name"
         android:layout_centerVertical="true"
         android:textColor="@color/app_theme_red_light"
         android:textSize="@dimen/adapter_text_size"
         android:layout_marginLeft="@dimen/adapter_player_name_margin_start" />
+    
+    <CheckBox
+        android:id="@+id/chosen_player"
+        android:layout_width="63dp"
+        android:layout_height="48dp"
+        android:button="@drawable/character_selector"
+        android:layout_alignParentRight="true" />
 
 </RelativeLayout>
