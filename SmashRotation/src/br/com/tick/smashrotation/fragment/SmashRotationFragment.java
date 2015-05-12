@@ -123,6 +123,7 @@ public class SmashRotationFragment extends Fragment implements OnClickListener, 
 
 	@Override
 	public void updateChosenPlayers(Player player, boolean isChecked) {
+		player.setSelected(isChecked);
 		
 		if (isChecked){
 			chosenPlayers.add(player);
@@ -131,5 +132,14 @@ public class SmashRotationFragment extends Fragment implements OnClickListener, 
 			chosenPlayers.remove(player);
 		}
 		
+	}
+	
+	@Override
+	public void onResume() {
+		for (Player player : SmashRotationBO.getInstance(getActivity()).getListOfPlayers()) {
+			player.setSelected(false);
+		}
+		
+		super.onResume();
 	}
 }

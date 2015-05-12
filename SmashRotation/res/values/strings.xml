@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Smash Rotation</string>
+    <string name="app_name">Rotation</string>
     <string name="app_name_rotation">Rotation</string>
     <string name="app_name_results">Results</string>
 
@@ -27,6 +27,7 @@
     <string name="result_number_of_games">Number of Games: </string>
     <string name="result_best_player">Best Player: </string>
     <string name="result_worst_player">Worst Player: </string>
+    <string name="result_location">Location: </string>
 
     <!-- Start Rotation Fragment -->
     

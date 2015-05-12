@@ -2,7 +2,6 @@ package br.com.tick.smashrotation.domain;
 
 import java.io.Serializable;
 
-
 public class Player implements Serializable {
 
 	/**
@@ -18,6 +17,7 @@ public class Player implements Serializable {
 	private String name;
 	private Integer wins = 0;
 	private Integer losses = 0;
+	private boolean selected = false;
 
 	public String getName() {
 		return name;
@@ -49,6 +49,14 @@ public class Player implements Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public Boolean getSelected() {
+		return selected;
+	}
+
+	public void setSelected(Boolean selected) {
+		this.selected = selected;
 	}
 
 }

@@ -91,30 +91,31 @@ public final class R {
         public static final int best_player=0x7f09000e;
         public static final int chosen_player=0x7f090002;
         public static final int container=0x7f090000;
-        public static final int contestant_a=0x7f090019;
-        public static final int contestant_a_name=0x7f09001a;
-        public static final int contestant_b=0x7f09001b;
-        public static final int contestant_b_name=0x7f09001c;
-        public static final int finish_contest=0x7f09001f;
+        public static final int contestant_a=0x7f09001a;
+        public static final int contestant_a_name=0x7f09001b;
+        public static final int contestant_b=0x7f09001c;
+        public static final int contestant_b_name=0x7f09001d;
+        public static final int finish_contest=0x7f090020;
         public static final int holder_contest_information=0x7f09000c;
-        public static final int holder_dialog=0x7f09001e;
-        public static final int holder_start_rotation=0x7f090013;
-        public static final int insert_player_holder=0x7f090010;
-        public static final int insert_player_name=0x7f090011;
-        public static final int insert_player_name_button=0x7f090012;
-        public static final int list_of_players=0x7f090015;
+        public static final int holder_dialog=0x7f09001f;
+        public static final int holder_start_rotation=0x7f090014;
+        public static final int insert_player_holder=0x7f090011;
+        public static final int insert_player_name=0x7f090012;
+        public static final int insert_player_name_button=0x7f090013;
+        public static final int list_of_players=0x7f090016;
         public static final int list_of_players_losses=0x7f090005;
         public static final int list_of_players_names=0x7f090001;
         public static final int list_of_players_wins=0x7f090004;
-        public static final int menu_holder=0x7f090016;
+        public static final int location=0x7f090010;
+        public static final int menu_holder=0x7f090017;
         public static final int number_of_games=0x7f09000d;
-        public static final int rotation=0x7f09001d;
+        public static final int rotation=0x7f09001e;
         public static final int smash_logo=0x7f090003;
-        public static final int start_rotation_text=0x7f090014;
+        public static final int start_rotation_text=0x7f090015;
         public static final int top_bar_app_name=0x7f09000b;
         public static final int top_bar_holder=0x7f09000a;
-        public static final int top_bar_menu=0x7f090017;
-        public static final int two_contestants_holder=0x7f090018;
+        public static final int top_bar_menu=0x7f090018;
+        public static final int two_contestants_holder=0x7f090019;
         public static final int worst_player=0x7f09000f;
     }
     public static final class layout {
@@ -144,13 +145,14 @@ public final class R {
         public static final int error_insert_player_name=0x7f060008;
         /**  Start Rotation Fragment 
          */
-        public static final int finish_contest=0x7f060012;
+        public static final int finish_contest=0x7f060013;
         /**  Smash Rotation Fragment 
          */
         public static final int insert_player_name=0x7f060003;
         public static final int insert_player_name_button=0x7f060004;
         public static final int not_enough=0x7f06000b;
         public static final int result_best_player=0x7f060010;
+        public static final int result_location=0x7f060012;
         /**  Results Fragment 
          */
         public static final int result_number_of_games=0x7f06000f;

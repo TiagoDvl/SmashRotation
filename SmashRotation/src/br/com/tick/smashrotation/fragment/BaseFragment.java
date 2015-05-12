@@ -7,11 +7,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import br.com.tick.smashrotation.R;
-import br.com.tick.smashrotation.listener.ISmashRotation;
 
 public class BaseFragment extends Fragment implements OnClickListener {
 
-	private transient ISmashRotation listener;
+//	private transient ISmashRotation listener;
 
 	public BaseFragment() {
 	}
@@ -20,7 +19,7 @@ public class BaseFragment extends Fragment implements OnClickListener {
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 
-		this.listener = (ISmashRotation) getActivity();
+//		this.listener = (ISmashRotation) getActivity();
 	}
 
 	@Override

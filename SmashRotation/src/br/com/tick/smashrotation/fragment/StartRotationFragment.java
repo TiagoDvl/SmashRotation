@@ -7,6 +7,10 @@ import java.util.List;
 import java.util.Random;
 
 import android.app.Fragment;
+import android.content.Context;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -28,6 +32,7 @@ import br.com.tick.smashrotation.domain.Contest;
 import br.com.tick.smashrotation.domain.Player;
 import br.com.tick.smashrotation.fragment.adapter.RotationAdapter;
 import br.com.tick.smashrotation.listener.ISmashRotation;
+import br.com.tick.smashrotation.task.LocationTask;
 
 public class StartRotationFragment extends Fragment implements OnClickListener, OnMenuItemClickListener {
 
@@ -76,6 +81,9 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 		if (playerA == null && playerB == null){
 			// This will be a problem.
 			startRotation();
+		}else {
+			contestantA.setText(playerA.getName());
+			contestantB.setText(playerB.getName());
 		}
 
 		contestantARelative.setOnClickListener(this);
@@ -132,7 +140,7 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 		} else if (player == 2) {
 			SmashRotationBO.getInstance(getActivity()).setChosenPlayer(playerB);
 		} else {
-			Log.e("Erro na escolha", "Jogador escolhido inválido");
+			Log.e("Erro na escolha", "Jogador escolhido invï¿½lido");
 		}
 
 		listener.showActionsDialog();
@@ -263,7 +271,6 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 			break;
 
 		default:
-			System.out.println("Action -> " + action + " -> Default");
 			break;
 		}
 		
@@ -298,7 +305,33 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 		switch (item.getItemId()) {
 		
 		case R.id.finish_contest:
-			listener.showResultFragment(contest);
+			int contWins = 0;
+			for (Player player : listOfPlayers) {
+				if (player.getWins() > contWins){
+					contWins = player.getWins();
+					contest.setBestPlayer(player);
+				}
+			}
+			
+			contWins = 0;
+			
+			for (Player player : listOfPlayers) {
+				if (player.getLosses() > contWins){
+					contWins = player.getLosses();
+					contest.setWorstPlayer(player);
+				}
+			}
+			
+			LocationManager lm = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+			Criteria criteria = new Criteria();
+			String bestProvider = lm.getBestProvider(criteria, false);
+			Location location = lm.getLastKnownLocation(bestProvider);
+			LocationTask task = new LocationTask(location, getActivity(), listener, contest);
+			
+			task.execute();
+			
+			contest.setLocation(null);
+			
 			break;
 		
 		}

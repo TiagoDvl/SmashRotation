@@ -5,15 +5,13 @@ import java.util.List;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.TextView;
 import br.com.tick.smashrotation.R;
 import br.com.tick.smashrotation.domain.Player;
-import br.com.tick.smashrotation.fragment.SmashRotationFragment;
 import br.com.tick.smashrotation.listener.IChoseYou;
 
 public class PlayersAdapter extends BaseAdapter {
@@ -22,11 +20,13 @@ public class PlayersAdapter extends BaseAdapter {
 	private transient List<Player> listOfPlayers;
 	private transient LayoutInflater inflater;
 	private transient IChoseYou listener;
+	private transient boolean[] checkBoxState;
 
 	public PlayersAdapter(Context context, List<Player> listOfPlayers, IChoseYou listener) {
 
 		this.activity = context;
 		this.listOfPlayers = listOfPlayers;
+		checkBoxState = new boolean[listOfPlayers.size()];
 		this.listener = listener;
 		this.inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -44,11 +44,11 @@ public class PlayersAdapter extends BaseAdapter {
 
 	@Override
 	public long getItemId(int position) {
-		return listOfPlayers.get(position).getId();
+		return position;
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
+	public View getView(final int position, View convertView, ViewGroup parent) {
 		ViewHolder holder = null;
 		final Player player = getItem(position);
 
@@ -57,22 +57,24 @@ public class PlayersAdapter extends BaseAdapter {
 			convertView = inflater.inflate(R.layout.adapter_players, ((ViewGroup) null));
 			holder.playerName = (TextView) convertView.findViewById(R.id.list_of_players_names);
 			holder.checkBoxChoosePlayer = (CheckBox) convertView.findViewById(R.id.chosen_player);
-			
 			convertView.setTag(holder);
+
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-		
-		
+
 		holder.playerName.setText(player.getName());
-		holder.checkBoxChoosePlayer.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-			
+		holder.checkBoxChoosePlayer.setChecked(player.getSelected());
+		holder.checkBoxChoosePlayer.setOnClickListener(new OnClickListener() {
+
 			@Override
-			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				listener.updateChosenPlayers(player, isChecked);
-				
+			public void onClick(View v) {
+				checkBoxState[position] = ((CheckBox) v).isChecked();
+				listOfPlayers.get(position).setSelected(((CheckBox) v).isChecked());
+				listener.updateChosenPlayers(player, ((CheckBox) v).isChecked());
 			}
 		});
+
 		return convertView;
 	}
 
@@ -80,5 +82,4 @@ public class PlayersAdapter extends BaseAdapter {
 		TextView playerName;
 		CheckBox checkBoxChoosePlayer;
 	}
-
 }

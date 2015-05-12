@@ -12,5 +12,6 @@ public interface ISmashRotation {
 	void receiveAction(int action, Player player);
 	void showResultFragment(Contest contest);
 	void popBackStack();
+	void populateWithAddress(String location);
 
 }

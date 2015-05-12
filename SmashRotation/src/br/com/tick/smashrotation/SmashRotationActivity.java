@@ -95,4 +95,10 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 		super.onDestroy();
 	}
 
+	@Override
+	public void populateWithAddress(String location) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
