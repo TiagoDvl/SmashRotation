@@ -18,6 +18,7 @@ public class Player implements Serializable {
 	private Integer wins = 0;
 	private Integer losses = 0;
 	private boolean selected = false;
+	private boolean mvp = false;
 
 	public String getName() {
 		return name;
@@ -59,4 +60,12 @@ public class Player implements Serializable {
 		this.selected = selected;
 	}
 
+	public boolean isMvp() {
+		return mvp;
+	}
+
+	public void setMvp(boolean mvp) {
+		this.mvp = mvp;
+	}
+	
 }

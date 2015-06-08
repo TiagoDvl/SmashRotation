@@ -55,6 +55,7 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 	private transient Contest contest;
 	private transient ImageView menuPopUp;
 	private transient RelativeLayout menuPopUpHolder;
+	private transient int wins;
 
 	public StartRotationFragment() {
 	}
@@ -180,7 +181,6 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 				playerB = listOfPlayers.get(0);
 				listOfPlayers.remove(0);
 				contestantB.setText(playerB.getName());
-				adapter.notifyDataSetChanged();
 			} else {
 				// Contest changes.
 				contest.setNumberOfGames(contest.getNumberOfGames() + 1);
@@ -198,8 +198,10 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 				playerA = listOfPlayers.get(0);
 				listOfPlayers.remove(0);
 				contestantA.setText(playerA.getName());
-				adapter.notifyDataSetChanged();
 			}
+			
+			giveThisManACrown();
+			adapter.notifyDataSetChanged();
 
 			break;
 		case 1:
@@ -218,7 +220,6 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 				playerA = listOfPlayers.get(0);
 				listOfPlayers.remove(0);
 				contestantA.setText(playerA.getName());
-				adapter.notifyDataSetChanged();
 			} else {
 				// Contest changes.
 				contest.setNumberOfGames(contest.getNumberOfGames() + 1);
@@ -246,8 +247,11 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 				playerB = listOfPlayers.get(0);
 				listOfPlayers.remove(0);
 				contestantB.setText(playerB.getName());
-				adapter.notifyDataSetChanged();
 			}
+			
+			giveThisManACrown();
+			adapter.notifyDataSetChanged();
+			
 			break;
 		case 2:
 			Toast.makeText(getActivity(), "Jogador " + player.getName() + " Passou!", Toast.LENGTH_SHORT).show();
@@ -258,7 +262,6 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 				playerA = listOfPlayers.get(0);
 				listOfPlayers.remove(0);
 				contestantA.setText(playerA.getName());
-				adapter.notifyDataSetChanged();
 			} else {
 				// Rotation Logic.
 				listOfPlayers.add(playerB);
@@ -266,12 +269,47 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 				playerB = listOfPlayers.get(0);
 				listOfPlayers.remove(0);
 				contestantB.setText(playerB.getName());
-				adapter.notifyDataSetChanged();
 			}
+			adapter.notifyDataSetChanged();
 			break;
 
 		default:
 			break;
+		}
+		
+	}
+
+	private void giveThisManACrown() {
+		
+		 wins = 0;
+		
+		
+		if (playerA.getWins() > wins){
+			wins = playerA.getWins();
+			fullResetOfMvp();
+			playerA.setMvp(true);
+		} else if (playerB.getWins() > wins){
+			wins = playerB.getWins();
+			fullResetOfMvp();
+			playerB.setMvp(true);
+		} else {
+			for (Player player : listOfPlayers) {
+				if (player.getWins() > wins){
+					fullResetOfMvp();
+					player.setMvp(true);
+				}
+			}
+		}
+		
+	}
+
+	private void fullResetOfMvp() {
+		
+		playerA.setMvp(false);
+		playerB.setMvp(false);
+		
+		for (Player player : listOfPlayers) {
+			player.setMvp(false);
 		}
 		
 	}
@@ -305,7 +343,19 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 		switch (item.getItemId()) {
 		
 		case R.id.finish_contest:
+			
 			int contWins = 0;
+			if (playerA.getWins() > 0){
+				contWins = playerA.getWins();
+				contest.setBestPlayer(playerA);
+			}
+			
+			if(playerB.getWins() > contWins){
+				contWins = playerB.getWins();
+				contest.setBestPlayer(playerB);
+			}
+			
+			
 			for (Player player : listOfPlayers) {
 				if (player.getWins() > contWins){
 					contWins = player.getWins();
@@ -329,9 +379,6 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 			LocationTask task = new LocationTask(location, getActivity(), listener, contest);
 			
 			task.execute();
-			
-			contest.setLocation(null);
-			
 			break;
 		
 		}

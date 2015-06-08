@@ -42,7 +42,7 @@ public class ResultsFragment extends Fragment implements OnClickListener {
 		numberOfGames.setText(getActivity().getResources().getString(R.string.result_number_of_games) + contest.getNumberOfGames());
 		bestPlayer.setText(getActivity().getResources().getString(R.string.result_best_player) + contest.getBestPlayer().getName());
 		worstPlayer.setText(getActivity().getResources().getString(R.string.result_worst_player) + contest.getWorstPlayer().getName());
-		location.setText(getActivity().getResources().getString(R.string.result_worst_player) + contest.getLocation());
+		location.setText(getActivity().getResources().getString(R.string.result_location) + contest.getLocation());
 
 		return rootView;
 	}

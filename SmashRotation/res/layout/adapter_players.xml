@@ -23,7 +23,6 @@
         android:id="@+id/chosen_player"
         android:layout_width="63dp"
         android:layout_height="48dp"
-        android:button="@drawable/character_selector"
         android:layout_alignParentRight="true" />
 
 </RelativeLayout>
