@@ -8,6 +8,7 @@ import java.util.Random;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
@@ -19,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupMenu;
@@ -33,6 +35,7 @@ import br.com.tick.smashrotation.domain.Player;
 import br.com.tick.smashrotation.fragment.adapter.RotationAdapter;
 import br.com.tick.smashrotation.listener.ISmashRotation;
 import br.com.tick.smashrotation.task.LocationTask;
+import br.com.tick.smashrotation.utils.DisplayUtil;
 
 public class StartRotationFragment extends Fragment implements OnClickListener, OnMenuItemClickListener {
 
@@ -57,6 +60,17 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 	private transient RelativeLayout menuPopUpHolder;
 	private transient int wins;
 
+	private transient TextView rotationTopBarText;
+	private transient TextView nowPlayingText;
+	private transient Button finishMatch;
+	private transient TextView nextPlayer;
+	
+	private transient TextView winsCounterA;
+	private transient TextView winsCounterB;
+	
+	private transient TextView lossesCounterA;
+	private transient TextView lossesCounterB;
+
 	public StartRotationFragment() {
 	}
 
@@ -70,19 +84,32 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_start_rotation, container, false);
+		DisplayUtil.setLayoutParams((ViewGroup) rootView);
 
+		Typeface typeface = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Oswald-Regular.ttf");
+		Typeface typefaceLight = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Oswald-Light.ttf");
 		contestantA = (TextView) rootView.findViewById(R.id.contestant_a_name);
 		contestantB = (TextView) rootView.findViewById(R.id.contestant_b_name);
+		rotationTopBarText = (TextView) rootView.findViewById(R.id.top_bar_app_name);
+		nowPlayingText = (TextView) rootView.findViewById(R.id.now_playing_txt);
+		finishMatch = (Button) rootView.findViewById(R.id.finish_match_text);
+		nextPlayer = (TextView) rootView.findViewById(R.id.next_player_text);
+		
+		winsCounterA = (TextView) rootView.findViewById(R.id.wins_counter_a);
+		winsCounterB = (TextView) rootView.findViewById(R.id.wins_counter_b);
+		lossesCounterA = (TextView) rootView.findViewById(R.id.losses_counter_a);
+		lossesCounterB = (TextView) rootView.findViewById(R.id.losses_counter_b);
+
 		contestantARelative = (RelativeLayout) rootView.findViewById(R.id.contestant_a);
 		contestantBRelative = (RelativeLayout) rootView.findViewById(R.id.contestant_b);
 		rotation = (ListView) rootView.findViewById(R.id.rotation);
 		menuPopUp = (ImageView) rootView.findViewById(R.id.top_bar_menu);
 		menuPopUpHolder = (RelativeLayout) rootView.findViewById(R.id.menu_holder);
-		
-		if (playerA == null && playerB == null){
+
+		if (playerA == null && playerB == null) {
 			// This will be a problem.
 			startRotation();
-		}else {
+		} else {
 			contestantA.setText(playerA.getName());
 			contestantB.setText(playerB.getName());
 		}
@@ -91,6 +118,22 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 		contestantBRelative.setOnClickListener(this);
 		menuPopUp.setOnClickListener(this);
 		menuPopUpHolder.setOnClickListener(this);
+		finishMatch.setOnClickListener(this);
+
+		contestantA.setTypeface(typeface);
+		contestantB.setTypeface(typeface);
+		rotationTopBarText.setTypeface(typeface);
+		nowPlayingText.setTypeface(typeface);
+		finishMatch.setTypeface(typeface);
+		nextPlayer.setTypeface(typeface);
+		
+		winsCounterA.setTypeface(typefaceLight);
+		winsCounterB.setTypeface(typefaceLight);
+		lossesCounterA.setTypeface(typefaceLight);
+		lossesCounterB.setTypeface(typefaceLight);
+
+		contestantA.setSelected(true);
+		contestantB.setSelected(true);
 
 		adapter = new RotationAdapter(getActivity(), listOfPlayers);
 		rotation.setAdapter(adapter);
@@ -101,8 +144,13 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 	private void startRotation() {
 		playerA = listOfPlayers.get(FIRST_CONTESTANT);
 		contestantA.setText(playerA.getName());
+		winsCounterA.setText("Wins: "+playerA.getWins());
+		lossesCounterA.setText("Losses: "+ playerA.getLosses());
+		
 		playerB = listOfPlayers.get(SECOND_CONTESTANT);
 		contestantB.setText(playerB.getName());
+		winsCounterB.setText("Wins: "+playerB.getWins());
+		lossesCounterB.setText("Losses: "+ playerB.getLosses());
 
 		// Proper way to remove more than one element of lists.
 		Integer[] intArray = new Integer[] { FIRST_CONTESTANT, SECOND_CONTESTANT };
@@ -128,6 +176,42 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 		case R.id.top_bar_menu:
 			showMenuPopup(v);
 			break;
+		case R.id.finish_match_text:
+			int contWins = 0;
+			if (playerA.getWins() > 0) {
+				contWins = playerA.getWins();
+				contest.setBestPlayer(playerA);
+			}
+
+			if (playerB.getWins() > contWins) {
+				contWins = playerB.getWins();
+				contest.setBestPlayer(playerB);
+			}
+
+			for (Player player : listOfPlayers) {
+				if (player.getWins() > contWins) {
+					contWins = player.getWins();
+					contest.setBestPlayer(player);
+				}
+			}
+
+			contWins = 0;
+
+			for (Player player : listOfPlayers) {
+				if (player.getLosses() > contWins) {
+					contWins = player.getLosses();
+					contest.setWorstPlayer(player);
+				}
+			}
+
+			LocationManager lm = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+			Criteria criteria = new Criteria();
+			String bestProvider = lm.getBestProvider(criteria, false);
+			Location location = lm.getLastKnownLocation(bestProvider);
+			LocationTask task = new LocationTask(location, getActivity(), listener, contest);
+
+			task.execute();
+			break;
 		default:
 			break;
 		}
@@ -141,7 +225,7 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 		} else if (player == 2) {
 			SmashRotationBO.getInstance(getActivity()).setChosenPlayer(playerB);
 		} else {
-			Log.e("Erro na escolha", "Jogador escolhido inv�lido");
+			Log.e("Erro na escolha", "Jogador escolhido inválido");
 		}
 
 		listener.showActionsDialog();
@@ -155,40 +239,38 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 			if (player.equals(playerA)) {
 				// Score change.
 				playerA.setWins(playerA.getWins() + 1);
-				playerB.setLosses(playerB.getLosses() + 1);
+				winsCounterA.setText("Wins: "+ playerA.getWins());
 				
+				playerB.setLosses(playerB.getLosses() + 1);
+
 				// Contest changes.
 				contest.setNumberOfGames(contest.getNumberOfGames() + 1);
-				
-				/** This is commented because i did not put loads of efforts on it.
-				 * It is probably wrong or giving false-positives.
+
+				/**
+				 * This is commented because i did not put loads of efforts on it. It is probably wrong or giving false-positives.
 				 * 
-				if (contest.getBestPlayer() == null) {
-					contest.setBestPlayer(playerA);
-				} else {
-					for (Player itPlayer : listOfPlayers) {
-						if (itPlayer.getWins() > contest.getBestPlayer().getWins()){
-							contest.setBestPlayer(itPlayer);
-							System.out.println("FOREACH -> "+ itPlayer.getName());
-						}
-					}
-				}
+				 * if (contest.getBestPlayer() == null) { contest.setBestPlayer(playerA); } else { for (Player itPlayer : listOfPlayers) { if (itPlayer.getWins() > contest.getBestPlayer().getWins()){
+				 * contest.setBestPlayer(itPlayer); System.out.println("FOREACH -> "+ itPlayer.getName()); } } }
 				 **/
-				
+
 				// Rotation Logic.
 				listOfPlayers.add(playerB);
 				playerB = null; // The player B have lost.
 				playerB = listOfPlayers.get(0);
 				listOfPlayers.remove(0);
 				contestantB.setText(playerB.getName());
+				winsCounterB.setText("Wins: "+playerB.getWins());
+				lossesCounterB.setText("Losses: "+ playerB.getLosses());
 			} else {
 				// Contest changes.
 				contest.setNumberOfGames(contest.getNumberOfGames() + 1);
 
 				// Score change.
 				playerB.setWins(playerA.getWins() + 1);
-				playerA.setLosses(playerA.getLosses() + 1);
+				winsCounterB.setText("Wins: "+ playerB.getWins());
 				
+				playerA.setLosses(playerA.getLosses() + 1);
+
 				// Contest changes.
 				contest.setNumberOfGames(contest.getNumberOfGames() + 1);
 
@@ -198,8 +280,10 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 				playerA = listOfPlayers.get(0);
 				listOfPlayers.remove(0);
 				contestantA.setText(playerA.getName());
+				winsCounterA.setText("Wins: "+playerA.getWins());
+				lossesCounterA.setText("Losses: "+ playerA.getLosses());
 			}
-			
+
 			giveThisManACrown();
 			adapter.notifyDataSetChanged();
 
@@ -212,6 +296,8 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 
 				// Score change.
 				playerB.setWins(playerB.getWins() + 1);
+				winsCounterB.setText("Wins: "+ playerB.getWins());
+				
 				playerA.setLosses(playerA.getLosses() + 1);
 
 				// Rotation Logic.
@@ -220,14 +306,18 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 				playerA = listOfPlayers.get(0);
 				listOfPlayers.remove(0);
 				contestantA.setText(playerA.getName());
+				winsCounterA.setText("Wins: "+playerA.getWins());
+				lossesCounterA.setText("Losses: "+ playerA.getLosses());
 			} else {
 				// Contest changes.
 				contest.setNumberOfGames(contest.getNumberOfGames() + 1);
 
 				// Score change.
 				playerA.setWins(playerA.getWins() + 1);
-				playerB.setLosses(playerB.getLosses() + 1);
+				winsCounterA.setText("Wins: "+ playerA.getWins());
 				
+				playerB.setLosses(playerB.getLosses() + 1);
+
 				// Contest changes.
 				contest.setNumberOfGames(contest.getNumberOfGames() + 1);
 
@@ -235,7 +325,7 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 					contest.setBestPlayer(playerA);
 				} else {
 					for (Player itPlayer : listOfPlayers) {
-						if (itPlayer.getWins() > contest.getBestPlayer().getWins()){
+						if (itPlayer.getWins() > contest.getBestPlayer().getWins()) {
 							contest.setBestPlayer(itPlayer);
 						}
 					}
@@ -248,10 +338,10 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 				listOfPlayers.remove(0);
 				contestantB.setText(playerB.getName());
 			}
-			
+
 			giveThisManACrown();
 			adapter.notifyDataSetChanged();
-			
+
 			break;
 		case 2:
 			Toast.makeText(getActivity(), "Jogador " + player.getName() + " Passou!", Toast.LENGTH_SHORT).show();
@@ -262,6 +352,8 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 				playerA = listOfPlayers.get(0);
 				listOfPlayers.remove(0);
 				contestantA.setText(playerA.getName());
+				winsCounterA.setText("Wins: "+playerA.getWins());
+				lossesCounterA.setText("Losses: "+ playerA.getLosses());
 			} else {
 				// Rotation Logic.
 				listOfPlayers.add(playerB);
@@ -269,6 +361,8 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 				playerB = listOfPlayers.get(0);
 				listOfPlayers.remove(0);
 				contestantB.setText(playerB.getName());
+				winsCounterB.setText("Wins: "+playerB.getWins());
+				lossesCounterB.setText("Losses: "+ playerB.getLosses());
 			}
 			adapter.notifyDataSetChanged();
 			break;
@@ -276,42 +370,41 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 		default:
 			break;
 		}
-		
+
 	}
 
 	private void giveThisManACrown() {
-		
-		 wins = 0;
-		
-		
-		if (playerA.getWins() > wins){
+
+		wins = 0;
+
+		if (playerA.getWins() > wins) {
 			wins = playerA.getWins();
 			fullResetOfMvp();
 			playerA.setMvp(true);
-		} else if (playerB.getWins() > wins){
+		} else if (playerB.getWins() > wins) {
 			wins = playerB.getWins();
 			fullResetOfMvp();
 			playerB.setMvp(true);
 		} else {
 			for (Player player : listOfPlayers) {
-				if (player.getWins() > wins){
+				if (player.getWins() > wins) {
 					fullResetOfMvp();
 					player.setMvp(true);
 				}
 			}
 		}
-		
+
 	}
 
 	private void fullResetOfMvp() {
-		
+
 		playerA.setMvp(false);
 		playerB.setMvp(false);
-		
+
 		for (Player player : listOfPlayers) {
 			player.setMvp(false);
 		}
-		
+
 	}
 
 	public void setNewContest(Contest contest) {
@@ -341,46 +434,11 @@ public class StartRotationFragment extends Fragment implements OnClickListener, 
 	@Override
 	public boolean onMenuItemClick(MenuItem item) {
 		switch (item.getItemId()) {
-		
+
 		case R.id.finish_contest:
-			
-			int contWins = 0;
-			if (playerA.getWins() > 0){
-				contWins = playerA.getWins();
-				contest.setBestPlayer(playerA);
-			}
-			
-			if(playerB.getWins() > contWins){
-				contWins = playerB.getWins();
-				contest.setBestPlayer(playerB);
-			}
-			
-			
-			for (Player player : listOfPlayers) {
-				if (player.getWins() > contWins){
-					contWins = player.getWins();
-					contest.setBestPlayer(player);
-				}
-			}
-			
-			contWins = 0;
-			
-			for (Player player : listOfPlayers) {
-				if (player.getLosses() > contWins){
-					contWins = player.getLosses();
-					contest.setWorstPlayer(player);
-				}
-			}
-			
-			LocationManager lm = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-			Criteria criteria = new Criteria();
-			String bestProvider = lm.getBestProvider(criteria, false);
-			Location location = lm.getLastKnownLocation(bestProvider);
-			LocationTask task = new LocationTask(location, getActivity(), listener, contest);
-			
-			task.execute();
+
 			break;
-		
+
 		}
 		return false;
 	}

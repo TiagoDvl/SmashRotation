@@ -8,7 +8,15 @@
         android:id="@+id/top_bar_holder"
         android:layout_width="match_parent"
         android:layout_height="@dimen/top_bar_holder_height"
-        android:background="@color/app_theme_red" >
+        android:background="@color/app_top_bar_rotation" >
+
+        <ImageView
+            android:id="@+id/img_top_bar"
+            android:layout_width="49px"
+            android:layout_height="62px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/top_bar_margin_left"
+            android:background="@drawable/icon_logo_topbar" />
 
         <TextView
             android:id="@+id/top_bar_app_name"
@@ -16,10 +24,10 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/top_bar_margin_left"
+            android:layout_toRightOf="@id/img_top_bar"
             android:text="@string/app_name_rotation"
             android:textColor="@color/white"
-            android:textSize="@dimen/top_bar_text_size"
-            android:textStyle="bold" />
+            android:textSize="@dimen/top_bar_text_size" />
 
         <RelativeLayout
             android:id="@+id/menu_holder"
@@ -40,56 +48,171 @@
         </RelativeLayout>
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/now_playing_identificator"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_below="@id/top_bar_holder"
+        android:background="@drawable/background_stroke_next_player" >
+
+        <TextView
+            android:id="@+id/now_playing_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/now_playing"
+            android:textColor="@color/now_playing_color_text"
+            android:textSize="@dimen/top_bar_text_size" />
+    </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/two_contestants_holder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/top_bar_holder"
+        android:layout_width="583px"
+        android:layout_height="385px"
+        android:layout_below="@id/now_playing_identificator"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/two_contestants_margin_top"
+        android:background="@drawable/icon_match"
         android:orientation="horizontal" >
 
         <RelativeLayout
             android:id="@+id/contestant_a"
             android:layout_width="@dimen/two_contestants_width"
             android:layout_height="@dimen/two_contestants_height"
-            android:background="@color/light_gray_pressed" >
+            android:layout_marginTop="@dimen/two_contestants_margin_top_inside" >
 
             <TextView
                 android:id="@+id/contestant_a_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="5px"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
                 android:text="@string/adapter_player_name"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="@dimen/eleven_pt"
+                android:singleLine="true" />
+            
+            <TextView 
+                android:id="@+id/wins_counter_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50px"
+                android:textColor="@color/white"
+                android:textSize="@dimen/nine_pt"
+                android:layout_below="@id/contestant_a_name"
+                />
+            
+            <TextView 
+                android:id="@+id/losses_counter_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2px"
+                android:textColor="@color/white"
+                android:textSize="@dimen/nine_pt"
+                android:layout_below="@id/wins_counter_a"
+                />
         </RelativeLayout>
 
         <View
             android:layout_width="@dimen/two_contestants_divider"
-            android:layout_height="@dimen/two_contestants_height" />
+            android:layout_height="@dimen/two_contestants_height"
+            android:layout_marginTop="@dimen/two_contestants_margin_top_inside" />
 
         <RelativeLayout
             android:id="@+id/contestant_b"
             android:layout_width="@dimen/two_contestants_width"
             android:layout_height="@dimen/two_contestants_height"
-            android:background="@color/light_gray"
+            android:layout_marginTop="@dimen/two_contestants_margin_top_inside"
             android:text="@string/adapter_player_name" >
 
             <TextView
                 android:id="@+id/contestant_b_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="5px"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
                 android:text="@string/adapter_player_name"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="@dimen/eleven_pt"
+                android:singleLine="true" />
+            
+            <TextView 
+                android:id="@+id/wins_counter_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50px"
+                android:textColor="@color/white"
+                android:textSize="@dimen/nine_pt"
+                android:layout_below="@id/contestant_b_name"
+                />
+            
+            <TextView 
+                android:id="@+id/losses_counter_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2px"
+                android:textColor="@color/white"
+                android:textSize="@dimen/nine_pt"
+                android:layout_below="@id/wins_counter_b"
+                />
         </RelativeLayout>
     </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/finish_match_holder"
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:layout_below="@id/two_contestants_holder" >
+
+        <Button
+            android:id="@+id/finish_match_text"
+            android:layout_width="582px"
+            android:layout_height="102px"
+            android:layout_centerInParent="true"
+            android:background="@drawable/finish_match_btn_selector"
+            android:text="@string/finish_match"
+            android:textColor="@color/white"
+            android:textSize="@dimen/eleven_pt" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/next_player"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_below="@id/finish_match_holder"
+        android:background="@drawable/background_stroke_next_player" >
+
+        <TextView
+            android:id="@+id/next_player_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:text="@string/next_player_text"
+            android:textColor="@color/now_playing_color_text" />
+    </RelativeLayout>
 
     <ListView
         android:id="@+id/rotation"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/two_contestants_holder"
+        android:layout_below="@id/next_player"
         android:layout_marginTop="@dimen/rotation_margin_top" >
     </ListView>
 

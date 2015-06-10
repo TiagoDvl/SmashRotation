@@ -3,6 +3,7 @@ package br.com.tick.smashrotation.fragment.adapter;
 import java.util.List;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -62,8 +63,10 @@ public class PlayersAdapter extends BaseAdapter {
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-
+		
+		Typeface typeface = Typeface.createFromAsset(activity.getAssets(), "fonts/Oswald-Regular.ttf");
 		holder.playerName.setText(player.getName());
+		holder.playerName.setTypeface(typeface);
 		holder.checkBoxChoosePlayer.setChecked(player.getSelected());
 		holder.checkBoxChoosePlayer.setOnClickListener(new OnClickListener() {
 

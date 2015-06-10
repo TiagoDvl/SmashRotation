@@ -8,7 +8,16 @@
         android:id="@+id/top_bar_holder"
         android:layout_width="match_parent"
         android:layout_height="@dimen/top_bar_holder_height"
-        android:background="@color/app_theme_red" >
+        android:background="@color/app_top_bar_rotation" >
+        
+        <ImageView 
+            android:id="@+id/img_top_bar"
+            android:layout_width="49px"
+            android:layout_height="62px"
+            android:layout_marginLeft="@dimen/top_bar_margin_left"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_logo_topbar"
+            />
 
         <TextView
             android:id="@+id/top_bar_app_name"
@@ -19,41 +28,47 @@
             android:text="@string/app_name"
             android:textColor="@color/white"
             android:textSize="@dimen/top_bar_text_size"
-            android:textStyle="bold" />
+            android:layout_toRightOf="@id/img_top_bar" />
     </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/insert_player_holder"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="120px"
         android:layout_below="@id/top_bar_holder"
         android:orientation="horizontal"
-        android:padding="@dimen/insert_player_holder_padding" >
+        android:padding="@dimen/insert_player_holder_padding"
+        android:gravity="center_vertical"
+        android:background="@color/insert_player_holder" >
 
         <EditText
             android:id="@+id/insert_player_name"
             android:layout_width="0dp"
-            android:layout_height="@dimen/insert_player_name_height"
+            android:layout_height="100px"
             android:layout_weight="5"
             android:background="@android:drawable/editbox_background_normal"
             android:hint="@string/insert_player_name"
             android:inputType="textPersonName"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:textSize="8pt"
+            android:textColor="@color/color_edit_box_text"
+            android:gravity="center_vertical" />
 
         <Button
             android:id="@+id/insert_player_name_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/insert_player_name_button" />
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:background="@drawable/insert_player_btn_selector" />
     </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/holder_start_rotation"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/holder_start_rotation_height"
+        android:layout_width="582px"
+        android:layout_height="102px"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="@dimen/holder_start_rotation_margin_top"
+        android:layout_marginBottom="@dimen/holder_start_rotation_margin_top"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/start_rotation_btn_selector" >
 
         <TextView

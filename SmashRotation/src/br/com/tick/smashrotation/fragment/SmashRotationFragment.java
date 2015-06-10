@@ -5,6 +5,7 @@ import java.util.List;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 import br.com.tick.smashrotation.R;
 import br.com.tick.smashrotation.bo.SmashRotationBO;
@@ -22,6 +24,7 @@ import br.com.tick.smashrotation.domain.Player;
 import br.com.tick.smashrotation.fragment.adapter.PlayersAdapter;
 import br.com.tick.smashrotation.listener.IChoseYou;
 import br.com.tick.smashrotation.listener.ISmashRotation;
+import br.com.tick.smashrotation.utils.DisplayUtil;
 
 public class SmashRotationFragment extends Fragment implements OnClickListener, IChoseYou {
 
@@ -35,6 +38,9 @@ public class SmashRotationFragment extends Fragment implements OnClickListener, 
 	private transient ISmashRotation listener;
 	private transient List<Player> chosenPlayers;
 	
+	private transient TextView rotationTopBar;
+	private transient TextView startRotationText;
+	
 	private static String EMPTY_STRING = "";
 
 	public SmashRotationFragment() {
@@ -43,6 +49,8 @@ public class SmashRotationFragment extends Fragment implements OnClickListener, 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_smash_rotation, container, false);
+		DisplayUtil.setLayoutParams((ViewGroup) rootView);
+		
 		instance = SmashRotationBO.getInstance(getActivity());
 		chosenPlayers = new ArrayList<Player>();
 
@@ -51,6 +59,14 @@ public class SmashRotationFragment extends Fragment implements OnClickListener, 
 		insertPlayerName = (EditText) rootView.findViewById(R.id.insert_player_name);
 		insertPlayerNameButton = (Button) rootView.findViewById(R.id.insert_player_name_button);
 		startRotation = (RelativeLayout) rootView.findViewById(R.id.holder_start_rotation);
+		
+		rotationTopBar = (TextView) rootView.findViewById(R.id.top_bar_app_name);
+		startRotationText = (TextView) rootView.findViewById(R.id.start_rotation_text);
+		
+		Typeface typeface = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Oswald-Regular.ttf");
+		rotationTopBar.setTypeface(typeface);
+		startRotationText.setTypeface(typeface);
+		insertPlayerName.setTypeface(typeface);
 
 		playersAdapter = new PlayersAdapter(getActivity(), instance.getListOfPlayers(), this);
 		listOfPlayers.setAdapter(playersAdapter);

@@ -7,7 +7,7 @@
 
     <!-- Smash Rotation Fragment -->
 
-    <string name="insert_player_name">Insert the player\'s name</string>
+    <string name="insert_player_name">Player\'s name</string>
     <string name="insert_player_name_button">OK</string>
     <string name="adapter_player_name">Player</string>
     <string name="adapter_player_wins">Wins: </string>
@@ -32,5 +32,8 @@
     <!-- Start Rotation Fragment -->
     
     <string name="finish_contest">Finish Contest</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="finish_match">Finish Match!</string>
+    <string name="next_player_text">Next Player:</string>
 
 </resources>

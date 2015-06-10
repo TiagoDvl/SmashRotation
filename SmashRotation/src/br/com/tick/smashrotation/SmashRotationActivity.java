@@ -15,6 +15,7 @@ import br.com.tick.smashrotation.fragment.SmashRotationFragment;
 import br.com.tick.smashrotation.fragment.StartRotationFragment;
 import br.com.tick.smashrotation.listener.ISmashRotation;
 import br.com.tick.smashrotation.persistence.Serialization;
+import br.com.tick.smashrotation.utils.DisplayUtil;
 
 public class SmashRotationActivity extends Activity implements ISmashRotation {
 	
@@ -29,6 +30,7 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_smash_rotation);
 		SmashRotationBO.getInstance(getApplicationContext());
+		DisplayUtil.init(this);
 
 		if (savedInstanceState == null) {
 			smashRotationFragment = new SmashRotationFragment();

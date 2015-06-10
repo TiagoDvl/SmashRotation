@@ -3,6 +3,7 @@ package br.com.tick.smashrotation.fragment.adapter;
 import java.util.List;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,25 +55,20 @@ public class RotationAdapter extends BaseAdapter {
 			holder = (ViewHolder) convertView.getTag();
 		}
 		
+		Typeface typeface = Typeface.createFromAsset(activity.getAssets(), "fonts/Oswald-Regular.ttf");
 		holder.playerName = (TextView) convertView.findViewById(R.id.list_of_players_names);
-		holder.playerWins = (TextView) convertView.findViewById(R.id.list_of_players_wins);
-		holder.playerLosses = (TextView) convertView.findViewById(R.id.list_of_players_losses);
-
 		holder.playerName.setText(player.getName());
-		holder.playerWins.setText(activity.getResources().getString(R.string.adapter_player_wins) + player.getWins());
-		holder.playerLosses.setText(activity.getResources().getString(R.string.adapter_player_losses) + player.getLosses());
-		
-		if (player.isMvp()){
-			holder.playerName.setText(player.getName() + "MVPPPPPPP");	
-		}
+		holder.playerName.setTypeface(typeface);
 
+		if (player.isMvp()){
+			
+		}
+		
 		return convertView;
 	}
 
 	private static class ViewHolder {
 		TextView playerName;
-		TextView playerWins;
-		TextView playerLosses;
 	}
 
 }

@@ -9,4 +9,14 @@
     <color name="app_theme_red">#D63333</color>
 	<color name="app_theme_red_light">#DA4747</color>
 	<color name="app_theme_red_lighter">#E57E7E</color>
+	
+	<color name="app_top_bar_rotation">#2b2727</color>
+	<color name="insert_player_holder">#e7e7e8</color>
+	
+	<color name="color_edit_box_text">#9f9f9f</color>
+	<color name="color_player_list_text">#9f9f9f</color>
+	
+	<color name="now_playing_color_bg">#e7e7e8</color>
+	<color name="now_playing_color_text">#a5a5a5</color>
+	
 </resources>
