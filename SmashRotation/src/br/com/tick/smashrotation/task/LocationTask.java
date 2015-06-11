@@ -37,16 +37,14 @@ public class LocationTask extends AsyncTask<Void, Void, String> {
 	protected String doInBackground(Void... params) {
 		Geocoder geocoder = new Geocoder(ctx);
 		String adress = null;
-		String cep = null;
 		try {
 			List<Address> user = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-			adress = user.get(0).getAddressLine(0);
-			cep = user.get(0).getPostalCode();
+			adress = user.get(0).getAddressLine(1);
 
 		} catch (Exception e) {
 			
 		}
-		return adress+" | "+cep;
+		return adress;
 	}
 	
 	@Override

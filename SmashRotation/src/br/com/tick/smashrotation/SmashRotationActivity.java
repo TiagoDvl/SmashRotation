@@ -52,6 +52,11 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 		// Inflate rotation fragment.
 		startRotationFragment = new StartRotationFragment();
 		startRotationFragment.setListOfPlayers(listOfPlayers);
+		
+		if (SmashRotationBO.getInstance(this).getContest().getNumberOfGames() > 0){
+			SmashRotationBO.getInstance(this).setContest(new Contest());
+		}
+		
 		startRotationFragment.setNewContest(SmashRotationBO.getInstance(this).getContest());
 		getFragmentManager().beginTransaction().replace(R.id.container, startRotationFragment).addToBackStack(startRotationFragment.getClass().toString()).commit();
 	}

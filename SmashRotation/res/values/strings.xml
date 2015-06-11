@@ -24,10 +24,13 @@
     <string name="action_dialog_pass">Passed</string>
 
     <!-- Results Fragment -->
-    <string name="result_number_of_games">Number of Games: </string>
-    <string name="result_best_player">Best Player: </string>
-    <string name="result_worst_player">Worst Player: </string>
-    <string name="result_location">Location: </string>
+    <string name="result_number_of_games">Games</string>
+    <string name="result_best_player">Best</string>
+    <string name="result_worst_player">Worst</string>
+    <string name="result_location">Location</string>
+    <string name="results_text">Results</string>
+    <string name="share_results">Share</string>
+    <string name="restart_rotation">Restart Rotation!</string>
 
     <!-- Start Rotation Fragment -->
     

@@ -19,4 +19,7 @@
 	<color name="now_playing_color_bg">#e7e7e8</color>
 	<color name="now_playing_color_text">#a5a5a5</color>
 	
+	<color name="results_text">#9f9f9f</color>
+	<color name="results_text_player">#4b4348</color>
+	
 </resources>
