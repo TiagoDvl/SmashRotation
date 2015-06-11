@@ -37,10 +37,10 @@ public class SmashRotationFragment extends Fragment implements OnClickListener, 
 	private transient RelativeLayout startRotation;
 	private transient ISmashRotation listener;
 	private transient List<Player> chosenPlayers;
-	
+
 	private transient TextView rotationTopBar;
 	private transient TextView startRotationText;
-	
+
 	private static String EMPTY_STRING = "";
 
 	public SmashRotationFragment() {
@@ -50,7 +50,7 @@ public class SmashRotationFragment extends Fragment implements OnClickListener, 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_smash_rotation, container, false);
 		DisplayUtil.setLayoutParams((ViewGroup) rootView);
-		
+
 		instance = SmashRotationBO.getInstance(getActivity());
 		chosenPlayers = new ArrayList<Player>();
 
@@ -59,14 +59,22 @@ public class SmashRotationFragment extends Fragment implements OnClickListener, 
 		insertPlayerName = (EditText) rootView.findViewById(R.id.insert_player_name);
 		insertPlayerNameButton = (Button) rootView.findViewById(R.id.insert_player_name_button);
 		startRotation = (RelativeLayout) rootView.findViewById(R.id.holder_start_rotation);
-		
+
 		rotationTopBar = (TextView) rootView.findViewById(R.id.top_bar_app_name);
 		startRotationText = (TextView) rootView.findViewById(R.id.start_rotation_text);
-		
+
 		Typeface typeface = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Oswald-Regular.ttf");
 		rotationTopBar.setTypeface(typeface);
 		startRotationText.setTypeface(typeface);
 		insertPlayerName.setTypeface(typeface);
+
+		if (instance.getListOfPlayers() != null && instance.getListOfPlayers().size() > 0) {
+			for (Player player : instance.getListOfPlayers()) {
+				player.setWins(0);
+				player.setLosses(0);
+				player.setMvp(false);
+			}
+		}
 
 		playersAdapter = new PlayersAdapter(getActivity(), instance.getListOfPlayers(), this);
 		listOfPlayers.setAdapter(playersAdapter);
@@ -80,11 +88,10 @@ public class SmashRotationFragment extends Fragment implements OnClickListener, 
 	public void onActivityCreated(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onActivityCreated(savedInstanceState);
-		
+
 		this.listener = (ISmashRotation) getActivity();
 	}
-	
-	
+
 	private void disapearKeyBoard() {
 		mgr.hideSoftInputFromWindow(insertPlayerName.getWindowToken(), 0);
 
@@ -97,7 +104,7 @@ public class SmashRotationFragment extends Fragment implements OnClickListener, 
 		case R.id.insert_player_name_button:
 			persistPlayer(insertPlayerName.getText().toString());
 			break;
-			
+
 		case R.id.holder_start_rotation:
 			if (chosenPlayers.size() > 2) {
 				showStartRotationScreen(chosenPlayers);
@@ -134,28 +141,28 @@ public class SmashRotationFragment extends Fragment implements OnClickListener, 
 
 	public void setData() {
 		// Set any kind of data that i would like to handle.
-		
+
 	}
 
 	@Override
 	public void updateChosenPlayers(Player player, boolean isChecked) {
 		player.setSelected(isChecked);
-		
-		if (isChecked){
+
+		if (isChecked) {
 			chosenPlayers.add(player);
 		} else {
 			// Is this going to work?
 			chosenPlayers.remove(player);
 		}
-		
+
 	}
-	
+
 	@Override
 	public void onResume() {
 		for (Player player : SmashRotationBO.getInstance(getActivity()).getListOfPlayers()) {
 			player.setSelected(false);
 		}
-		
+
 		super.onResume();
 	}
 }

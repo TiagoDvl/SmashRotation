@@ -27,7 +27,6 @@ public class PlayersAdapter extends BaseAdapter {
 
 		this.activity = context;
 		this.listOfPlayers = listOfPlayers;
-		checkBoxState = new boolean[listOfPlayers.size()];
 		this.listener = listener;
 		this.inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -72,6 +71,7 @@ public class PlayersAdapter extends BaseAdapter {
 
 			@Override
 			public void onClick(View v) {
+				checkBoxState = new boolean[listOfPlayers.size()];
 				checkBoxState[position] = ((CheckBox) v).isChecked();
 				listOfPlayers.get(position).setSelected(((CheckBox) v).isChecked());
 				listener.updateChosenPlayers(player, ((CheckBox) v).isChecked());

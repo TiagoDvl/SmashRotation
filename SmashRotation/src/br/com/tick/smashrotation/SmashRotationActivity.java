@@ -12,6 +12,7 @@ import br.com.tick.smashrotation.domain.Player;
 import br.com.tick.smashrotation.fragment.ActionsDialogFragment;
 import br.com.tick.smashrotation.fragment.ResultsFragment;
 import br.com.tick.smashrotation.fragment.SmashRotationFragment;
+import br.com.tick.smashrotation.fragment.SplashScreenFragment;
 import br.com.tick.smashrotation.fragment.StartRotationFragment;
 import br.com.tick.smashrotation.listener.ISmashRotation;
 import br.com.tick.smashrotation.persistence.Serialization;
@@ -20,6 +21,7 @@ import br.com.tick.smashrotation.utils.DisplayUtil;
 public class SmashRotationActivity extends Activity implements ISmashRotation {
 	
 	// Put them in order to understand the app flow.
+	private SplashScreenFragment splashScreenFragment;
 	private SmashRotationFragment smashRotationFragment;
 	private StartRotationFragment startRotationFragment;
 	private ActionsDialogFragment actionsdialogFragment;
@@ -33,9 +35,8 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 		DisplayUtil.init(this);
 
 		if (savedInstanceState == null) {
-			smashRotationFragment = new SmashRotationFragment();
-			smashRotationFragment.setData();
-			getFragmentManager().beginTransaction().replace(R.id.container, smashRotationFragment).commit();
+			splashScreenFragment = new SplashScreenFragment();
+			getFragmentManager().beginTransaction().replace(R.id.container, splashScreenFragment).commit();
 		}
 
 		// Proving that the singleton design patters works and its gonna be used
@@ -88,7 +89,6 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 		try {
 			ObjectOutputStream objectOutputStream = Serialization.createDataOutputStream(getApplication().getFilesDir().getPath());
 			objectOutputStream.writeObject(SmashRotationBO.getInstance(getApplicationContext()).getListOfPlayers());
-			System.out.println("Salvou!");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -100,6 +100,14 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 	@Override
 	public void populateWithAddress(String location) {
 		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void showMainScreen() {
+		smashRotationFragment = new SmashRotationFragment();
+		smashRotationFragment.setData();
+		getFragmentManager().beginTransaction().replace(R.id.container, smashRotationFragment).commit();
 		
 	}
 

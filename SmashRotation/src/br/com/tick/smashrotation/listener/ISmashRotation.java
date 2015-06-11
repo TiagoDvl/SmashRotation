@@ -13,5 +13,6 @@ public interface ISmashRotation {
 	void showResultFragment(Contest contest);
 	void popBackStack();
 	void populateWithAddress(String location);
+	void showMainScreen();
 
 }
