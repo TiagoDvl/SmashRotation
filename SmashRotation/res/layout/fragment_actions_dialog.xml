@@ -12,46 +12,61 @@
 
     <LinearLayout
         android:id="@+id/actions_holder"
-        android:layout_width="@dimen/holder_width"
-        android:layout_height="@dimen/holder_height"
+        android:layout_width="650px"
+        android:layout_height="390px"
         android:layout_centerInParent="true"
-        android:background="@color/light_gray_pressed"
+        android:background="@drawable/round_corner_dialog"
         android:gravity="center"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:paddingLeft="@dimen/actions_margin_left"
         android:paddingRight="@dimen/actions_margin_right" >
 
         <Button
-            android:id="@+id/action_winner"
-            android:layout_width="@dimen/actions_width"
-            android:layout_height="@dimen/actions_height"
-            android:background="@color/light_gray"
-            android:clickable="true"
-            android:gravity="center"
-            android:text="@string/action_dialog_win"
-            android:textColor="@color/white" />
+            android:id="@+id/holder_player_name"
+            android:layout_width="590px"
+            android:layout_height="126px"
+            android:textColor="@color/white"
+            android:background="@drawable/icon_playername" />
 
-        <Button
-            android:id="@+id/action_loser"
-            android:layout_width="@dimen/actions_width"
-            android:layout_height="@dimen/actions_height"
-            android:layout_marginLeft="@dimen/actions_center_margin_left"
-            android:layout_marginRight="@dimen/actions_center_margin_right"
-            android:background="@color/light_gray"
-            android:clickable="true"
-            android:gravity="center"
-            android:text="@string/action_dialog_lose"
-            android:textColor="@color/white" />
+        <LinearLayout
+            android:id="@+id/holder_actions_inside"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15px" >
 
-        <Button
-            android:id="@+id/action_pass"
-            android:layout_width="@dimen/actions_width"
-            android:layout_height="@dimen/actions_height"
-            android:background="@color/light_gray"
-            android:clickable="true"
-            android:gravity="center"
-            android:text="@string/action_dialog_pass"
-            android:textColor="@color/white" />
+            <Button
+                android:id="@+id/action_winner"
+                android:layout_width="@dimen/actions_width"
+                android:layout_height="@dimen/actions_height"
+                android:background="@drawable/won_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/action_dialog_win"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/action_loser"
+                android:layout_width="@dimen/actions_width"
+                android:layout_height="@dimen/actions_height"
+                android:layout_marginLeft="@dimen/actions_center_margin_left"
+                android:layout_marginRight="@dimen/actions_center_margin_right"
+                android:background="@drawable/lost_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/action_dialog_lose"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/action_pass"
+                android:layout_width="@dimen/actions_width"
+                android:layout_height="@dimen/actions_height"
+                android:background="@drawable/passed_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/action_dialog_pass"
+                android:textColor="@color/white" />
+        </LinearLayout>
     </LinearLayout>
 
 </br.com.tick.smashrotation.component.NoClickRelativeLayout>

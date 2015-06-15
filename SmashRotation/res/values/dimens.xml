@@ -1,8 +1,8 @@
 <resources>
 
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">20px</dimen>
+    <dimen name="activity_vertical_margin">5px</dimen>
 
     <!-- Smash Rotation Fragment -->
 
@@ -10,8 +10,8 @@
     <dimen name="holder_start_rotation_height">50dp</dimen>
     <dimen name="holder_start_rotation_margin_top">5dp</dimen>
     <dimen name="adapter_player_losses_margin_start">50dp</dimen>
-    <dimen name="top_bar_holder_height">100px</dimen>
-    <dimen name="top_bar_margin_left">10dp</dimen>
+    <dimen name="top_bar_holder_height">120px</dimen>
+    <dimen name="top_bar_margin_left">20px</dimen>
     <dimen name="top_bar_text_size">10pt</dimen>
     <dimen name="nine_pt">9pt</dimen>
     <dimen name="eleven_pt">11pt</dimen>
@@ -38,8 +38,8 @@
 
     <dimen name="holder_width">280dp</dimen>
     <dimen name="holder_height">180dp</dimen>
-    <dimen name="actions_width">80dp</dimen>
-    <dimen name="actions_height">140dp</dimen>
+    <dimen name="actions_width">184px</dimen>
+    <dimen name="actions_height">184px</dimen>
     <dimen name="actions_margin_left">10dp</dimen>
     <dimen name="actions_margin_right">10dp</dimen>
     <dimen name="actions_center_margin_left">5dp</dimen>

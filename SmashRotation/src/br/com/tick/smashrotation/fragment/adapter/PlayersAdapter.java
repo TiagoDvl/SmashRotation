@@ -14,6 +14,7 @@ import android.widget.TextView;
 import br.com.tick.smashrotation.R;
 import br.com.tick.smashrotation.domain.Player;
 import br.com.tick.smashrotation.listener.IChoseYou;
+import br.com.tick.smashrotation.utils.DisplayUtil;
 
 public class PlayersAdapter extends BaseAdapter {
 
@@ -55,6 +56,9 @@ public class PlayersAdapter extends BaseAdapter {
 		if (convertView == null) {
 			holder = new ViewHolder();
 			convertView = inflater.inflate(R.layout.adapter_players, ((ViewGroup) null));
+			DisplayUtil.setLayoutParams((ViewGroup) convertView);
+			
+			
 			holder.playerName = (TextView) convertView.findViewById(R.id.list_of_players_names);
 			holder.checkBoxChoosePlayer = (CheckBox) convertView.findViewById(R.id.chosen_player);
 			convertView.setTag(holder);

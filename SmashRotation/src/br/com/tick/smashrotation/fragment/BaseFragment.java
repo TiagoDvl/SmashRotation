@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import br.com.tick.smashrotation.R;
+import br.com.tick.smashrotation.utils.DisplayUtil;
 
 public class BaseFragment extends Fragment implements OnClickListener {
 
@@ -25,6 +26,7 @@ public class BaseFragment extends Fragment implements OnClickListener {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_start_rotation, container, false);
+		DisplayUtil.setLayoutParams((ViewGroup) rootView);
 
 		return rootView;
 	}

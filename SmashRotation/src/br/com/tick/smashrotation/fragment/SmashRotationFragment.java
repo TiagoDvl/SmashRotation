@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -37,9 +38,12 @@ public class SmashRotationFragment extends Fragment implements OnClickListener, 
 	private transient RelativeLayout startRotation;
 	private transient ISmashRotation listener;
 	private transient List<Player> chosenPlayers;
+	private transient TextView moarPlayers;
 
 	private transient TextView rotationTopBar;
 	private transient TextView startRotationText;
+	
+	private transient ImageView excludePlayers;
 
 	private static String EMPTY_STRING = "";
 
@@ -62,24 +66,34 @@ public class SmashRotationFragment extends Fragment implements OnClickListener, 
 
 		rotationTopBar = (TextView) rootView.findViewById(R.id.top_bar_app_name);
 		startRotationText = (TextView) rootView.findViewById(R.id.start_rotation_text);
+		
+		excludePlayers = (ImageView) rootView.findViewById(R.id.exclude_players);
+		moarPlayers = (TextView) rootView.findViewById(R.id.moar_players);
 
 		Typeface typeface = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Oswald-Regular.ttf");
 		rotationTopBar.setTypeface(typeface);
 		startRotationText.setTypeface(typeface);
 		insertPlayerName.setTypeface(typeface);
+		moarPlayers.setTypeface(typeface);
 
-		if (instance.getListOfPlayers() != null && instance.getListOfPlayers().size() > 0) {
-			for (Player player : instance.getListOfPlayers()) {
-				player.setWins(0);
-				player.setLosses(0);
-				player.setMvp(false);
-			}
-		}
 
 		playersAdapter = new PlayersAdapter(getActivity(), instance.getListOfPlayers(), this);
 		listOfPlayers.setAdapter(playersAdapter);
 		insertPlayerNameButton.setOnClickListener(this);
 		startRotation.setOnClickListener(this);
+		excludePlayers.setOnClickListener(this);
+		
+		if (instance.getListOfPlayers() != null && instance.getListOfPlayers().size() > 0) {
+			moarPlayers.setVisibility(View.GONE);
+			for (Player player : instance.getListOfPlayers()) {
+				player.setWins(0);
+				player.setLosses(0);
+				player.setMvp(false);
+			}
+			playersAdapter.notifyDataSetChanged();
+		}else{
+			moarPlayers.setVisibility(View.VISIBLE);
+		}
 
 		return rootView;
 	}
@@ -107,10 +121,25 @@ public class SmashRotationFragment extends Fragment implements OnClickListener, 
 
 		case R.id.holder_start_rotation:
 			if (chosenPlayers.size() > 2) {
-				showStartRotationScreen(chosenPlayers);
+				listener.showDialogLineRandom(chosenPlayers);
 			} else {
 				Toast.makeText(getActivity(), R.string.not_enough, Toast.LENGTH_SHORT).show();
 			}
+			break;
+			
+		case R.id.exclude_players:
+			
+			List<Player> players = instance.getListOfPlayers();
+			for (Player player : chosenPlayers) {
+				if (players.contains(player)){
+					instance.getListOfPlayers().remove(player);
+				}
+			}
+			playersAdapter.notifyDataSetChanged();
+			excludePlayers.setVisibility(View.INVISIBLE);
+			moarPlayers.setVisibility(View.VISIBLE);
+			chosenPlayers.clear();
+			
 			break;
 
 		default:
@@ -119,19 +148,20 @@ public class SmashRotationFragment extends Fragment implements OnClickListener, 
 
 	}
 
-	private void showStartRotationScreen(List<Player> listOfPlayers) {
-		listener.showRotationScreen(listOfPlayers);
-	}
-
 	private void persistPlayer(String string) {
 		insertPlayerName.setText(EMPTY_STRING);
 		if (!"".equals(string.trim())) {
 			Player player = new Player();
 			player.setName(string);
-			instance.getListOfPlayers().add(player);
+			List<Player> players = instance.getListOfPlayers();
+			players.add(player);
+			
+			instance.setListOfPlayers(players);
+			
 			playersAdapter.notifyDataSetChanged();
 			Toast.makeText(getActivity(), R.string.success_insert_player_name, Toast.LENGTH_LONG).show();
 			disapearKeyBoard();
+			moarPlayers.setVisibility(View.GONE);
 
 		} else {
 			Toast.makeText(getActivity(), R.string.error_insert_player_name, Toast.LENGTH_LONG).show();
@@ -153,6 +183,12 @@ public class SmashRotationFragment extends Fragment implements OnClickListener, 
 		} else {
 			// Is this going to work?
 			chosenPlayers.remove(player);
+		}
+		
+		if (chosenPlayers.size() > 0){
+			excludePlayers.setVisibility(View.VISIBLE);
+		} else {
+			excludePlayers.setVisibility(View.GONE);
 		}
 
 	}

@@ -9,32 +9,167 @@ package br.com.tick.smashrotation;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>bottom</code></td><td>0</td><td> Keep in sync with Enums in LikeView </td></tr>
+<tr><td><code>inline</code></td><td>1</td><td></td></tr>
+<tr><td><code>top</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int com_facebook_auxiliary_view_position=0x7f01000a;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int com_facebook_confirm_logout=0x7f010000;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int com_facebook_foreground_color=0x7f010006;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>center</code></td><td>0</td><td> Keep in sync with Enums in LikeView </td></tr>
+<tr><td><code>left</code></td><td>1</td><td></td></tr>
+<tr><td><code>right</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int com_facebook_horizontal_alignment=0x7f01000b;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int com_facebook_is_cropped=0x7f010005;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int com_facebook_login_text=0x7f010001;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int com_facebook_logout_text=0x7f010002;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int com_facebook_object_id=0x7f010007;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>unknown</code></td><td>0</td><td> Keep in sync with Enums in Likeview </td></tr>
+<tr><td><code>open_graph</code></td><td>1</td><td></td></tr>
+<tr><td><code>page</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int com_facebook_object_type=0x7f010008;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>small</code></td><td>-2</td><td> Keep in sync with constants in ProfilePictureView </td></tr>
+<tr><td><code>normal</code></td><td>-3</td><td></td></tr>
+<tr><td><code>large</code></td><td>-4</td><td></td></tr>
+</table>
+         */
+        public static final int com_facebook_preset_size=0x7f010004;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>standard</code></td><td>0</td><td> Keep in sync with Enums in LikeView </td></tr>
+<tr><td><code>button</code></td><td>1</td><td></td></tr>
+<tr><td><code>box_count</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int com_facebook_style=0x7f010009;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>automatic</code></td><td>0</td><td> Keep in sync with Enums in LoginButton </td></tr>
+<tr><td><code>display_always</code></td><td>1</td><td></td></tr>
+<tr><td><code>never_display</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int com_facebook_tooltip_mode=0x7f010003;
     }
     public static final class color {
-        public static final int app_theme_red=0x7f040005;
-        public static final int app_theme_red_light=0x7f040006;
-        public static final int app_theme_red_lighter=0x7f040007;
-        public static final int app_top_bar_rotation=0x7f040008;
-        public static final int black=0x7f040000;
-        public static final int color_edit_box_text=0x7f04000a;
-        public static final int color_player_list_text=0x7f04000b;
-        public static final int insert_player_holder=0x7f040009;
-        public static final int light_gray=0x7f040002;
-        public static final int light_gray_pressed=0x7f040003;
-        public static final int now_playing_color_bg=0x7f04000c;
-        public static final int now_playing_color_text=0x7f04000d;
-        public static final int results_text=0x7f04000e;
-        public static final int results_text_player=0x7f04000f;
-        public static final int transparent_white=0x7f040004;
-        public static final int white=0x7f040001;
+        public static final int app_theme_red=0x7f060013;
+        public static final int app_theme_red_light=0x7f060014;
+        public static final int app_theme_red_lighter=0x7f060015;
+        public static final int app_top_bar_rotation=0x7f060016;
+        public static final int black=0x7f06000d;
+        public static final int color_edit_box_text=0x7f060018;
+        public static final int color_player_list_text=0x7f060019;
+        public static final int com_facebook_blue=0x7f060000;
+        public static final int com_facebook_button_background_color=0x7f060005;
+        public static final int com_facebook_button_background_color_disabled=0x7f060006;
+        public static final int com_facebook_button_background_color_pressed=0x7f060007;
+        public static final int com_facebook_button_like_background_color_selected=0x7f060008;
+        public static final int com_facebook_button_login_silver_background_color=0x7f060009;
+        public static final int com_facebook_button_login_silver_background_color_pressed=0x7f06000a;
+        public static final int com_facebook_button_send_background_color=0x7f06000b;
+        public static final int com_facebook_button_send_background_color_pressed=0x7f06000c;
+        public static final int com_facebook_likeboxcountview_border_color=0x7f060002;
+        public static final int com_facebook_likeboxcountview_text_color=0x7f060003;
+        public static final int com_facebook_likeview_text_color=0x7f060001;
+        public static final int com_facebook_share_button_text_color=0x7f060004;
+        public static final int insert_player_holder=0x7f060017;
+        public static final int light_gray=0x7f06000f;
+        public static final int light_gray_pressed=0x7f060010;
+        public static final int now_playing_color_bg=0x7f06001a;
+        public static final int now_playing_color_text=0x7f06001b;
+        public static final int results_text=0x7f06001c;
+        public static final int results_text_player=0x7f06001d;
+        public static final int transparent_black=0x7f060012;
+        public static final int transparent_white=0x7f060011;
+        public static final int white=0x7f06000e;
     }
     public static final class dimen {
-        public static final int actions_center_margin_left=0x7f050020;
-        public static final int actions_center_margin_right=0x7f050021;
-        public static final int actions_height=0x7f05001d;
-        public static final int actions_margin_left=0x7f05001e;
-        public static final int actions_margin_right=0x7f05001f;
-        public static final int actions_width=0x7f05001c;
+        public static final int actions_center_margin_left=0x7f070033;
+        public static final int actions_center_margin_right=0x7f070034;
+        public static final int actions_height=0x7f070030;
+        public static final int actions_margin_left=0x7f070031;
+        public static final int actions_margin_right=0x7f070032;
+        public static final int actions_width=0x7f07002f;
         /**  Default screen margins, per the Android Design guidelines. 
 
          Example customization of dimensions originally defined in res/values/dimens.xml
@@ -42,46 +177,65 @@ public final class R {
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
-        public static final int adapter_player_losses_margin_start=0x7f050005;
+        public static final int activity_horizontal_margin=0x7f070013;
+        public static final int activity_vertical_margin=0x7f070014;
+        public static final int adapter_player_losses_margin_start=0x7f070018;
         /**  Smash Rotation Fragment 
          */
-        public static final int adapter_player_name_margin_start=0x7f050002;
-        public static final int adapter_text_size=0x7f05000f;
-        public static final int bottom_bar_text_size=0x7f050010;
-        public static final int eleven_pt=0x7f05000a;
-        public static final int holder_height=0x7f05001b;
-        public static final int holder_start_rotation_height=0x7f050003;
-        public static final int holder_start_rotation_margin_top=0x7f050004;
+        public static final int adapter_player_name_margin_start=0x7f070015;
+        public static final int adapter_text_size=0x7f070022;
+        public static final int bottom_bar_text_size=0x7f070023;
+        public static final int com_facebook_likeboxcountview_border_radius=0x7f070005;
+        public static final int com_facebook_likeboxcountview_border_width=0x7f070006;
+        public static final int com_facebook_likeboxcountview_caret_height=0x7f070004;
+        public static final int com_facebook_likeboxcountview_caret_width=0x7f070003;
+        public static final int com_facebook_likeboxcountview_text_padding=0x7f070008;
+        public static final int com_facebook_likeboxcountview_text_size=0x7f070007;
+        public static final int com_facebook_likeview_edge_padding=0x7f070001;
+        public static final int com_facebook_likeview_internal_padding=0x7f070002;
+        public static final int com_facebook_likeview_text_size=0x7f070000;
+        public static final int com_facebook_profilepictureview_preset_size_large=0x7f07000b;
+        public static final int com_facebook_profilepictureview_preset_size_normal=0x7f07000a;
+        public static final int com_facebook_profilepictureview_preset_size_small=0x7f070009;
+        public static final int com_facebook_share_button_compound_drawable_padding=0x7f07000c;
+        public static final int com_facebook_share_button_padding_bottom=0x7f07000d;
+        public static final int com_facebook_share_button_padding_left=0x7f07000e;
+        public static final int com_facebook_share_button_padding_right=0x7f07000f;
+        public static final int com_facebook_share_button_padding_top=0x7f070010;
+        public static final int com_facebook_share_button_text_size=0x7f070011;
+        public static final int com_facebook_tooltip_horizontal_padding=0x7f070012;
+        public static final int eleven_pt=0x7f07001d;
+        public static final int holder_height=0x7f07002e;
+        public static final int holder_start_rotation_height=0x7f070016;
+        public static final int holder_start_rotation_margin_top=0x7f070017;
         /**  Actions Dialog 
          */
-        public static final int holder_width=0x7f05001a;
-        public static final int insert_player_holder_padding=0x7f05000d;
-        public static final int insert_player_name_height=0x7f05000e;
-        public static final int nine_pt=0x7f050009;
-        public static final int result_share_holder_height=0x7f050025;
+        public static final int holder_width=0x7f07002d;
+        public static final int insert_player_holder_padding=0x7f070020;
+        public static final int insert_player_name_height=0x7f070021;
+        public static final int nine_pt=0x7f07001c;
+        public static final int result_share_holder_height=0x7f070038;
         /**  Result Fragment 
          */
-        public static final int result_texts=0x7f050022;
-        public static final int result_texts_margin_top=0x7f050024;
-        public static final int result_texts_size=0x7f050023;
-        public static final int rotation_margin_top=0x7f050015;
-        public static final int rotation_menu_height=0x7f050019;
-        public static final int rotation_menu_margin_right=0x7f050017;
-        public static final int rotation_menu_width=0x7f050018;
-        public static final int ten_pt=0x7f05000b;
-        public static final int thrirteen_pt=0x7f05000c;
-        public static final int top_bar_holder_height=0x7f050006;
-        public static final int top_bar_margin_left=0x7f050007;
-        public static final int top_bar_text_size=0x7f050008;
-        public static final int two_contestants_divider=0x7f050014;
-        public static final int two_contestants_height=0x7f050012;
-        public static final int two_contestants_margin_top=0x7f050016;
-        public static final int two_contestants_margin_top_inside=0x7f050013;
+        public static final int result_texts=0x7f070035;
+        public static final int result_texts_margin_top=0x7f070037;
+        public static final int result_texts_size=0x7f070036;
+        public static final int rotation_margin_top=0x7f070028;
+        public static final int rotation_menu_height=0x7f07002c;
+        public static final int rotation_menu_margin_right=0x7f07002a;
+        public static final int rotation_menu_width=0x7f07002b;
+        public static final int ten_pt=0x7f07001e;
+        public static final int thrirteen_pt=0x7f07001f;
+        public static final int top_bar_holder_height=0x7f070019;
+        public static final int top_bar_margin_left=0x7f07001a;
+        public static final int top_bar_text_size=0x7f07001b;
+        public static final int two_contestants_divider=0x7f070027;
+        public static final int two_contestants_height=0x7f070025;
+        public static final int two_contestants_margin_top=0x7f070029;
+        public static final int two_contestants_margin_top_inside=0x7f070026;
         /**  Start Rotation 
          */
-        public static final int two_contestants_width=0x7f050011;
+        public static final int two_contestants_width=0x7f070024;
     }
     public static final class drawable {
         public static final int background_stroke_next_player=0x7f020000;
@@ -115,129 +269,237 @@ public final class R {
         public static final int bt_yes_pressed=0x7f02001c;
         public static final int bt_yes_unpressed=0x7f02001d;
         public static final int character_selector=0x7f02001e;
-        public static final int facebook_logo=0x7f02001f;
-        public static final int finish_match_btn_selector=0x7f020020;
-        public static final int ic_launcher=0x7f020021;
-        public static final int icon_crown_match=0x7f020022;
-        public static final int icon_crown_results=0x7f020023;
-        public static final int icon_logo=0x7f020024;
-        public static final int icon_logo_topbar=0x7f020025;
-        public static final int icon_match=0x7f020026;
-        public static final int icon_playername=0x7f020027;
-        public static final int icon_share=0x7f020028;
-        public static final int insert_player_btn_selector=0x7f020029;
-        public static final int menu_selector=0x7f02002a;
-        public static final int rotation=0x7f02002b;
-        public static final int rotation_pressed=0x7f02002c;
-        public static final int rotation_unpressed=0x7f02002d;
-        public static final int smash_vector=0x7f02002e;
-        public static final int splash_bg=0x7f02002f;
-        public static final int start_rotation_btn_selector=0x7f020030;
+        public static final int com_facebook_button_background=0x7f02001f;
+        public static final int com_facebook_button_icon=0x7f020020;
+        public static final int com_facebook_button_like_background=0x7f020021;
+        public static final int com_facebook_button_like_icon_selected=0x7f020022;
+        public static final int com_facebook_button_login_silver_background=0x7f020023;
+        public static final int com_facebook_button_send_background=0x7f020024;
+        public static final int com_facebook_button_send_icon=0x7f020025;
+        public static final int com_facebook_close=0x7f020026;
+        public static final int com_facebook_profile_picture_blank_portrait=0x7f020027;
+        public static final int com_facebook_profile_picture_blank_square=0x7f020028;
+        public static final int com_facebook_tooltip_black_background=0x7f020029;
+        public static final int com_facebook_tooltip_black_bottomnub=0x7f02002a;
+        public static final int com_facebook_tooltip_black_topnub=0x7f02002b;
+        public static final int com_facebook_tooltip_black_xout=0x7f02002c;
+        public static final int com_facebook_tooltip_blue_background=0x7f02002d;
+        public static final int com_facebook_tooltip_blue_bottomnub=0x7f02002e;
+        public static final int com_facebook_tooltip_blue_topnub=0x7f02002f;
+        public static final int com_facebook_tooltip_blue_xout=0x7f020030;
+        public static final int exclude_players_btn_selector=0x7f020031;
+        public static final int facebook_logo=0x7f020032;
+        public static final int finish_match_btn_selector=0x7f020033;
+        public static final int ic_launcher=0x7f020034;
+        public static final int icon_crown_match=0x7f020035;
+        public static final int icon_crown_results=0x7f020036;
+        public static final int icon_logo=0x7f020037;
+        public static final int icon_logo_topbar=0x7f020038;
+        public static final int icon_match=0x7f020039;
+        public static final int icon_playername=0x7f02003a;
+        public static final int icon_share=0x7f02003b;
+        public static final int insert_new_selector=0x7f02003c;
+        public static final int insert_player_btn_selector=0x7f02003d;
+        public static final int line_random_selector=0x7f02003e;
+        public static final int lost_selector=0x7f02003f;
+        public static final int menu_selector=0x7f020040;
+        public static final int messenger_bubble_large_blue=0x7f020041;
+        public static final int messenger_bubble_large_white=0x7f020042;
+        public static final int messenger_bubble_small_blue=0x7f020043;
+        public static final int messenger_bubble_small_white=0x7f020044;
+        public static final int messenger_button_blue_bg_round=0x7f020045;
+        public static final int messenger_button_blue_bg_selector=0x7f020046;
+        public static final int messenger_button_send_round_shadow=0x7f020047;
+        public static final int messenger_button_white_bg_round=0x7f020048;
+        public static final int messenger_button_white_bg_selector=0x7f020049;
+        public static final int passed_selector=0x7f02004a;
+        public static final int rotation=0x7f02004b;
+        public static final int rotation_pressed=0x7f02004c;
+        public static final int rotation_unpressed=0x7f02004d;
+        public static final int round_corner_dialog=0x7f02004e;
+        public static final int smash_vector=0x7f02004f;
+        public static final int splash_bg=0x7f020050;
+        public static final int start_rotation_btn_selector=0x7f020051;
+        public static final int won_selector=0x7f020052;
     }
     public static final class id {
-        public static final int action_loser=0x7f090005;
-        public static final int action_pass=0x7f090006;
-        public static final int action_winner=0x7f090004;
-        public static final int actions_holder=0x7f090003;
-        public static final int best_player=0x7f090012;
-        public static final int best_player_text=0x7f090011;
-        public static final int chosen_player=0x7f090002;
-        public static final int container=0x7f090000;
-        public static final int contestant_a=0x7f090027;
-        public static final int contestant_a_name=0x7f090028;
-        public static final int contestant_b=0x7f09002b;
-        public static final int contestant_b_name=0x7f09002c;
-        public static final int finish_contest=0x7f090035;
-        public static final int finish_match_holder=0x7f09002f;
-        public static final int finish_match_text=0x7f090030;
-        public static final int holder_best_player=0x7f090010;
-        public static final int holder_buttons=0x7f090019;
-        public static final int holder_contest_information=0x7f09000a;
-        public static final int holder_dialog=0x7f090034;
-        public static final int holder_location=0x7f090016;
-        public static final int holder_number_of_games=0x7f09000d;
-        public static final int holder_results_text=0x7f09000b;
-        public static final int holder_start_rotation=0x7f09001f;
-        public static final int holder_worst_player=0x7f090013;
-        public static final int img_top_bar=0x7f090008;
-        public static final int insert_player_holder=0x7f09001c;
-        public static final int insert_player_name=0x7f09001d;
-        public static final int insert_player_name_button=0x7f09001e;
-        public static final int list_of_players=0x7f090021;
-        public static final int list_of_players_names=0x7f090001;
-        public static final int location=0x7f090018;
-        public static final int location_text=0x7f090017;
-        public static final int losses_counter_a=0x7f09002a;
-        public static final int losses_counter_b=0x7f09002e;
-        public static final int menu_holder=0x7f090022;
-        public static final int next_player=0x7f090031;
-        public static final int next_player_text=0x7f090032;
-        public static final int now_playing_identificator=0x7f090024;
-        public static final int now_playing_txt=0x7f090025;
-        public static final int number_of_games=0x7f09000f;
-        public static final int number_of_games_text=0x7f09000e;
-        public static final int restart_rotation=0x7f09001b;
-        public static final int results_text=0x7f09000c;
-        public static final int rotation=0x7f090033;
-        public static final int share_results=0x7f09001a;
-        public static final int start_rotation_text=0x7f090020;
-        public static final int top_bar_app_name=0x7f090009;
-        public static final int top_bar_holder=0x7f090007;
-        public static final int top_bar_menu=0x7f090023;
-        public static final int two_contestants_holder=0x7f090026;
-        public static final int wins_counter_a=0x7f090029;
-        public static final int wins_counter_b=0x7f09002d;
-        public static final int worst_player=0x7f090015;
-        public static final int worst_player_text=0x7f090014;
+        public static final int action_loser=0x7f090021;
+        public static final int action_pass=0x7f090022;
+        public static final int action_winner=0x7f090020;
+        public static final int actions_holder=0x7f09001d;
+        public static final int automatic=0x7f090000;
+        public static final int best_player=0x7f090031;
+        public static final int best_player_text=0x7f090030;
+        public static final int bottom=0x7f09000c;
+        public static final int box_count=0x7f090009;
+        public static final int button=0x7f09000a;
+        public static final int center=0x7f09000f;
+        public static final int chosen_player=0x7f090014;
+        public static final int com_facebook_body_frame=0x7f090018;
+        public static final int com_facebook_button_xout=0x7f09001a;
+        public static final int com_facebook_fragment_container=0x7f090016;
+        public static final int com_facebook_login_activity_progress_bar=0x7f090017;
+        public static final int com_facebook_tooltip_bubble_view_bottom_pointer=0x7f09001c;
+        public static final int com_facebook_tooltip_bubble_view_text_body=0x7f09001b;
+        public static final int com_facebook_tooltip_bubble_view_top_pointer=0x7f090019;
+        public static final int container=0x7f090012;
+        public static final int contestant_a=0x7f090049;
+        public static final int contestant_a_name=0x7f09004a;
+        public static final int contestant_b=0x7f09004e;
+        public static final int contestant_b_name=0x7f09004f;
+        public static final int display_always=0x7f090001;
+        public static final int et_new_player=0x7f09005b;
+        public static final int exclude_players=0x7f09003b;
+        public static final int finish_contest=0x7f09005e;
+        public static final int finish_match_holder=0x7f090053;
+        public static final int finish_match_text=0x7f090054;
+        public static final int holder_actions_inside=0x7f09001f;
+        public static final int holder_best_player=0x7f09002f;
+        public static final int holder_buttons=0x7f090038;
+        public static final int holder_contest_information=0x7f090029;
+        public static final int holder_dialog=0x7f090058;
+        public static final int holder_dialog_line_random=0x7f090042;
+        public static final int holder_edit_and_button=0x7f09005a;
+        public static final int holder_location=0x7f090035;
+        public static final int holder_master_results=0x7f090025;
+        public static final int holder_number_of_games=0x7f09002c;
+        public static final int holder_player_name=0x7f09001e;
+        public static final int holder_results_text=0x7f09002a;
+        public static final int holder_start_rotation=0x7f09003f;
+        public static final int holder_worst_player=0x7f090032;
+        public static final int img_top_bar=0x7f090027;
+        public static final int inline=0x7f09000d;
+        public static final int insert_new_player=0x7f090059;
+        public static final int insert_new_player_btn=0x7f09005c;
+        public static final int insert_player_holder=0x7f09003c;
+        public static final int insert_player_name=0x7f09003d;
+        public static final int insert_player_name_button=0x7f09003e;
+        public static final int large=0x7f090003;
+        public static final int left=0x7f090010;
+        public static final int line=0x7f090023;
+        public static final int list_of_players=0x7f090041;
+        public static final int list_of_players_names=0x7f090013;
+        public static final int location=0x7f090037;
+        public static final int location_text=0x7f090036;
+        public static final int losses_counter_a=0x7f09004d;
+        public static final int losses_counter_b=0x7f090052;
+        public static final int messenger_send_button=0x7f09005d;
+        public static final int moar_players=0x7f090043;
+        public static final int mvp=0x7f090015;
+        public static final int mvp_match=0x7f09004b;
+        public static final int mvp_match_b=0x7f090050;
+        public static final int never_display=0x7f090002;
+        public static final int next_player=0x7f090055;
+        public static final int next_player_text=0x7f090056;
+        public static final int normal=0x7f090004;
+        public static final int now_playing_identificator=0x7f090046;
+        public static final int now_playing_txt=0x7f090047;
+        public static final int number_of_games=0x7f09002e;
+        public static final int number_of_games_text=0x7f09002d;
+        public static final int open_graph=0x7f090006;
+        public static final int page=0x7f090007;
+        public static final int random=0x7f090024;
+        public static final int restart_rotation=0x7f09003a;
+        public static final int results_text=0x7f09002b;
+        public static final int right=0x7f090011;
+        public static final int rotation=0x7f090057;
+        public static final int share_results=0x7f090039;
+        public static final int small=0x7f090005;
+        public static final int splash_icon=0x7f090044;
+        public static final int standard=0x7f09000b;
+        public static final int start_rotation_text=0x7f090040;
+        public static final int top=0x7f09000e;
+        public static final int top_bar_app_name=0x7f090028;
+        public static final int top_bar_holder=0x7f090026;
+        public static final int top_bar_insert_new_player=0x7f090045;
+        public static final int two_contestants_holder=0x7f090048;
+        public static final int unknown=0x7f090008;
+        public static final int wins_counter_a=0x7f09004c;
+        public static final int wins_counter_b=0x7f090051;
+        public static final int worst_player=0x7f090034;
+        public static final int worst_player_text=0x7f090033;
     }
     public static final class layout {
         public static final int activity_smash_rotation=0x7f030000;
         public static final int adapter_players=0x7f030001;
         public static final int adapter_rotation_players=0x7f030002;
-        public static final int fragment_actions_dialog=0x7f030003;
-        public static final int fragment_result=0x7f030004;
-        public static final int fragment_smash_rotation=0x7f030005;
-        public static final int fragment_splash_rotation=0x7f030006;
-        public static final int fragment_start_rotation=0x7f030007;
+        public static final int com_facebook_activity_layout=0x7f030003;
+        public static final int com_facebook_login_fragment=0x7f030004;
+        public static final int com_facebook_tooltip_bubble=0x7f030005;
+        public static final int fragment_actions_dialog=0x7f030006;
+        public static final int fragment_line_random_dialog=0x7f030007;
+        public static final int fragment_result=0x7f030008;
+        public static final int fragment_smash_rotation=0x7f030009;
+        public static final int fragment_splash_rotation=0x7f03000a;
+        public static final int fragment_start_rotation=0x7f03000b;
+        public static final int insert_new_player_dialog=0x7f03000c;
+        public static final int messenger_button_send_blue_large=0x7f03000d;
+        public static final int messenger_button_send_blue_round=0x7f03000e;
+        public static final int messenger_button_send_blue_small=0x7f03000f;
+        public static final int messenger_button_send_white_large=0x7f030010;
+        public static final int messenger_button_send_white_round=0x7f030011;
+        public static final int messenger_button_send_white_small=0x7f030012;
     }
     public static final class menu {
         public static final int menu_popup=0x7f080000;
     }
     public static final class string {
-        public static final int action_dialog_lose=0x7f06000d;
-        public static final int action_dialog_pass=0x7f06000e;
+        public static final int action_dialog_lose=0x7f040022;
+        public static final int action_dialog_pass=0x7f040023;
         /**  Actions Dialog Fragment 
          */
-        public static final int action_dialog_win=0x7f06000c;
-        public static final int adapter_player_losses=0x7f060007;
-        public static final int adapter_player_name=0x7f060005;
-        public static final int adapter_player_wins=0x7f060006;
-        public static final int app_name=0x7f060000;
-        public static final int app_name_results=0x7f060002;
-        public static final int app_name_rotation=0x7f060001;
-        public static final int error_insert_player_name=0x7f060008;
+        public static final int action_dialog_win=0x7f040021;
+        public static final int adapter_player_losses=0x7f040019;
+        public static final int adapter_player_name=0x7f040017;
+        public static final int adapter_player_wins=0x7f040018;
+        public static final int app_id=0x7f040014;
+        public static final int app_name=0x7f040011;
+        public static final int app_name_results=0x7f040013;
+        public static final int app_name_rotation=0x7f040012;
+        public static final int com_facebook_image_download_unknown_error=0x7f04000e;
+        public static final int com_facebook_internet_permission_error_message=0x7f04000c;
+        public static final int com_facebook_internet_permission_error_title=0x7f04000b;
+        public static final int com_facebook_like_button_liked=0x7f040002;
+        public static final int com_facebook_like_button_not_liked=0x7f040001;
+        public static final int com_facebook_loading=0x7f04000a;
+        public static final int com_facebook_loginview_cancel_action=0x7f040009;
+        public static final int com_facebook_loginview_log_in_button=0x7f040004;
+        public static final int com_facebook_loginview_log_in_button_long=0x7f040005;
+        public static final int com_facebook_loginview_log_out_action=0x7f040008;
+        public static final int com_facebook_loginview_log_out_button=0x7f040003;
+        public static final int com_facebook_loginview_logged_in_as=0x7f040006;
+        public static final int com_facebook_loginview_logged_in_using_facebook=0x7f040007;
+        public static final int com_facebook_send_button_text=0x7f040010;
+        public static final int com_facebook_share_button_text=0x7f04000f;
+        public static final int com_facebook_tooltip_default=0x7f04000d;
+        public static final int error_insert_player_name=0x7f04001a;
         /**  Start Rotation Fragment 
          */
-        public static final int finish_contest=0x7f060016;
-        public static final int finish_match=0x7f060018;
+        public static final int finish_contest=0x7f04002c;
+        public static final int finish_match=0x7f04002e;
         /**  Smash Rotation Fragment 
          */
-        public static final int insert_player_name=0x7f060003;
-        public static final int insert_player_name_button=0x7f060004;
-        public static final int next_player_text=0x7f060019;
-        public static final int not_enough=0x7f06000b;
-        public static final int now_playing=0x7f060017;
-        public static final int restart_rotation=0x7f060015;
-        public static final int result_best_player=0x7f060010;
-        public static final int result_location=0x7f060012;
+        public static final int insert_player_name=0x7f040015;
+        public static final int insert_player_name_button=0x7f040016;
+        public static final int line_dialog=0x7f04001f;
+        public static final int messenger_send_button_text=0x7f040000;
+        public static final int moar_players=0x7f04001e;
+        public static final int new_challenger=0x7f040024;
+        public static final int next_player_text=0x7f04002f;
+        public static final int not_enough=0x7f04001d;
+        public static final int now_playing=0x7f04002d;
+        public static final int random_dialog=0x7f040020;
+        public static final int restart_rotation=0x7f04002b;
+        public static final int result_best_player=0x7f040026;
+        public static final int result_location=0x7f040028;
         /**  Results Fragment 
          */
-        public static final int result_number_of_games=0x7f06000f;
-        public static final int result_worst_player=0x7f060011;
-        public static final int results_text=0x7f060013;
-        public static final int share_results=0x7f060014;
-        public static final int start_rotation=0x7f06000a;
-        public static final int success_insert_player_name=0x7f060009;
+        public static final int result_number_of_games=0x7f040025;
+        public static final int result_worst_player=0x7f040027;
+        public static final int results_text=0x7f040029;
+        public static final int share_results=0x7f04002a;
+        public static final int start_rotation=0x7f04001c;
+        public static final int success_insert_player_name=0x7f04001b;
     }
     public static final class style {
         /** 
@@ -261,10 +523,284 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f050015;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f050016;
+        public static final int MessengerButton=0x7f050000;
+        public static final int MessengerButton_Blue=0x7f050001;
+        public static final int MessengerButton_Blue_Large=0x7f050002;
+        public static final int MessengerButton_Blue_Small=0x7f050003;
+        public static final int MessengerButton_White=0x7f050004;
+        public static final int MessengerButton_White_Large=0x7f050005;
+        public static final int MessengerButton_White_Small=0x7f050006;
+        public static final int MessengerButtonText=0x7f050007;
+        public static final int MessengerButtonText_Blue=0x7f050008;
+        public static final int MessengerButtonText_Blue_Large=0x7f050009;
+        public static final int MessengerButtonText_Blue_Small=0x7f05000a;
+        public static final int MessengerButtonText_White=0x7f05000b;
+        public static final int MessengerButtonText_White_Large=0x7f05000c;
+        public static final int MessengerButtonText_White_Small=0x7f05000d;
+        public static final int com_facebook_button=0x7f05000f;
+        public static final int com_facebook_button_like=0x7f050010;
+        public static final int com_facebook_button_send=0x7f050013;
+        public static final int com_facebook_button_share=0x7f050014;
+        public static final int com_facebook_loginview_default_style=0x7f050011;
+        public static final int com_facebook_loginview_silver_style=0x7f050012;
+        public static final int tooltip_bubble_text=0x7f05000e;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a com_facebook_like_view.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #com_facebook_like_view_com_facebook_auxiliary_view_position br.com.tick.smashrotation:com_facebook_auxiliary_view_position}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_like_view_com_facebook_foreground_color br.com.tick.smashrotation:com_facebook_foreground_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_like_view_com_facebook_horizontal_alignment br.com.tick.smashrotation:com_facebook_horizontal_alignment}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_like_view_com_facebook_object_id br.com.tick.smashrotation:com_facebook_object_id}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_like_view_com_facebook_object_type br.com.tick.smashrotation:com_facebook_object_type}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_like_view_com_facebook_style br.com.tick.smashrotation:com_facebook_style}</code></td><td></td></tr>
+           </table>
+           @see #com_facebook_like_view_com_facebook_auxiliary_view_position
+           @see #com_facebook_like_view_com_facebook_foreground_color
+           @see #com_facebook_like_view_com_facebook_horizontal_alignment
+           @see #com_facebook_like_view_com_facebook_object_id
+           @see #com_facebook_like_view_com_facebook_object_type
+           @see #com_facebook_like_view_com_facebook_style
+         */
+        public static final int[] com_facebook_like_view = {
+            0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009,
+            0x7f01000a, 0x7f01000b
+        };
+        /**
+          <p>This symbol is the offset where the {@link br.com.tick.smashrotation.R.attr#com_facebook_auxiliary_view_position}
+          attribute's value can be found in the {@link #com_facebook_like_view} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>bottom</code></td><td>0</td><td> Keep in sync with Enums in LikeView </td></tr>
+<tr><td><code>inline</code></td><td>1</td><td></td></tr>
+<tr><td><code>top</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name br.com.tick.smashrotation:com_facebook_auxiliary_view_position
+        */
+        public static final int com_facebook_like_view_com_facebook_auxiliary_view_position = 4;
+        /**
+          <p>This symbol is the offset where the {@link br.com.tick.smashrotation.R.attr#com_facebook_foreground_color}
+          attribute's value can be found in the {@link #com_facebook_like_view} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name br.com.tick.smashrotation:com_facebook_foreground_color
+        */
+        public static final int com_facebook_like_view_com_facebook_foreground_color = 0;
+        /**
+          <p>This symbol is the offset where the {@link br.com.tick.smashrotation.R.attr#com_facebook_horizontal_alignment}
+          attribute's value can be found in the {@link #com_facebook_like_view} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>center</code></td><td>0</td><td> Keep in sync with Enums in LikeView </td></tr>
+<tr><td><code>left</code></td><td>1</td><td></td></tr>
+<tr><td><code>right</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name br.com.tick.smashrotation:com_facebook_horizontal_alignment
+        */
+        public static final int com_facebook_like_view_com_facebook_horizontal_alignment = 5;
+        /**
+          <p>This symbol is the offset where the {@link br.com.tick.smashrotation.R.attr#com_facebook_object_id}
+          attribute's value can be found in the {@link #com_facebook_like_view} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name br.com.tick.smashrotation:com_facebook_object_id
+        */
+        public static final int com_facebook_like_view_com_facebook_object_id = 1;
+        /**
+          <p>This symbol is the offset where the {@link br.com.tick.smashrotation.R.attr#com_facebook_object_type}
+          attribute's value can be found in the {@link #com_facebook_like_view} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>unknown</code></td><td>0</td><td> Keep in sync with Enums in Likeview </td></tr>
+<tr><td><code>open_graph</code></td><td>1</td><td></td></tr>
+<tr><td><code>page</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name br.com.tick.smashrotation:com_facebook_object_type
+        */
+        public static final int com_facebook_like_view_com_facebook_object_type = 2;
+        /**
+          <p>This symbol is the offset where the {@link br.com.tick.smashrotation.R.attr#com_facebook_style}
+          attribute's value can be found in the {@link #com_facebook_like_view} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>standard</code></td><td>0</td><td> Keep in sync with Enums in LikeView </td></tr>
+<tr><td><code>button</code></td><td>1</td><td></td></tr>
+<tr><td><code>box_count</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name br.com.tick.smashrotation:com_facebook_style
+        */
+        public static final int com_facebook_like_view_com_facebook_style = 3;
+        /** Attributes that can be used with a com_facebook_login_view.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #com_facebook_login_view_com_facebook_confirm_logout br.com.tick.smashrotation:com_facebook_confirm_logout}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_login_view_com_facebook_login_text br.com.tick.smashrotation:com_facebook_login_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_login_view_com_facebook_logout_text br.com.tick.smashrotation:com_facebook_logout_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_login_view_com_facebook_tooltip_mode br.com.tick.smashrotation:com_facebook_tooltip_mode}</code></td><td></td></tr>
+           </table>
+           @see #com_facebook_login_view_com_facebook_confirm_logout
+           @see #com_facebook_login_view_com_facebook_login_text
+           @see #com_facebook_login_view_com_facebook_logout_text
+           @see #com_facebook_login_view_com_facebook_tooltip_mode
+         */
+        public static final int[] com_facebook_login_view = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003
+        };
+        /**
+          <p>This symbol is the offset where the {@link br.com.tick.smashrotation.R.attr#com_facebook_confirm_logout}
+          attribute's value can be found in the {@link #com_facebook_login_view} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name br.com.tick.smashrotation:com_facebook_confirm_logout
+        */
+        public static final int com_facebook_login_view_com_facebook_confirm_logout = 0;
+        /**
+          <p>This symbol is the offset where the {@link br.com.tick.smashrotation.R.attr#com_facebook_login_text}
+          attribute's value can be found in the {@link #com_facebook_login_view} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name br.com.tick.smashrotation:com_facebook_login_text
+        */
+        public static final int com_facebook_login_view_com_facebook_login_text = 1;
+        /**
+          <p>This symbol is the offset where the {@link br.com.tick.smashrotation.R.attr#com_facebook_logout_text}
+          attribute's value can be found in the {@link #com_facebook_login_view} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name br.com.tick.smashrotation:com_facebook_logout_text
+        */
+        public static final int com_facebook_login_view_com_facebook_logout_text = 2;
+        /**
+          <p>This symbol is the offset where the {@link br.com.tick.smashrotation.R.attr#com_facebook_tooltip_mode}
+          attribute's value can be found in the {@link #com_facebook_login_view} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>automatic</code></td><td>0</td><td> Keep in sync with Enums in LoginButton </td></tr>
+<tr><td><code>display_always</code></td><td>1</td><td></td></tr>
+<tr><td><code>never_display</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name br.com.tick.smashrotation:com_facebook_tooltip_mode
+        */
+        public static final int com_facebook_login_view_com_facebook_tooltip_mode = 3;
+        /** Attributes that can be used with a com_facebook_profile_picture_view.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #com_facebook_profile_picture_view_com_facebook_is_cropped br.com.tick.smashrotation:com_facebook_is_cropped}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_profile_picture_view_com_facebook_preset_size br.com.tick.smashrotation:com_facebook_preset_size}</code></td><td></td></tr>
+           </table>
+           @see #com_facebook_profile_picture_view_com_facebook_is_cropped
+           @see #com_facebook_profile_picture_view_com_facebook_preset_size
+         */
+        public static final int[] com_facebook_profile_picture_view = {
+            0x7f010004, 0x7f010005
+        };
+        /**
+          <p>This symbol is the offset where the {@link br.com.tick.smashrotation.R.attr#com_facebook_is_cropped}
+          attribute's value can be found in the {@link #com_facebook_profile_picture_view} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name br.com.tick.smashrotation:com_facebook_is_cropped
+        */
+        public static final int com_facebook_profile_picture_view_com_facebook_is_cropped = 1;
+        /**
+          <p>This symbol is the offset where the {@link br.com.tick.smashrotation.R.attr#com_facebook_preset_size}
+          attribute's value can be found in the {@link #com_facebook_profile_picture_view} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>small</code></td><td>-2</td><td> Keep in sync with constants in ProfilePictureView </td></tr>
+<tr><td><code>normal</code></td><td>-3</td><td></td></tr>
+<tr><td><code>large</code></td><td>-4</td><td></td></tr>
+</table>
+          @attr name br.com.tick.smashrotation:com_facebook_preset_size
+        */
+        public static final int com_facebook_profile_picture_view_com_facebook_preset_size = 0;
+    };
 }

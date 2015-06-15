@@ -10,6 +10,8 @@ import br.com.tick.smashrotation.bo.SmashRotationBO;
 import br.com.tick.smashrotation.domain.Contest;
 import br.com.tick.smashrotation.domain.Player;
 import br.com.tick.smashrotation.fragment.ActionsDialogFragment;
+import br.com.tick.smashrotation.fragment.InsertNewPlayerDialogFragment;
+import br.com.tick.smashrotation.fragment.LineRandomFragment;
 import br.com.tick.smashrotation.fragment.ResultsFragment;
 import br.com.tick.smashrotation.fragment.SmashRotationFragment;
 import br.com.tick.smashrotation.fragment.SplashScreenFragment;
@@ -18,12 +20,18 @@ import br.com.tick.smashrotation.listener.ISmashRotation;
 import br.com.tick.smashrotation.persistence.Serialization;
 import br.com.tick.smashrotation.utils.DisplayUtil;
 
+import com.facebook.appevents.AppEventsLogger;
+
 public class SmashRotationActivity extends Activity implements ISmashRotation {
 	
 	// Put them in order to understand the app flow.
 	private SplashScreenFragment splashScreenFragment;
 	private SmashRotationFragment smashRotationFragment;
+	private LineRandomFragment lineRandomFragment;
+	
 	private StartRotationFragment startRotationFragment;
+	private InsertNewPlayerDialogFragment insertNewPlayerDialogFragment;
+	
 	private ActionsDialogFragment actionsdialogFragment;
 	private ResultsFragment resultsFragment;
 
@@ -33,25 +41,18 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 		setContentView(R.layout.activity_smash_rotation);
 		SmashRotationBO.getInstance(getApplicationContext());
 		DisplayUtil.init(this);
-
+		
 		if (savedInstanceState == null) {
 			splashScreenFragment = new SplashScreenFragment();
 			getFragmentManager().beginTransaction().replace(R.id.container, splashScreenFragment).commit();
 		}
-
-		// Proving that the singleton design patters works and its gonna be used
-		// through the application.
-//		for (Player player : SmashRotationBO.getInstance(this).generateStaticPlayers()) {
-//			System.out.println("Nome -> " + player.getName());
-//			System.out.println("Wins -> " + player.getWins() + "\n");
-//		}
 	}
 
 	@Override
-	public void showRotationScreen(List<Player> listOfPlayers) {
+	public void showRotationScreen(List<Player> listOfPlayers, int i) {
 		// Inflate rotation fragment.
 		startRotationFragment = new StartRotationFragment();
-		startRotationFragment.setListOfPlayers(listOfPlayers);
+		startRotationFragment.setListOfPlayers(listOfPlayers, i);
 		
 		if (SmashRotationBO.getInstance(this).getContest().getNumberOfGames() > 0){
 			SmashRotationBO.getInstance(this).setContest(new Contest());
@@ -114,6 +115,39 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 		smashRotationFragment.setData();
 		getFragmentManager().beginTransaction().replace(R.id.container, smashRotationFragment).commit();
 		
+	}
+	
+	@Override
+	public void showDialogLineRandom(List<Player> chosenPlayers) {
+		lineRandomFragment = new LineRandomFragment();
+		lineRandomFragment.setChosenPlayers(chosenPlayers);
+		getFragmentManager().beginTransaction().add(R.id.holder_dialog_line_random, lineRandomFragment).addToBackStack(lineRandomFragment.getClass().toString()).commit();
+	}
+
+	@Override
+	public void sendNewChallenger(Player player) {
+		startRotationFragment.receiveNewChallenger(player);
+		
+	}
+	
+	@Override
+	public void showDialogInsertNewPlayer() {
+		
+		insertNewPlayerDialogFragment = new InsertNewPlayerDialogFragment();
+		getFragmentManager().beginTransaction().add(R.id.holder_dialog, insertNewPlayerDialogFragment).addToBackStack(insertNewPlayerDialogFragment.getClass().toString()).commit();
+		
+	}
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		AppEventsLogger.activateApp(this);
+	}
+	
+	@Override
+	protected void onPause() {
+		AppEventsLogger.deactivateApp(this);
+		super.onPause();
 	}
 
 }

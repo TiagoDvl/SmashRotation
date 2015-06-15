@@ -23,7 +23,7 @@ public class SmashRotationBO {
 		contest = new Contest();
 	}
 
-	public static SmashRotationBO getInstance(Context context) {
+	public synchronized static SmashRotationBO getInstance(Context context) {
 		if (instance == null) {
 			instance = new SmashRotationBO(context);
 			

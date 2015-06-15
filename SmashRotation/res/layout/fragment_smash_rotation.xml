@@ -9,15 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/top_bar_holder_height"
         android:background="@color/app_top_bar_rotation" >
-        
-        <ImageView 
+
+        <ImageView
             android:id="@+id/img_top_bar"
             android:layout_width="49px"
             android:layout_height="62px"
-            android:layout_marginLeft="@dimen/top_bar_margin_left"
             android:layout_centerVertical="true"
-            android:background="@drawable/icon_logo_topbar"
-            />
+            android:layout_marginLeft="@dimen/top_bar_margin_left"
+            android:background="@drawable/icon_logo_topbar" />
 
         <TextView
             android:id="@+id/top_bar_app_name"
@@ -25,10 +24,20 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/top_bar_margin_left"
+            android:layout_toRightOf="@id/img_top_bar"
             android:text="@string/app_name"
             android:textColor="@color/white"
-            android:textSize="@dimen/top_bar_text_size"
-            android:layout_toRightOf="@id/img_top_bar" />
+            android:textSize="@dimen/top_bar_text_size" />
+
+        <ImageView
+            android:id="@+id/exclude_players"
+            android:layout_width="31px"
+            android:layout_height="50px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:background="@drawable/exclude_players_btn_selector"
+            android:visibility="invisible" />
     </RelativeLayout>
 
     <LinearLayout
@@ -36,10 +45,10 @@
         android:layout_width="match_parent"
         android:layout_height="120px"
         android:layout_below="@id/top_bar_holder"
-        android:orientation="horizontal"
-        android:padding="@dimen/insert_player_holder_padding"
+        android:background="@color/insert_player_holder"
         android:gravity="center_vertical"
-        android:background="@color/insert_player_holder" >
+        android:orientation="horizontal"
+        android:padding="@dimen/insert_player_holder_padding" >
 
         <EditText
             android:id="@+id/insert_player_name"
@@ -47,12 +56,13 @@
             android:layout_height="100px"
             android:layout_weight="5"
             android:background="@android:drawable/editbox_background_normal"
+            android:gravity="center_vertical"
             android:hint="@string/insert_player_name"
             android:inputType="textPersonName"
+            android:maxLength="14"
             android:singleLine="true"
-            android:textSize="8pt"
             android:textColor="@color/color_edit_box_text"
-            android:gravity="center_vertical" />
+            android:textSize="8pt" />
 
         <Button
             android:id="@+id/insert_player_name_button"
@@ -66,9 +76,9 @@
         android:layout_width="582px"
         android:layout_height="102px"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="@dimen/holder_start_rotation_margin_top"
-        android:layout_marginBottom="@dimen/holder_start_rotation_margin_top"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/holder_start_rotation_margin_top"
+        android:layout_marginTop="@dimen/holder_start_rotation_margin_top"
         android:background="@drawable/start_rotation_btn_selector" >
 
         <TextView
@@ -78,7 +88,7 @@
             android:layout_centerInParent="true"
             android:text="@string/start_rotation"
             android:textColor="@color/white"
-            android:textSize="@dimen/bottom_bar_text_size" />
+            android:textSize="@dimen/eleven_pt" />
     </RelativeLayout>
 
     <ListView
@@ -90,5 +100,20 @@
         android:cacheColorHint="@android:color/transparent"
         android:listSelector="@android:color/transparent" >
     </ListView>
+
+    <RelativeLayout
+        android:id="@+id/holder_dialog_line_random"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/moar_players"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/moar_players"
+        android:textColor="@color/now_playing_color_bg"
+        android:textSize="@dimen/eleven_pt" />
 
 </RelativeLayout>

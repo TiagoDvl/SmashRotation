@@ -35,7 +35,7 @@ public class SplashScreenFragment extends Fragment implements OnClickListener {
 			public void run() {
 				listener.showMainScreen();
 			}
-		}, 1000);
+		}, 3000);
 
 		return rootView;
 	}

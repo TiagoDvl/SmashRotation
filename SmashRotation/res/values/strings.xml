@@ -4,6 +4,7 @@
     <string name="app_name">Rotation</string>
     <string name="app_name_rotation">Rotation</string>
     <string name="app_name_results">Results</string>
+    <string name="app_id">388734354646891</string>
 
     <!-- Smash Rotation Fragment -->
 
@@ -16,12 +17,17 @@
     <string name="success_insert_player_name">Player registered</string>
     <string name="start_rotation">Rotation!</string>
     <string name="not_enough">Not enough players to start a rotation.</string>
+    <string name="moar_players">Insert new players\nto start a Rotation :)</string>
+    
+    <string name="line_dialog">In Order</string>
+    <string name="random_dialog">Random</string>
 
     <!-- Actions Dialog Fragment -->
 
     <string name="action_dialog_win">Won</string>
     <string name="action_dialog_lose">Lost</string>
     <string name="action_dialog_pass">Passed</string>
+    <string name="new_challenger">New Challenger</string>
 
     <!-- Results Fragment -->
     <string name="result_number_of_games">Games</string>

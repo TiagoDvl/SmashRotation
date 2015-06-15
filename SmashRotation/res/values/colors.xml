@@ -5,6 +5,7 @@
     <color name="light_gray">#7f7f7f</color>
     <color name="light_gray_pressed">#c3c3c3</color>
     <color name="transparent_white">#33FFFFFF</color>
+    <color name="transparent_black">#80000000</color>
     
     <color name="app_theme_red">#D63333</color>
 	<color name="app_theme_red_light">#DA4747</color>

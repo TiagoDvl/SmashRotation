@@ -8,9 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import br.com.tick.smashrotation.R;
 import br.com.tick.smashrotation.domain.Player;
+import br.com.tick.smashrotation.utils.DisplayUtil;
 
 public class RotationAdapter extends BaseAdapter {
 
@@ -49,6 +51,9 @@ public class RotationAdapter extends BaseAdapter {
 		if (convertView == null) {
 			holder = new ViewHolder();
 			convertView = inflater.inflate(R.layout.adapter_rotation_players, ((ViewGroup) null));
+			DisplayUtil.setLayoutParams((ViewGroup) convertView);
+			holder.playerName = (TextView) convertView.findViewById(R.id.list_of_players_names);
+			holder.mvp = (ImageView) convertView.findViewById(R.id.mvp);
 
 			convertView.setTag(holder);
 		} else {
@@ -56,12 +61,13 @@ public class RotationAdapter extends BaseAdapter {
 		}
 		
 		Typeface typeface = Typeface.createFromAsset(activity.getAssets(), "fonts/Oswald-Regular.ttf");
-		holder.playerName = (TextView) convertView.findViewById(R.id.list_of_players_names);
 		holder.playerName.setText(player.getName());
 		holder.playerName.setTypeface(typeface);
 
 		if (player.isMvp()){
-			
+			holder.mvp.setVisibility(View.VISIBLE);
+		} else {
+			holder.mvp.setVisibility(View.GONE);
 		}
 		
 		return convertView;
@@ -69,6 +75,7 @@ public class RotationAdapter extends BaseAdapter {
 
 	private static class ViewHolder {
 		TextView playerName;
+		ImageView mvp;
 	}
 
 }
