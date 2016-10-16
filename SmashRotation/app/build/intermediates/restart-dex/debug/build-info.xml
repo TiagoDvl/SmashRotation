@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    api-level="23"
+    density="xxhdpi"
+    format="8"
+    plugin-version="2.2.0"
+    timestamp="217650579519529"
+    token="866399158680882199"
+    verifier="FULL_BUILD_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="3660" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="99" />
+    <task
+        name="verifier"
+        duration="90" />
+
+    <artifact
+        location="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="217650579519529"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

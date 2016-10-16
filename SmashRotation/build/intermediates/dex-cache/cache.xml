@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_b2a4975006c022c746b68075b54ddbf08e9fd953\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\exploded-aar\com.android.support\customtabs\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
+        <dex dex="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-customtabs-23.4.0_914a60dde3090d5e3c523e0accd70c69c093eb31\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_3f9f305cdd4463d8c2ab2442cc4f8659f1a5be7a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.4.0_ecc7db16fc541bbf91e3c61485c62f4660ac8a41\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_a443d2980b628093109b1bd96eb2efa5304badbe\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="46c2846d28d2637b62e734c1a70df830a8fb479b">
+        <dex dex="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_804f53123891f7ede08495021a12ba3c7fd77aa4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="df6791bb4f5402ed138d3dd1385f8e2bc3ac8728">
+        <dex dex="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.android-facebook-android-sdk-4.16.0_6bacf96c92b0ece324d0017f01e0d4a5daa62a37\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.4.0_f265697e021407996ab0c411eb99f465f485c3bb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-tasks-1.4.0_958002fff285ac3e8e5469a4055a0b74e5d593be\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_05a7210b2bd409cf2d94ec30f806f40dc3dc048f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="df6791bb4f5402ed138d3dd1385f8e2bc3ac8728">
+        <dex dex="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.android-facebook-android-sdk-4.16.0_f07b8dbe0f99c002fd5de98d290009616e52fb1e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d9562d2a3e7fb9a73c8bd1606047d1a0717dc425">
+        <dex dex="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_3e2e0d78ad3febfcfc8518dc5547dd9b91dfc394\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_e1729eee53d442f82c47ac05402055123bee87cf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-applinks-1.4.0_56a24d1e2255760007df1507875af30adbac3c99\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_e42ffa557ecff9b12a488c1760371dd7d625d218\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_c02d47d6830660fee9b2262a8fe7df8b5fc6b734\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_dc3390377ccbf53dad0c4eeda41d37f16f01ac21\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_b8132bfa1752576773571030784d10c09d8ea003\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ec3b843d81adf82fd41dda6bc670aa1fe2b19d6f">
+        <dex dex="C:\Users\Tiago\Documents\GitHub\SmashRotation\SmashRotation\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2b849c72f825014d76b5e804e49060c7ff62147d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c512f88f6156a2eee642d7a16ac26cb27d5bad7a">
+        <dex dex="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_e5f06d497d9bf0bf5af1f878f0932f6f994e7dd2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\exploded-aar\com.android.support\customtabs\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
+        <dex dex="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-customtabs-23.4.0_a178c4215e4a5cae55927233b9710655bc201e65\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.4.0_4cfc3aaaf8a5cde10f3eaf54eaccf677db79554c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\Tiago\StudioProjects\SmashRotation1\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_7f27074255faad67c71e5157c08ce927f73fe2e5\classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,48 @@
+<br.com.tick.rotation.component.NoClickRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                      xmlns:tools="http://schemas.android.com/tools"
+                                                      android:layout_width="match_parent"
+                                                      android:layout_height="match_parent"
+                                                      android:background="@color/transparent_black"
+                                                      android:clickable="false"
+                                                      android:paddingBottom="@dimen/activity_vertical_margin"
+                                                      android:paddingLeft="@dimen/activity_horizontal_margin"
+                                                      android:paddingRight="@dimen/activity_horizontal_margin"
+                                                      android:paddingTop="@dimen/activity_vertical_margin"
+                                                      tools:context="br.com.tick.rotation.SmashRotationActivity$PlaceholderFragment" >
+
+    <LinearLayout
+        android:id="@+id/actions_holder"
+        android:layout_width="645px"
+        android:layout_height="385px"
+        android:layout_centerInParent="true"
+        android:background="@drawable/round_corner_dialog"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/actions_margin_left"
+        android:paddingRight="@dimen/actions_margin_right" >
+
+        <Button
+            android:id="@+id/line"
+            android:layout_width="582px"
+            android:layout_height="102px"
+            android:background="@drawable/line_random_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/line_dialog"
+            android:textColor="@color/white"
+            android:layout_marginBottom="40px"
+             />
+
+        <Button
+            android:id="@+id/random"
+            android:layout_width="582px"
+            android:layout_height="102px"
+            android:background="@drawable/line_random_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/random_dialog"
+            android:textColor="@color/white" />
+        
+    </LinearLayout>
+
+</br.com.tick.rotation.component.NoClickRelativeLayout>
