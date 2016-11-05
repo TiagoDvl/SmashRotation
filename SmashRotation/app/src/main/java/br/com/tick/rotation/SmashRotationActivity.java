@@ -1,11 +1,17 @@
 package br.com.tick.rotation;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.os.Bundle;
+
+import com.facebook.appevents.AppEventsLogger;
+import com.google.android.gms.ads.MobileAds;
+
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.List;
 
-import android.app.Activity;
-import android.os.Bundle;
 import br.com.tick.rotation.bo.SmashRotationBO;
 import br.com.tick.rotation.domain.Contest;
 import br.com.tick.rotation.domain.Player;
@@ -19,8 +25,6 @@ import br.com.tick.rotation.fragment.StartRotationFragment;
 import br.com.tick.rotation.listener.ISmashRotation;
 import br.com.tick.rotation.persistence.Serialization;
 import br.com.tick.rotation.utils.DisplayUtil;
-
-import com.facebook.appevents.AppEventsLogger;
 
 public class SmashRotationActivity extends Activity implements ISmashRotation {
 	
@@ -41,6 +45,7 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 		setContentView(R.layout.activity_smash_rotation);
 		SmashRotationBO.getInstance(getApplicationContext());
 		DisplayUtil.init(this);
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-7270107445522798~9017597067");
 		
 		if (savedInstanceState == null) {
 			splashScreenFragment = new SplashScreenFragment();
@@ -144,4 +149,46 @@ public class SmashRotationActivity extends Activity implements ISmashRotation {
 		super.onPause();
 	}
 
+    @Override
+    public void onBackPressed() {
+        if (startRotationFragment != null
+                && resultsFragment == null
+                && insertNewPlayerDialogFragment == null) {
+            showDecisionDialog(getResources().getString(R.string.decision_lose_everything), false);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    public void showDecisionDialog(String message, final boolean isEndingMatch) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setMessage(message);
+        alertDialogBuilder.setPositiveButton(getResources().getString(R.string.decision_ok),
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        if (isEndingMatch) {
+                            if (startRotationFragment != null) {
+                                startRotationFragment.finishMatch();
+                            }
+                        } else {
+                            getFragmentManager().popBackStack();
+                        }
+                    }
+                });
+        alertDialogBuilder.setNegativeButton(getResources().getString(R.string.decision_no),
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        // This was only programmed just in case it needs.
+                        if (isEndingMatch) {
+                            return;
+                        } else {
+                            return;
+                        }
+                    }
+                });
+        alertDialogBuilder.setTitle(getResources().getString(R.string.decision_title));
+        alertDialogBuilder.show();
+    }
 }

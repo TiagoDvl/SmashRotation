@@ -62,7 +62,7 @@
             android:maxLength="14"
             android:singleLine="true"
             android:textColor="@color/color_edit_box_text"
-            android:textSize="8pt" />
+            android:textSize="@dimen/twelve_sp" />
 
         <Button
             android:id="@+id/insert_player_name_button"
@@ -88,7 +88,7 @@
             android:layout_centerInParent="true"
             android:text="@string/start_rotation"
             android:textColor="@color/white"
-            android:textSize="@dimen/eleven_pt" />
+            android:textSize="@dimen/nine_pt" />
     </RelativeLayout>
 
     <ListView

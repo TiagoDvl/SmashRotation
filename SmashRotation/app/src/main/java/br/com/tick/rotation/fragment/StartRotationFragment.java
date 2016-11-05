@@ -18,6 +18,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -25,6 +28,7 @@ import java.util.List;
 import java.util.Random;
 
 import br.com.tick.rotation.R;
+import br.com.tick.rotation.SmashRotationActivity;
 import br.com.tick.rotation.bo.SmashRotationBO;
 import br.com.tick.rotation.domain.Contest;
 import br.com.tick.rotation.domain.Player;
@@ -86,6 +90,7 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_start_rotation, container, false);
 		DisplayUtil.setLayoutParams((ViewGroup) rootView);
+        setAdMob(rootView);
 
 		Typeface typeface = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Oswald-Regular.ttf");
 		Typeface typefaceLight = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Oswald-Light.ttf");
@@ -155,7 +160,13 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 		return rootView;
 	}
 
-	private void startRotation() {
+    private void setAdMob(View rootView) {
+        AdView mAdView = (AdView) rootView.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+    }
+
+    private void startRotation() {
 		playerA = listOfPlayers.get(FIRST_CONTESTANT);
 		contestantA.setText(playerA.getName());
 		winsCounterA.setText(getResources().getString(R.string.wins) + playerA.getWins());
@@ -187,42 +198,8 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 			showActionsDialog(2);
 			break;
 		case R.id.finish_match_text:
-			int contWins = 0;
-			if (playerA.getWins() > 0) {
-				contWins = playerA.getWins();
-				contest.setBestPlayer(playerA);
-			}
-
-			if (playerB.getWins() > contWins) {
-				contWins = playerB.getWins();
-				contest.setBestPlayer(playerB);
-			}
-
-			for (Player player : listOfPlayers) {
-				if (player.getWins() > contWins) {
-					contWins = player.getWins();
-					contest.setBestPlayer(player);
-				}
-			}
-
-			contWins = 0;
-
-			for (Player player : listOfPlayers) {
-				if (player.getLosses() > contWins) {
-					contWins = player.getLosses();
-					contest.setWorstPlayer(player);
-				}
-			}
-
-			Location location = getLastKnownLocation(getActivity());
-			LocationTask task = new LocationTask(location, getActivity(), listener, contest);
-
-			if (contest.getNumberOfGames() > 0) {
-				task.execute();
-			} else {
-				Toast.makeText(getActivity(),
-                        getResources().getString(R.string.insufficient_matches), Toast.LENGTH_SHORT).show();
-			}
+            ((SmashRotationActivity)getActivity()).showDecisionDialog(
+                    getResources().getString(R.string.decision_finish_match), true);
 			break;
 
 		case R.id.top_bar_insert_new_player:
@@ -233,7 +210,46 @@ public class StartRotationFragment extends Fragment implements OnClickListener {
 		}
 	}
 
-	private Location getLastKnownLocation(Context context) {
+    public void finishMatch() {
+        int contWins = 0;
+        if (playerA.getWins() > 0) {
+            contWins = playerA.getWins();
+            contest.setBestPlayer(playerA);
+        }
+
+        if (playerB.getWins() > contWins) {
+            contWins = playerB.getWins();
+            contest.setBestPlayer(playerB);
+        }
+
+        for (Player player : listOfPlayers) {
+            if (player.getWins() > contWins) {
+                contWins = player.getWins();
+                contest.setBestPlayer(player);
+            }
+        }
+
+        contWins = 0;
+
+        for (Player player : listOfPlayers) {
+            if (player.getLosses() > contWins) {
+                contWins = player.getLosses();
+                contest.setWorstPlayer(player);
+            }
+        }
+
+        Location location = getLastKnownLocation(getActivity());
+        LocationTask task = new LocationTask(location, getActivity(), listener, contest);
+
+        if (contest.getNumberOfGames() > 0) {
+            task.execute();
+        } else {
+            Toast.makeText(getActivity(),
+                    getResources().getString(R.string.insufficient_matches), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private Location getLastKnownLocation(Context context) {
 		mLocationManager = (LocationManager) context.getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
 		List<String> providers = mLocationManager.getProviders(true);
 		Location bestLocation = null;

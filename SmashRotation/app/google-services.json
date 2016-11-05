@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "558397875957",
+    "firebase_url": "https://rotation-games.firebaseio.com",
+    "project_id": "rotation-games",
+    "storage_bucket": "rotation-games.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558397875957:android:cd0071aa93845e04",
+        "android_client_info": {
+          "package_name": "br.com.tick.rotation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "558397875957-7csa2pjpda7nebndv4qso1candac4ej6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp-ib2R116Se7902d18nsfkDQu_AwcVsw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

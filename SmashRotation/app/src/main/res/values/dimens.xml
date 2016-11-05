@@ -12,9 +12,10 @@
     <dimen name="adapter_player_losses_margin_start">50dp</dimen>
     <dimen name="top_bar_holder_height">120px</dimen>
     <dimen name="top_bar_margin_left">20px</dimen>
-    <dimen name="top_bar_text_size">10pt</dimen>
-    <dimen name="nine_pt">9pt</dimen>
-    <dimen name="eleven_pt">11pt</dimen>
+    <dimen name="top_bar_text_size">15sp</dimen>
+    <dimen name="twelve_sp">12sp</dimen>
+    <dimen name="nine_pt">15sp</dimen>
+    <dimen name="eleven_pt">18sp</dimen>
     <dimen name="ten_pt">10pt</dimen>
     <dimen name="thrirteen_pt">13pt</dimen>
     <dimen name="insert_player_holder_padding">5dp</dimen>
@@ -29,7 +30,7 @@
     <dimen name="two_contestants_margin_top_inside">5px</dimen>
     <dimen name="two_contestants_divider">55px</dimen>
     <dimen name="rotation_margin_top">10dp</dimen>
-    <dimen name="two_contestants_margin_top">10dp</dimen>
+    <dimen name="two_contestants_margin_top">5dp</dimen>
     <dimen name="rotation_menu_margin_right">10dp</dimen>
     <dimen name="rotation_menu_width">8dp</dimen>
     <dimen name="rotation_menu_height">30dp</dimen>

@@ -5,6 +5,7 @@
     <string name="app_name_rotation">Rotation</string>
     <string name="app_name_results">Results</string>
     <string name="app_id">388734354646891</string>
+    <string name="banner_ad_unit_id">ca-app-pub-7270107445522798/1494330267</string>
 
     <!-- Smash Rotation Fragment -->
 
@@ -54,5 +55,12 @@
     <string name="won">&#160;Won!</string>
     <string name="lost">&#160;Lost!</string>
     <string name="passed">&#160;Passed!</string>
+
+    <!-- Alerts -->
+    <string name="decision_lose_everything">Are you sure you want to leave?\nYou will loose all match history.</string>
+    <string name="decision_finish_match">Do you want to end rotation?.</string>
+    <string name="decision_ok">Yes, I do</string>
+    <string name="decision_no">No</string>
+    <string name="decision_title">Leaving?</string>
 
 </resources>

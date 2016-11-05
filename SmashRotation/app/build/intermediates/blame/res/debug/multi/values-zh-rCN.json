@@ -1,741 +1,14 @@
 [
     {
-        "outputFile": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rCN\\values-zh-rCN.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 95,
-                    "endOffset": 146
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 95,
-                        "endOffset": 146
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 151,
-                    "endColumn": 106,
-                    "endOffset": 253
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 151,
-                        "endColumn": 106,
-                        "endOffset": 253
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 4,
-                    "startColumn": 4,
-                    "startOffset": 258,
-                    "endColumn": 122,
-                    "endOffset": 376
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 258,
-                        "endColumn": 122,
-                        "endOffset": 376
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 5,
-                    "startColumn": 4,
-                    "startOffset": 381,
-                    "endColumn": 94,
-                    "endOffset": 471
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 381,
-                        "endColumn": 94,
-                        "endOffset": 471
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 6,
-                    "startColumn": 4,
-                    "startOffset": 476,
-                    "endColumn": 99,
-                    "endOffset": 571
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 476,
-                        "endColumn": 99,
-                        "endOffset": 571
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 7,
-                    "startColumn": 4,
-                    "startOffset": 576,
-                    "endColumn": 81,
-                    "endOffset": 653
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 576,
-                        "endColumn": 81,
-                        "endOffset": 653
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 8,
-                    "startColumn": 4,
-                    "startOffset": 658,
-                    "endColumn": 96,
-                    "endOffset": 750
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 658,
-                        "endColumn": 96,
-                        "endOffset": 750
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 9,
-                    "startColumn": 4,
-                    "startOffset": 755,
-                    "endColumn": 105,
-                    "endOffset": 856
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 755,
-                        "endColumn": 105,
-                        "endOffset": 856
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 10,
-                    "startColumn": 4,
-                    "startOffset": 861,
-                    "endColumn": 75,
-                    "endOffset": 932
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 861,
-                        "endColumn": 75,
-                        "endOffset": 932
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 11,
-                    "startColumn": 4,
-                    "startOffset": 937,
-                    "endColumn": 75,
-                    "endOffset": 1008
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 937,
-                        "endColumn": 75,
-                        "endOffset": 1008
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 12,
-                    "startColumn": 4,
-                    "startOffset": 1013,
-                    "endColumn": 77,
-                    "endOffset": 1086
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 1013,
-                        "endColumn": 77,
-                        "endOffset": 1086
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 13,
-                    "startColumn": 4,
-                    "startOffset": 1091,
-                    "endColumn": 95,
-                    "endOffset": 1182
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 1091,
-                        "endColumn": 95,
-                        "endOffset": 1182
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 14,
-                    "startColumn": 4,
-                    "startOffset": 1187,
-                    "endColumn": 95,
-                    "endOffset": 1278
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 1187,
-                        "endColumn": 95,
-                        "endOffset": 1278
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 15,
-                    "startColumn": 4,
-                    "startOffset": 1283,
-                    "endColumn": 94,
-                    "endOffset": 1373
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 1283,
-                        "endColumn": 94,
-                        "endOffset": 1373
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 16,
-                    "startColumn": 4,
-                    "startOffset": 1378,
-                    "endColumn": 96,
-                    "endOffset": 1470
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 1378,
-                        "endColumn": 96,
-                        "endOffset": 1470
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 17,
-                    "startColumn": 4,
-                    "startOffset": 1475,
-                    "endColumn": 94,
-                    "endOffset": 1565
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 1475,
-                        "endColumn": 94,
-                        "endOffset": 1565
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 18,
-                    "startColumn": 4,
-                    "startOffset": 1570,
-                    "endColumn": 97,
-                    "endOffset": 1663
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 4,
-                        "startOffset": 1570,
-                        "endColumn": 97,
-                        "endOffset": 1663
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 19,
-                    "startColumn": 4,
-                    "startOffset": 1668,
-                    "endColumn": 111,
-                    "endOffset": 1775
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 1668,
-                        "endColumn": 111,
-                        "endOffset": 1775
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 20,
-                    "startColumn": 4,
-                    "startOffset": 1780,
-                    "endColumn": 93,
-                    "endOffset": 1869
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 1780,
-                        "endColumn": 93,
-                        "endOffset": 1869
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 21,
-                    "startColumn": 4,
-                    "startOffset": 1874,
-                    "endColumn": 119,
-                    "endOffset": 1989
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 119,
-                        "endOffset": 170
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 22,
-                    "startColumn": 4,
-                    "startOffset": 1994,
-                    "endColumn": 82,
-                    "endOffset": 2072
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 175,
-                        "endColumn": 82,
-                        "endOffset": 253
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 23,
-                    "startColumn": 4,
-                    "startOffset": 2077,
-                    "endColumn": 88,
-                    "endOffset": 2161
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 258,
-                        "endColumn": 88,
-                        "endOffset": 342
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 24,
-                    "startColumn": 4,
-                    "startOffset": 2166,
-                    "endColumn": 91,
-                    "endOffset": 2253
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 347,
-                        "endColumn": 91,
-                        "endOffset": 434
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 25,
-                    "startColumn": 4,
-                    "startOffset": 2258,
-                    "endColumn": 61,
-                    "endOffset": 2315
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 439,
-                        "endColumn": 61,
-                        "endOffset": 496
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 26,
-                    "startColumn": 4,
-                    "startOffset": 2320,
-                    "endColumn": 64,
-                    "endOffset": 2380
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 501,
-                        "endColumn": 64,
-                        "endOffset": 561
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 27,
-                    "startColumn": 4,
-                    "startOffset": 2385,
-                    "endColumn": 56,
-                    "endOffset": 2437
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 566,
-                        "endColumn": 56,
-                        "endOffset": 618
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 28,
-                    "startColumn": 4,
-                    "startOffset": 2442,
-                    "endColumn": 67,
-                    "endOffset": 2505
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 623,
-                        "endColumn": 67,
-                        "endOffset": 686
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 29,
-                    "startColumn": 4,
-                    "startOffset": 2510,
-                    "endColumn": 67,
-                    "endOffset": 2573
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 691,
-                        "endColumn": 67,
-                        "endOffset": 754
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 30,
-                    "startColumn": 4,
-                    "startOffset": 2578,
-                    "endColumn": 84,
-                    "endOffset": 2658
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 759,
-                        "endColumn": 84,
-                        "endOffset": 839
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 31,
-                    "startColumn": 4,
-                    "startOffset": 2663,
-                    "endColumn": 68,
-                    "endOffset": 2727
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 844,
-                        "endColumn": 68,
-                        "endOffset": 908
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 32,
-                    "startColumn": 4,
-                    "startOffset": 2732,
-                    "endColumn": 68,
-                    "endOffset": 2796
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 913,
-                        "endColumn": 68,
-                        "endOffset": 977
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 33,
-                    "startColumn": 4,
-                    "startOffset": 2801,
-                    "endColumn": 75,
-                    "endOffset": 2872
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 982,
-                        "endColumn": 75,
-                        "endOffset": 1053
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 34,
-                    "startColumn": 4,
-                    "startOffset": 2877,
-                    "endColumn": 91,
-                    "endOffset": 2964
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 1058,
-                        "endColumn": 91,
-                        "endOffset": 1145
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 35,
-                    "startColumn": 4,
-                    "startOffset": 2969,
-                    "endColumn": 60,
-                    "endOffset": 3025
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 1150,
-                        "endColumn": 60,
-                        "endOffset": 1206
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 36,
-                    "startColumn": 4,
-                    "startOffset": 3030,
-                    "endColumn": 61,
-                    "endOffset": 3087
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 1211,
-                        "endColumn": 61,
-                        "endOffset": 1268
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 37,
-                    "startColumn": 4,
-                    "startOffset": 3092,
-                    "endColumn": 85,
-                    "endOffset": 3173
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 4,
-                        "startOffset": 1273,
-                        "endColumn": 85,
-                        "endOffset": 1354
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 38,
-                    "startColumn": 4,
-                    "startOffset": 3178,
-                    "endColumn": 57,
-                    "endOffset": 3231
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 1359,
-                        "endColumn": 57,
-                        "endOffset": 1412
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 39,
-                    "startColumn": 4,
-                    "startOffset": 3236,
-                    "endColumn": 100,
-                    "endOffset": 3332
-                },
-                "from": {
-                    "file": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 1874,
-                        "endColumn": 100,
-                        "endOffset": 1970
-                    }
-                }
-            }
-        ]
-    },
-    {
         "outputFile": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rCN\\values-zh-rCN.xml",
         "map": [
             {
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
-                    "startOffset": 55,
+                    "startOffset": 105,
                     "endColumn": 95,
-                    "endOffset": 146
+                    "endOffset": 196
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -752,9 +25,9 @@
                 "to": {
                     "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 151,
+                    "startOffset": 201,
                     "endColumn": 106,
-                    "endOffset": 253
+                    "endOffset": 303
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -771,9 +44,9 @@
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 258,
+                    "startOffset": 308,
                     "endColumn": 122,
-                    "endOffset": 376
+                    "endOffset": 426
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -790,9 +63,9 @@
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 381,
+                    "startOffset": 431,
                     "endColumn": 94,
-                    "endOffset": 471
+                    "endOffset": 521
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -809,9 +82,9 @@
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 476,
+                    "startOffset": 526,
                     "endColumn": 99,
-                    "endOffset": 571
+                    "endOffset": 621
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -828,9 +101,9 @@
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 576,
+                    "startOffset": 626,
                     "endColumn": 81,
-                    "endOffset": 653
+                    "endOffset": 703
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -847,9 +120,9 @@
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 658,
+                    "startOffset": 708,
                     "endColumn": 96,
-                    "endOffset": 750
+                    "endOffset": 800
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -866,9 +139,9 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 755,
+                    "startOffset": 805,
                     "endColumn": 105,
-                    "endOffset": 856
+                    "endOffset": 906
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -885,9 +158,9 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 861,
+                    "startOffset": 911,
                     "endColumn": 75,
-                    "endOffset": 932
+                    "endOffset": 982
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -904,9 +177,9 @@
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 937,
+                    "startOffset": 987,
                     "endColumn": 75,
-                    "endOffset": 1008
+                    "endOffset": 1058
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -923,9 +196,9 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 1013,
+                    "startOffset": 1063,
                     "endColumn": 77,
-                    "endOffset": 1086
+                    "endOffset": 1136
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -942,9 +215,9 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 1091,
+                    "startOffset": 1141,
                     "endColumn": 95,
-                    "endOffset": 1182
+                    "endOffset": 1232
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -961,9 +234,9 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 1187,
+                    "startOffset": 1237,
                     "endColumn": 95,
-                    "endOffset": 1278
+                    "endOffset": 1328
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -980,9 +253,9 @@
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 1283,
+                    "startOffset": 1333,
                     "endColumn": 94,
-                    "endOffset": 1373
+                    "endOffset": 1423
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -999,9 +272,9 @@
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1378,
+                    "startOffset": 1428,
                     "endColumn": 96,
-                    "endOffset": 1470
+                    "endOffset": 1520
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1018,9 +291,9 @@
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1475,
+                    "startOffset": 1525,
                     "endColumn": 94,
-                    "endOffset": 1565
+                    "endOffset": 1615
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1037,9 +310,9 @@
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1570,
+                    "startOffset": 1620,
                     "endColumn": 97,
-                    "endOffset": 1663
+                    "endOffset": 1713
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1056,9 +329,9 @@
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1668,
+                    "startOffset": 1718,
                     "endColumn": 111,
-                    "endOffset": 1775
+                    "endOffset": 1825
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1075,9 +348,9 @@
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1780,
+                    "startOffset": 1830,
                     "endColumn": 93,
-                    "endOffset": 1869
+                    "endOffset": 1919
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1094,9 +367,9 @@
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 1874,
+                    "startOffset": 1924,
                     "endColumn": 119,
-                    "endOffset": 1989
+                    "endOffset": 2039
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1113,9 +386,9 @@
                 "to": {
                     "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 1994,
+                    "startOffset": 2044,
                     "endColumn": 82,
-                    "endOffset": 2072
+                    "endOffset": 2122
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1132,9 +405,9 @@
                 "to": {
                     "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 2077,
+                    "startOffset": 2127,
                     "endColumn": 88,
-                    "endOffset": 2161
+                    "endOffset": 2211
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1151,9 +424,9 @@
                 "to": {
                     "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 2166,
+                    "startOffset": 2216,
                     "endColumn": 91,
-                    "endOffset": 2253
+                    "endOffset": 2303
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1170,9 +443,9 @@
                 "to": {
                     "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 2258,
+                    "startOffset": 2308,
                     "endColumn": 61,
-                    "endOffset": 2315
+                    "endOffset": 2365
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1189,9 +462,9 @@
                 "to": {
                     "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 2320,
+                    "startOffset": 2370,
                     "endColumn": 64,
-                    "endOffset": 2380
+                    "endOffset": 2430
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1208,9 +481,9 @@
                 "to": {
                     "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 2385,
+                    "startOffset": 2435,
                     "endColumn": 56,
-                    "endOffset": 2437
+                    "endOffset": 2487
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1227,9 +500,9 @@
                 "to": {
                     "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 2442,
+                    "startOffset": 2492,
                     "endColumn": 67,
-                    "endOffset": 2505
+                    "endOffset": 2555
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1246,9 +519,9 @@
                 "to": {
                     "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 2510,
+                    "startOffset": 2560,
                     "endColumn": 67,
-                    "endOffset": 2573
+                    "endOffset": 2623
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1265,9 +538,9 @@
                 "to": {
                     "startLine": 30,
                     "startColumn": 4,
-                    "startOffset": 2578,
+                    "startOffset": 2628,
                     "endColumn": 84,
-                    "endOffset": 2658
+                    "endOffset": 2708
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1284,9 +557,9 @@
                 "to": {
                     "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 2663,
+                    "startOffset": 2713,
                     "endColumn": 68,
-                    "endOffset": 2727
+                    "endOffset": 2777
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1303,9 +576,9 @@
                 "to": {
                     "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 2732,
+                    "startOffset": 2782,
                     "endColumn": 68,
-                    "endOffset": 2796
+                    "endOffset": 2846
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1322,9 +595,9 @@
                 "to": {
                     "startLine": 33,
                     "startColumn": 4,
-                    "startOffset": 2801,
+                    "startOffset": 2851,
                     "endColumn": 75,
-                    "endOffset": 2872
+                    "endOffset": 2922
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1341,9 +614,9 @@
                 "to": {
                     "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 2877,
+                    "startOffset": 2927,
                     "endColumn": 91,
-                    "endOffset": 2964
+                    "endOffset": 3014
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1360,9 +633,9 @@
                 "to": {
                     "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 2969,
+                    "startOffset": 3019,
                     "endColumn": 60,
-                    "endOffset": 3025
+                    "endOffset": 3075
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1379,9 +652,9 @@
                 "to": {
                     "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 3030,
+                    "startOffset": 3080,
                     "endColumn": 61,
-                    "endOffset": 3087
+                    "endOffset": 3137
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1398,9 +671,9 @@
                 "to": {
                     "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 3092,
+                    "startOffset": 3142,
                     "endColumn": 85,
-                    "endOffset": 3173
+                    "endOffset": 3223
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1417,9 +690,389 @@
                 "to": {
                     "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 3178,
+                    "startOffset": 3228,
+                    "endColumn": 102,
+                    "endOffset": 3326
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 344,
+                        "endColumn": 102,
+                        "endOffset": 442
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 3331,
+                    "endColumn": 160,
+                    "endOffset": 3487
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 447,
+                        "endColumn": 160,
+                        "endOffset": 603
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 3492,
+                    "endColumn": 116,
+                    "endOffset": 3604
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 608,
+                        "endColumn": 116,
+                        "endOffset": 720
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 3609,
+                    "endColumn": 103,
+                    "endOffset": 3708
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 725,
+                        "endColumn": 103,
+                        "endOffset": 824
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 3713,
+                    "endColumn": 169,
+                    "endOffset": 3878
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 829,
+                        "endColumn": 169,
+                        "endOffset": 994
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 3883,
+                    "endColumn": 172,
+                    "endOffset": 4051
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 999,
+                        "endColumn": 172,
+                        "endOffset": 1167
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 4056,
+                    "endColumn": 117,
+                    "endOffset": 4169
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 1172,
+                        "endColumn": 117,
+                        "endOffset": 1285
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 4174,
+                    "endColumn": 120,
+                    "endOffset": 4290
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1290,
+                        "endColumn": 120,
+                        "endOffset": 1406
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 4295,
+                    "endColumn": 175,
+                    "endOffset": 4466
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 347,
+                        "endColumn": 175,
+                        "endOffset": 518
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 4471,
+                    "endColumn": 189,
+                    "endOffset": 4656
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1411,
+                        "endColumn": 189,
+                        "endOffset": 1596
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 4661,
+                    "endColumn": 116,
+                    "endOffset": 4773
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1601,
+                        "endColumn": 116,
+                        "endOffset": 1713
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 4778,
+                    "endColumn": 102,
+                    "endOffset": 4876
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1718,
+                        "endColumn": 102,
+                        "endOffset": 1816
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 4881,
+                    "endColumn": 160,
+                    "endOffset": 5037
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1821,
+                        "endColumn": 160,
+                        "endOffset": 1977
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 5042,
+                    "endColumn": 116,
+                    "endOffset": 5154
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1982,
+                        "endColumn": 116,
+                        "endOffset": 2094
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 5159,
+                    "endColumn": 162,
+                    "endOffset": 5317
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 2099,
+                        "endColumn": 162,
+                        "endOffset": 2257
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 5322,
+                    "endColumn": 119,
+                    "endOffset": 5437
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 2262,
+                        "endColumn": 119,
+                        "endOffset": 2377
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 5442,
+                    "endColumn": 137,
+                    "endOffset": 5575
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 2382,
+                        "endColumn": 137,
+                        "endOffset": 2515
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 5580,
+                    "endColumn": 85,
+                    "endOffset": 5661
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 2520,
+                        "endColumn": 85,
+                        "endOffset": 2601
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 56,
+                    "startColumn": 4,
+                    "startOffset": 5666,
+                    "endColumn": 86,
+                    "endOffset": 5748
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2606,
+                        "endColumn": 86,
+                        "endOffset": 2688
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 57,
+                    "startColumn": 4,
+                    "startOffset": 5753,
+                    "endColumn": 102,
+                    "endOffset": 5851
+                },
+                "from": {
+                    "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\values-zh-rCN\\values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 2693,
+                        "endColumn": 102,
+                        "endOffset": 2791
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 5856,
                     "endColumn": 57,
-                    "endOffset": 3231
+                    "endOffset": 5909
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.16.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
@@ -1434,11 +1087,11 @@
             },
             {
                 "to": {
-                    "startLine": 39,
+                    "startLine": 59,
                     "startColumn": 4,
-                    "startOffset": 3236,
+                    "startOffset": 5914,
                     "endColumn": 100,
-                    "endOffset": 3332
+                    "endOffset": 6010
                 },
                 "from": {
                     "file": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rCN\\values-zh-rCN.xml",

@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bt_menu_pressed.png",
-        "source": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\src\\main\\res\\drawable-hdpi\\bt_menu_pressed.png"
-    },
-    {
         "merged": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\rotation_pressed.png",
         "source": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\src\\main\\res\\drawable-hdpi\\rotation_pressed.png"
     },
@@ -20,22 +16,6 @@
         "source": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\src\\main\\res\\drawable-hdpi\\facebook_logo.png"
     },
     {
-        "merged": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\smash_vector.png",
-        "source": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\src\\main\\res\\drawable-hdpi\\smash_vector.png"
-    },
-    {
-        "merged": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
-        "source": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\facebook_logo.png",
-        "source": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\src\\main\\res\\drawable-hdpi\\facebook_logo.png"
-    },
-    {
-        "merged": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\rotation_pressed.png",
-        "source": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\src\\main\\res\\drawable-hdpi\\rotation_pressed.png"
-    },
-    {
         "merged": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\rotation_unpressed.png",
         "source": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\src\\main\\res\\drawable-hdpi\\rotation_unpressed.png"
     },
@@ -44,15 +24,7 @@
         "source": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\src\\main\\res\\drawable-hdpi\\smash_vector.png"
     },
     {
-        "merged": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\rotation_unpressed.png",
-        "source": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\src\\main\\res\\drawable-hdpi\\rotation_unpressed.png"
-    },
-    {
         "merged": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
         "source": "C:\\Users\\Tiago\\Documents\\GitHub\\SmashRotation\\SmashRotation\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bt_menu_unpressed.png",
-        "source": "C:\\Users\\Tiago\\StudioProjects\\SmashRotation1\\app\\src\\main\\res\\drawable-hdpi\\bt_menu_unpressed.png"
     }
 ]

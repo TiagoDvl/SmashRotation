@@ -21,17 +21,15 @@ public class RotationAdapter extends BaseAdapter {
 	private transient LayoutInflater inflater;
 
 	public RotationAdapter(Context context, List<Player> listOfPlayers) {
-
 		this.activity = context;
 		this.listOfPlayers = listOfPlayers;
 		this.inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
 	}
 
-	@Override
-	public int getCount() {
-		return listOfPlayers.size();
-	}
+    @Override
+    public int getCount() {
+        return listOfPlayers.size();
+    }
 
 	@Override
 	public Player getItem(int position) {

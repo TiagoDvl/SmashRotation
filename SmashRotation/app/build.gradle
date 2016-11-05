@@ -16,9 +16,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
-
-    dependencies {
-        // Android SDK
-        compile 'com.facebook.android:facebook-android-sdk:4.16.0'
-    }
 }
+
+dependencies {
+    // Android SDK
+    compile 'com.facebook.android:facebook-android-sdk:4.16.0'
+    compile 'com.google.firebase:firebase-ads:9.6.1'
+}
+
+apply plugin: 'com.google.gms.google-services'
